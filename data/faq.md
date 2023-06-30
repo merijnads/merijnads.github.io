@@ -1,7 +1,7 @@
 ---
 path: "/faq"
 title: "Frequently asked questions"
-hidden: false
+hidden: true
 information_page: true
 sidebar_priority: 3000
 ---
@@ -64,6 +64,6 @@ Introduction to Programming is a massive open online course, free of charge and 
 
 The Introduction to Programming course translates to a course worth 5 study credits at the University of Helsinki. However, course participants are not automatically University of Helsinki students, and it is possible to participate in the course in a way that will not result in study credits. If the participant so wishes, they may receive credits for this course. Participating in this course does not entitle the participant to a governmental study grant.
 
-### I'm currently receiving unemployment benefits in Finland. Can I still take this course? 
+### I'm currently receiving unemployment benefits in Finland. Can I still take this course?
 
 Please take this up with your employment services office (TE-toimisto). Unfortunately, not all employment services offices treat this course in the same way. Some offices have withdrawn benefits for simply participating in the course, even if the participant is not aiming for a right to study or official study credits. On the other hand, some offices have even recommended this course without withdrawing benefits.

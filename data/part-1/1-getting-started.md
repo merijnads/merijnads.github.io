@@ -1,61 +1,62 @@
 ---
 path: '/part-1/1-getting-started'
-title: 'Getting started'
+title: 'Hallo Python'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+<text-box variant='learningObjectives' name='Leerdoelen'>
 
-After this section
+Na dit gedeelte:
 
-- You will have written and executed your first Python program
-- You will know how to use the print command
-- You will be able to use programming for arithmetic operations
+- Je zult je eerste Python-programma hebben geschreven en uitgevoerd.
+- Je weet hoe je het print-commando moet gebruiken.
+- Je kunt rekenkundige bewerkingen programmeren.
 
 </text-box>
 
-Computer programs consist of _commands_, each command instructing the computer to take some action. A computer executes these commands one by one. Among other things, commands can be used to perform calculations, compare things in the computer's memory, cause changes in how the program functions, relay messages or ask for information from the program's user.
+Computerprogramma's bestaan uit _opdrachten_, waarbij elke opdracht de computer instrueert om een bepaalde actie te ondernemen. Een computer voert deze opdrachten één voor één uit. Onder andere kunnen opdrachten worden gebruikt om berekeningen uit te voeren, dingen in het geheugen van de computer te vergelijken, wijzigingen aan te brengen in de werking van het programma, berichten door te geven of informatie op te vragen van de gebruiker van het programma.
 
-Let's begin programming by getting familiar with the `print` command, which _prints_ text. In this context, printing essentially means that the program will show some text on the screen.
+Laten we beginnen met programmeren door vertrouwd te raken met het `print`-commando, waarmee tekst wordt afgedrukt. In deze context betekent afdrukken in feite dat het programma wat tekst op het scherm laat zien.
 
-The following program will print the line "Hi there!":
+
+Het volgende programma zal de zin "Hallo daar!" afdrukken:
 
 ```python
-print("Hi there!")
+print("Hallo daar!")
 ```
 
-When the program is run, it produces this:
+Wanneer het programma wordt uitgevoerd, produceert het dit:
 
 <sample-output>
 
-Hi there!
+Hallo daar!
 
 </sample-output>
 
-The program will not work unless the code is written exactly as it is above. For example, trying to run the print command without the quotation marks, like so
+Het programma werkt niet tenzij de code precies wordt geschreven zoals hierboven. Bijvoorbeeld, proberen om het print-commando zonder aanhalingstekens uit te voeren, zoals dit:
 
 ```python
-print(Hi there!)
+print(Hallo daar!)
 ```
 
-will not print out the message, but instead causes an error:
+zal de boodschap niet afdrukken, maar in plaats daarvan een fout veroorzaken:
 
 <sample-output>
 
 <pre>
 File "<stdin>", line 1
-  print(Hi there!)
+  print(Hallo daar!)
                    ^
 SyntaxError: invalid syntax
 </pre>
 
 </sample-output>
 
-In summary, if you want to print text, the text must all be encased in quotation marks or Python will not interpret it correctly.
+Samengevat, als je tekst wilt afdrukken, moet alle tekst tussen aanhalingstekens staan, anders zal Python het niet correct interpreteren.
 
 <in-browser-programming-exercise name="Emoticon" tmcname="part01-01_emoticon" height="300px">
 
-Please write a program which prints out an emoticon: :-)
+Schrijf een programma dat een emoticon afdrukt: :-)
 
 </in-browser-programming-exercise>
 

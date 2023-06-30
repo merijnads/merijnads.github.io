@@ -1,6 +1,6 @@
 ---
 path: '/part-1'
-title: 'Part 1'
+title: 'Module 1'
 overview: true
 hidden: false
 ---

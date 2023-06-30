@@ -94,7 +94,8 @@
     "typesafe-actions": "^4.4.2",
     "typescript": "^4.9.3",
     "uuid": "^9.0.0",
-    "visibilityjs": "^2.0.2"
+    "visibilityjs": "^2.0.2",
+    "webpack": "^5.88.1"
   },
   "keywords": [
     "gatsby"
