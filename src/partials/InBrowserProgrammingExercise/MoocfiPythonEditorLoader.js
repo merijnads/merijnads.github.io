@@ -110,7 +110,6 @@ class InBrowserProgrammingExercisePartial extends React.Component {
             </StyledDeadlineText>
           )}
           <Wrapper>{children}</Wrapper>
-          {this.context.loggedIn ? (
             <ProgrammingExercise
               onExerciseDetailsChange={this.onUpdate}
               organization={this.state.organization}
@@ -123,9 +122,6 @@ class InBrowserProgrammingExercisePartial extends React.Component {
               outputPosition={outputposition || "relative"}
               language={language}
             />
-          ) : (
-            loginPrompt
-          )}
         </div>
       </ProgrammingExerciseCard>
     )

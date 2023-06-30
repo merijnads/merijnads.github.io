@@ -3,6 +3,7 @@ path: "/support-and-assistance"
 title: "Support and assistance"
 hidden: false
 information_page: true
+hide_in_sidebar: true
 sidebar_priority: 4000
 ---
 

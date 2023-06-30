@@ -60,31 +60,30 @@ Schrijf een programma dat een emoticon afdrukt: :-)
 
 </in-browser-programming-exercise>
 
-## A program of multiple commands
+## Een programma met meerdere opdrachten
 
-Multiple commands written in succession will be executed in order from first to last.
-For example this program
+Meerdere opdrachten die na elkaar worden geschreven, worden van eerste tot laatste uitgevoerd.
+Bijvoorbeeld dit programma
 
 ```python
-print("Welcome to Introduction to Programming!")
-print("First we will practice using the print command.")
-print("This program prints three lines of text on the screen.")
+print("Welkom bij Programmeren 1!")
+print("Eerst zullen we oefenen met het print-commando.")
+print("Dit programma drukt drie regels tekst af op het scherm.")
 ```
-prints the following lines on the screen:
+drukt de volgende regels af op het scherm:
 
 <sample-output>
 
-Welcome to Introduction to Programming!
-First we will practice using the print command.
-This program prints three lines of text on the screen.
+Welkom bij Programmeren 1!
+Eerst zullen we oefenen met het print-commando.
+Dit programma drukt drie regels tekst af op het scherm.
 
 </sample-output>
 
 <in-browser-programming-exercise name="Fix the code: Seven Brothers" tmcname="part01-02_seven_brothers">
 
-"Seitsemän veljestä" is one of the first novels ever written in Finnish. It is the story of seven orphaned brothers learning to make their way in the world ([read more on Wikipedia](https://en.wikipedia.org/wiki/Seitsem%C3%A4n_veljest%C3%A4)).
 
-This program is supposed to print out the names of the brothers in alphabetical order, but it's not working quite right yet. Please fix the program so that the names are printed in the correct order.
+Dit programma moet de namen van de broers in alfabetische volgorde afdrukken, maar het werkt nog niet helemaal goed. Herstel het programma zodat de namen in de juiste volgorde worden afgedrukt.
 
 
 ```python
@@ -102,7 +101,7 @@ print("Timo")
 
 <in-browser-programming-exercise name="Row, Row, Row Your Boat" tmcname="part01-03_row_your_boat">
 
-Please write a program which prints out the following lines exactly as they are written here, punctuation and all:
+Schrijf een programma dat de volgende regels exact afdrukt zoals ze hier geschreven zijn, inclusief leestekens:
 
 <sample-output>
 
@@ -116,16 +115,16 @@ Life is but a dream.
 </in-browser-programming-exercise>
 
 
-## Arithmetic operations
+## Rekenkundige bewerkingen
 
-You can also put arithmetic operations inside a `print` command. Running it will then print out the result of the operation. For example, the following program
+Je kunt ook rekenkundige bewerkingen binnen een `print`-commando plaatsen. Wanneer het wordt uitgevoerd, wordt dan het resultaat van de bewerking afgedrukt. Bijvoorbeeld, het volgende programma
 
 ```python
 print(2 + 5)
 print(3 * 3)
 print(2 + 2 * 10)
 ```
-prints out these lines:
+drukt deze regels af:
 
 <sample-output>
 
@@ -135,15 +134,15 @@ prints out these lines:
 
 </sample-output>
 
-Notice the lack of quotation marks around the arithmetic operations above. Quotation marks are used to signify _strings_. In the context of programming, strings are sequences of characters. They can consist of letters, numbers and any other types of characters, such as punctuation. Strings aren't just words as we commonly understand them, but instead a single string can be as long as multiple complete sentences.
-Strings are usually printed out exactly as they are written. Thus, the following two commands produce two quite different results:
+Let op het ontbreken van aanhalingstekens rond de rekenkundige bewerkingen hierboven. Aanhalingstekens worden gebruikt om _strings_ aan te geven. In de context van programmeren zijn _strings_ sequenties van tekens. Ze kunnen bestaan uit letters, cijfers en andere soorten tekens, zoals leestekens. Strings zijn niet alleen maar woorden zoals we ze doorgaans begrijpen, maar een enkele string kan net zo lang zijn als meerdere volledige zinnen.
+Strings worden meestal afgedrukt precies zoals ze zijn geschreven. Daarom produceren de volgende twee opdrachten twee heel verschillende resultaten:
 
 ```python
 print(2 + 2 * 10)
 print("2 + 2 * 10")
 ```
 
-This program prints out:
+Dit programma drukt af:
 
 <sample-output>
 
@@ -152,62 +151,62 @@ This program prints out:
 
 </sample-output>
 
-With the second line of code, Python does not calculate the result of the operation, but instead prints out the operation itself, as a string.
-So, strings are printed out just as they are written, without any reference to their contents.
+Met de tweede regel code berekent Python niet het resultaat van de bewerking, maar drukt in plaats daarvan de bewerking zelf af als een string.
+Dus, strings worden afgedrukt precies zoals ze zijn geschreven, zonder enige verwijzing naar hun inhoud.
 
 ## Commenting
 
-Any line beginning with the pound sign `#`, also known as a hash or a number sign, is a comment. This means that any text on that line following the `#` symbol will not in any way affect how the program functions. Python will simply ignore it.
+Elke regel die begint met het hekje `#`, ook wel bekend als een hekje of nummerteken, is een commentaar. Dit betekent dat de tekst op die regel na het symbool `#` op geen enkele manier invloed heeft op de werking van het programma. Python zal het eenvoudigweg negeren.
 
-Comments are used for explaining how a program works, to both the programmer themselves, and others reading the program code. In this program a comment explains the calculation performed in the code:
+Commentaar wordt gebruikt om uit te leggen hoe een programma werkt, zowel aan de programmeur zelf als aan anderen die de programmacode lezen. In dit programma wordt een commentaar gebruikt om de berekening uit te leggen die in de code wordt uitgevoerd:
 
 ```python
-print("Hours in a year:")
-# there are 365 days in a year and 24 hours in each day
+print("Aantal uren in een jaar:")
+# er zijn 365 dagen in een jaar en 24 uur in elke dag
 print(365*24)
 ```
 
-When the program is run, the comment will not be visible to the user:
+Wanneer het programma wordt uitgevoerd, is het commentaar niet zichtbaar voor de gebruiker:
 
 <sample-output>
 
-Hours in a year:
+Aantal uren in een jaar:
 8760
 
 </sample-output>
 
-Short comments can also be added to the end of a line:
+Korte opmerkingen kunnen ook aan het einde van een regel worden toegevoegd:
 
 ```python
-print("Hours in a year:")
-print(365*24) # 365 days, 24 hours in each day
+print("Aantal uren in een jaar:")
+print(365*24) # 365 dagen, 24 uur per dag
 ```
 
 <in-browser-programming-exercise name="Minutes in a year" tmcname="part01-04_minutes_in_a_year">
 
-Please write a program which prints out the number of minutes in a year. Use Python code to perform the calculation, as in the previous code example.
+Schrijf een programma dat het aantal minuten in een jaar afdrukt. Gebruik Python-code om de berekening uit te voeren, zoals in het vorige voorbeeld.
 
 </in-browser-programming-exercise>
 
 <in-browser-programming-exercise name="Print some code" tmcname="part01-05_print_code">
 
-Thus far, you have probably used double quotation marks `"` to print out strings. In addition to the double quotation marks, Python also accepts single quotation marks `'`.
+Tot nu toe heb je waarschijnlijk dubbele aanhalingstekens `"` gebruikt om strings af te drukken. Naast de dubbele aanhalingstekens accepteert Python ook enkele aanhalingstekens `'`.
 
-This comes in handy if you ever want to print out the actual quotation marks themselves:
+Dit is handig als je de daadwerkelijke aanhalingstekens zelf wilt afdrukken:
 
 ```python
 
-print('"Come right back!", shouted the police officer.')
+print('"Kom direct terug!", riep de politieagent.')
 
 ```
 
 <sample-output>
 
-"Come right back!", shouted the police officer.
+"Kom direct terug!", riep de politieagent.
 
 </sample-output>
 
-Please write a program which prints out the following:
+Schrijf een programma dat het volgende afdrukt:
 
 <sample-output>
 

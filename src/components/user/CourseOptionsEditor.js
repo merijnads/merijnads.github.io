@@ -203,6 +203,7 @@ class CourseOptionsEditor extends React.Component {
                   }}
                   fullWidth
                   value={this.state.first_name}
+                  hidden="true"
                   onChange={this.handleInput}
                   onFocus={this.handleFocus}
                   onBlur={this.handleUnFocus}
@@ -222,6 +223,7 @@ class CourseOptionsEditor extends React.Component {
                       this.state.focused === "last_name",
                   }}
                   fullWidth
+                  hidden="true"
                   value={this.state.last_name}
                   onChange={this.handleInput}
                   onFocus={this.handleFocus}
@@ -241,6 +243,7 @@ class CourseOptionsEditor extends React.Component {
                       this.state.focused === "student_number",
                   }}
                   fullWidth
+                  hidden="true"
                   value={this.state.student_number}
                   onChange={this.handleInput}
                   helperText={this.props.t("nosid")}
@@ -256,6 +259,7 @@ class CourseOptionsEditor extends React.Component {
                       checked={this.state.digital_education_for_all}
                       onChange={this.handleCheckboxInput}
                       name="digital_education_for_all"
+                      hidden="true"
                       value="1"
                     />
                   }
@@ -270,6 +274,7 @@ class CourseOptionsEditor extends React.Component {
                       checked={this.state.marketing}
                       onChange={this.handleCheckboxInput}
                       name="marketing"
+                      hidden="true"
                       value="1"
                     />
                   }
@@ -336,67 +341,8 @@ class CourseOptionsEditor extends React.Component {
             </div>
           </Loading>
 
-          <h2>{this.props.t("researchTitle")}</h2>
 
-          <p>{this.props.t("research1")}</p>
 
-          <ol>
-            <li>{this.props.t("research2")}</li>
-            <li>{this.props.t("research3")}</li>
-            <li>{this.props.t("research4")}</li>
-          </ol>
-
-          <p>
-            {this.props.t("research5")}
-            <a
-              href="https://dl.acm.org/citation.cfm?id=2858798"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Educational Data Mining and Learning Analytics in Programming:
-              Literature Review and Case Studies
-            </a>
-            .
-          </p>
-
-          <p>{this.props.t("research6")}</p>
-
-          <p>{this.props.t("research7")}</p>
-
-          <Row>
-            <Loading loading={this.state.loading} heightHint="115px">
-              <RadioGroup
-                aria-label={this.props.t("researchAgree")}
-                name="research"
-                value={this.state.research}
-                onChange={this.handleInput}
-              >
-                <FormControlLabel
-                  value="1"
-                  control={<Radio color="primary" />}
-                  label={this.props.t("researchYes")}
-                />
-                <FormControlLabel
-                  value="0"
-                  control={<Radio />}
-                  label={this.props.t("researchNo")}
-                />
-              </RadioGroup>
-            </Loading>
-          </Row>
-
-          <Row>
-            <Button
-              onClick={this.onClick}
-              disabled={this.state.submitting || this.state.error}
-              loading={this.state.submitting}
-              variant="contained"
-              color="primary"
-              fullWidth
-            >
-              {this.props.t("save")}
-            </Button>
-          </Row>
         </Form>
         {this.state.error && (
           <InfoBox>

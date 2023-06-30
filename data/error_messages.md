@@ -1,73 +1,73 @@
 ---
 path: "/error_messages"
-title: "Common error messages"
+title: "Veelvoorkomende foutmeldingen"
 hidden: false
 information_page: true
 sidebar_priority: 2000
 separator_after: "Programmeren 1"
 ---
 
-This page contains information about the most common error messages you may come across when completing the programming exercises on this course.
+Deze pagina bevat informatie over de meest voorkomende foutmeldingen die je kunt tegenkomen bij het maken van de programmeeroefeningen in deze cursus.
 
-### My printout looks identical to the example in the instructions, but my submission still fails
+### Mijn afdruk ziet er identiek uit als het voorbeeld in de instructies, maar mijn inzending faalt nog steeds
 
-Make sure your program doesn't print any extra whitespace, such as space characters. Notice that the default behaviour of the `print` function is to add a space between any strings separated with a comma.
+Zorg ervoor dat je programma geen extra spaties afdrukt, zoals spatie karakters. Merk op dat het standaardgedrag van de `print` functie is om een spatie toe te voegen tussen eventuele strings die met een komma zijn gescheiden.
 
 ```python
-    print("Hello","World!")    # This prints out: Hello World!
+    print("Hallo","Wereld!")    # Dit print uit: Hallo Wereld!
 ```
 
 ### SyntaxError: bad input on line [line number]
 
-This error message usually appears when there is a typo in your code which the Python interpreter finds hard to classify more specifically. For example, there may be a colon character missing from the end of an `if` statement, or a keyword, such as `while`, may have been misspelled. The only way to fix this problem is to inspect the line indicated in the error message.
+Deze foutmelding verschijnt meestal wanneer er een tikfout in je code zit die de Python-interpreter moeilijk specifieker kan classificeren. Bijvoorbeeld, er kan een dubbele punt karakter ontbreken aan het einde van een `if` statement, of een keyword, zoals `while`, kan verkeerd gespeld zijn. De enige manier om dit probleem op te lossen is door de regel aangegeven in de foutmelding te inspecteren.
 
 ```python
-    number1 = 1
-    number1 = 2
-    if number1 < number2    # ':' missing
-        print('number2 is greater')
+    getal1 = 1
+    getal2 = 2
+    if getal1 < getal2    # ':' ontbreekt
+        print('getal2 is groter')
 ```
 
-If the line indicated in the error message looks correct, the error may often be one line above or below the line indicated, so check around the issue, too.
+Als de regel aangegeven in de foutmelding correct lijkt, kan de fout vaak één regel boven of onder de aangegeven regel zijn, dus controleer ook rond het probleem.
 
-**NB: The programming exercises in the early parts of this course use a framework called Skulpt to run Python code in the browser.** Skulpt is quite limited compared to a regular Python interpreter, and thus the error messages printed out are often less informative. For example, the `bad input on line` error message may refer to many different programming errors, and it is difficult to find out the true cause of the error just based on this message.
+**NB: De programmeeroefeningen in de vroege delen van deze cursus gebruiken een framework genaamd Skulpt om Python-code in de browser uit te voeren.** Skulpt is vrij beperkt in vergelijking met een normale Python-interpreter, en daardoor zijn de foutmeldingen die worden afgedrukt vaak minder informatief. Bijvoorbeeld, de `slechte invoer op regel` foutmelding kan verwijzen naar veel verschillende programmeerfouten, en het is moeilijk om de ware oorzaak van de fout alleen op basis van deze boodschap te achterhalen.
 
 ### SyntaxError: unindent does not match any outer indentation level on line [line number]
 
-Your code is indented incorrectly at the line indicated in the error message. For example, all lines within an `if` block must be indented the same. To fix this error, indent all lines within a block of code with the exact same amount of whitespace.
-The following code would cause this error:
+Je code is op de aangegeven regel in de foutmelding onjuist ingesprongen. Bijvoorbeeld, alle regels binnen een `if` blok moeten op dezelfde manier ingesprongen zijn. Om deze fout te herstellen, moeten alle regels binnen een blok van de code met exact dezelfde hoeveelheid witruimte worden ingesprongen.
+De volgende code zou deze fout veroorzaken:
 
 ```python
     if True:
-        print('Indented correctly')
-       print('Indented incorrectly!')
+        print('Correct ingesprongen')
+       print('Onjuist ingesprongen!')
 ```
 
 ### NameError: name [variable name] is not defined on line [line number]
 
-You are trying to refer to a variable or object which does not exist at that specific point in your program. It may be that the variable has not yet been assigned a value, or there is a typo in the variable name. It may also be the case that you have defined a variable inside a function, and are trying to refer to that same variable outside the function.
+Je probeert te verwijzen naar een variabele of object dat op dat specifieke punt in je programma niet bestaat. Het kan zijn dat de variabele nog geen waarde heeft gekregen, of er zit een tikfout in de variabele naam. Het kan ook zijn dat je een variabele binnen een functie hebt gedefinieerd, en je probeert naar diezelfde variabele buiten de functie te verwijzen.
 
 ```python
-    person = input('Please type in your name: ')
-    input('Please type in your age: ')
+    persoon = input('Typ je naam in: ')
+    input('Typ je leeftijd in: ')
 
-    print("Hi", pearson)                # error: person was typed pearson
-    print("You are", age, "years old")  # error: the variable age has not been defined
+    print("Hi", pearson)                # fout: persoon werd pearson getypt
+    print("Je bent", leeftijd, "jaar oud")  # fout: de variabele leeftijd is niet gedefinieerd
 ```
 
 ### TypeError: unsupported operand type(s) for Add: 'int' and 'str' on line [line number]
 
-You may be trying to add an integer and a string together, without first converting the string into an integer value. Strings can be converted into integers with the `int()` function. A similar error message may appear if you try to perform other arithmetic operations, such as division or subtraction, on strings.
+Je probeert misschien een geheel getal en een string samen te voegen, zonder eerst de string om te zetten in een geheel getal. Strings kunnen worden omgezet in gehele getallen met de `int()` functie. Een soortgelijke foutmelding kan verschijnen als je probeert andere rekenkundige bewerkingen uit te voeren, zoals deling of aftrekking, op strings.
 
-It may also be the case that you are trying to create a new string by combining a string and an integer. You should first convert the integer into a string with the `str()` function.
+Het kan ook zijn dat je probeert een nieuwe string te maken door een string en een geheel getal te combineren. Je moet eerst het geheel getal omzetten in een string met de `str()` functie.
 
 ```python
-    my_age = input("Please type in your age: ")
-    my_name = input("Please type in your name: ")
+    mijn_leeftijd = input("Typ je leeftijd in: ")
+    mijn_naam = input("Typ je naam in: ")
 
-    print(my_age//2)   # error: the variable my_age has not been converted into an integer
+    print(mijn_leeftijd//2)   # fout: de variabele mijn_leeftijd is niet omgezet naar een integer
 ```
 
 ### TypeError: cannot concatenate 'str' and 'int' objects on line [line number]
 
-See above.
+Zie hierboven.

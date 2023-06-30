@@ -47,9 +47,7 @@ class MissingInfo extends React.Component {
 
     let userInfo = await getCachedUserDetails()
     const research = userInfo?.extra_fields?.research
-    if (research === undefined) {
-      navigate("/missing-info")
-    }
+
   }
 
   render() {
@@ -63,17 +61,8 @@ class MissingInfo extends React.Component {
     return (
       <Layout>
         <Container>
-          <Helmet title="Profiili" />
-          <h1>Profiili</h1>
-
-          <p>
-            Täällä voit muokata mooc.fi -tilisi asetuksia tämän kurssin osalta.
-            Katso myös profiilisi mooc.fi:n Test My Code -palvelussa:{" "}
-            <a href="https://tmc.mooc.fi" rel="noopener noreferrer">
-              https://tmc.mooc.fi
-            </a>
-            .
-          </p>
+          <Helmet title="Profiel" />
+          <h1>Profiel</h1>
           <CourseOptionsEditor onComplete={this.onStepComplete} />
         </Container>
         <Snackbar

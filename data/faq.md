@@ -3,6 +3,7 @@ path: "/faq"
 title: "Frequently asked questions"
 hidden: true
 information_page: true
+hide_in_sidebar: true
 sidebar_priority: 3000
 ---
 

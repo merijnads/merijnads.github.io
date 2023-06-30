@@ -45,7 +45,7 @@ class LoginControls extends React.Component {
   render() {
     return this.context.loggedIn ? (
       <Fragment>
-        <Button to="/profile">
+        <Button to="">
           <StyledIcon icon={profileIcon} />
           {this.state.name}
         </Button>

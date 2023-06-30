@@ -107,25 +107,9 @@ const Footer = ({ t }) => {
       <FooterContent>
         <StyledCard>
           <StyledCardContent>
-            <GithubContainer>
-              <a
-                href={CourseSettings.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <StyledIcon icon={faGithub} size="3x" title={t("footer-src")} />
-                <div>{t("footer-src")}</div>
-              </a>
-            </GithubContainer>
-            <ButtonContainer>
-              <Button to="/report-issue">{t("footer-report-issue")}</Button>
-              {filePath && (
-                <Button to={`/edit-page?path=${filePath}`}>
-                  {t("footer-edit-page")}
-                </Button>
-              )}
-            </ButtonContainer>
-            <ContentContainer>
+                <ContentContainer>
+                <p>Deze cursus is vertaald en aangepast voor de opleiding Applied Data Science & Artificial Intelligence, Hogeschool Rotterdam.</p>
+
               {t("makers")}{" "}
               <a
                 href="https://www.helsinki.fi/en/researchgroups/data-driven-education"
@@ -137,35 +121,9 @@ const Footer = ({ t }) => {
               .
             </ContentContainer>
 
-            <ContentContainer>
-              <Link to="/credits">{t("credits")}</Link>.
-            </ContentContainer>
-            <SocialContainer>
-              <a
-                href="https://twitter.com/moocfi"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={t("twitter-aria")}
-              >
-                <StyledIcon icon={faTwitter} size="3x" />
-              </a>
-              <a
-                href="https://www.facebook.com/Moocfi"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={t("facebook-aria")}
-              >
-                <StyledIcon icon={faFacebook} size="3x" />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCkHoQ5p9skFdyjrV3_tnUrA"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={t("facebook-aria")}
-              >
-                <StyledIcon icon={faYoutube} size="3x" />
-              </a>
-            </SocialContainer>
+          Het cursusmateriaal heeft een Creative Commons BY-NC-SA 4.0-licentie.
+
+
             <BrandsContainer>
               <a
                 href="https://helsinki.fi"
