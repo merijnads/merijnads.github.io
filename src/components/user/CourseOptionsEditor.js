@@ -340,9 +340,6 @@ class CourseOptionsEditor extends React.Component {
               )}
             </div>
           </Loading>
-
-
-
         </Form>
         {this.state.error && (
           <InfoBox>

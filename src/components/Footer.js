@@ -107,9 +107,11 @@ const Footer = ({ t }) => {
       <FooterContent>
         <StyledCard>
           <StyledCardContent>
-                <ContentContainer>
-                <p>Deze cursus is vertaald en aangepast voor de opleiding Applied Data Science & Artificial Intelligence, Hogeschool Rotterdam.</p>
-
+            <ContentContainer>
+              <p>
+                Deze cursus is vertaald en aangepast voor de opleiding Applied
+                Data Science & Artificial Intelligence, Hogeschool Rotterdam.
+              </p>
               {t("makers")}{" "}
               <a
                 href="https://www.helsinki.fi/en/researchgroups/data-driven-education"
@@ -120,10 +122,8 @@ const Footer = ({ t }) => {
               </a>
               .
             </ContentContainer>
-
-          Het cursusmateriaal heeft een Creative Commons BY-NC-SA 4.0-licentie.
-
-
+            Het cursusmateriaal heeft een Creative Commons BY-NC-SA
+            4.0-licentie.
             <BrandsContainer>
               <a
                 href="https://helsinki.fi"
