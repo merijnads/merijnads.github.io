@@ -1,5 +1,5 @@
 ---
-path: '/part-3/2-working-with-strings'
+path: '/part-3/3-working-with-strings'
 title: 'Working with strings'
 hidden: false
 ---
@@ -147,7 +147,7 @@ The strings are equally long
 
 </in-browser-programming-exercise>
 
-As strings are essentially sequences of characters, any single character in a string can also be retrieved. The operator `[]` finds the character with the _index_ specified within the brackets. 
+As strings are essentially sequences of characters, any single character in a string can also be retrieved. The operator `[]` finds the character with the _index_ specified within the brackets.
 
 The index refers to a position in the string, counting up from zero. The first character in the string has index 0, the second character has index 1, and so forth.
 
@@ -602,7 +602,7 @@ o not found
 
 </in-browser-programming-exercise>
 
-The operator `in` returns a Boolean value, so it will only tell us _if_ a substring exists in a string, but it will not be useful in finding out _where_ exactly it is. Instead, the Python string method `find` can be used for this purpose. It takes the substring searched for as an argument, and returns either the first index where it is found, or `-1` if the substring is not found within the string. 
+The operator `in` returns a Boolean value, so it will only tell us _if_ a substring exists in a string, but it will not be useful in finding out _where_ exactly it is. Instead, the Python string method `find` can be used for this purpose. It takes the substring searched for as an argument, and returns either the first index where it is found, or `-1` if the substring is not found within the string.
 
 The image below illustrates how it is used:
 
@@ -662,7 +662,7 @@ Above we used the string _method_ `find`. Methods work quite similarly to the _f
 
 <in-browser-programming-exercise name="Find the first substring" tmcname="part03-20_find_first_substring">
 
-Please write a program which asks the user to type in a string and a single character. The program then prints the first three character slice which begins with the character specified by the user. You may assume the input string is at least three characters long. The program must print out three characters, or else nothing. 
+Please write a program which asks the user to type in a string and a single character. The program then prints the first three character slice which begins with the character specified by the user. You may assume the input string is at least three characters long. The program must print out three characters, or else nothing.
 
 Pay special attention to when there are less than two characters left in the string after the first occurrence of the character looked for. In that case nothing should be printed out, and there should not be any indexing errors when executing the program.
 

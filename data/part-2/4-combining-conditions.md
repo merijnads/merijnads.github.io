@@ -1,5 +1,5 @@
 ---
-path: '/part-2/3-combining-conditions'
+path: '/part-2/4-combining-conditions'
 title: 'Combining conditions'
 hidden: false
 ---
@@ -346,7 +346,7 @@ The letter in the middle is B
 
 <in-browser-programming-exercise name="Gift tax calculator" tmcname="part02-14_gift_tax_calculator"  height="500px">
 
-Some say paying taxes makes Finns happy, so let's see if the secret of happiness lies in one of the taxes set out in Finnish tax code. 
+Some say paying taxes makes Finns happy, so let's see if the secret of happiness lies in one of the taxes set out in Finnish tax code.
 
 [According to the Finnish Tax Administration](https://www.vero.fi/en/individuals/property/gifts/), a gift is a transfer of property to another person against no compensation or payment. If the total value of the gifts you receive from the same donor in the course of 3 years is €5,000 or more, you must pay gift tax.
 

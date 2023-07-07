@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://brightspace.hr.nl/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet"
+        href="https://brightspace.hr.nl/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet"
+        href="https://brightspace.hr.nl/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/css/custom.css">
+    <style>
+        .banner-img img {
+            width: 100%
+        }
+
+        .card-header h2,
+        .card-header h3,
+        .card-header h4,
+        .card-header h5,
+        .card-header h6 {
+            margin-top: .75rem
+        }
+
+        .card-standard {
+            border: 3px solid #017d79;
+            margin: 1.875rem 0
+        }
+
+        .card-standard .card-body {
+            padding: 1.875rem
+        }
+
+        .card-standard .card-body .callout-header,
+        .card-standard .card-body h2,
+        .card-standard .card-body h3,
+        .card-standard .card-body h4,
+        .card-standard .card-body h5,
+        .card-standard .card-body h6 {
+            color: #1e2d34;
+            margin-bottom: .75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: left
+        }
+
+        .card-standard .card-body p {
+            color: #212529;
+            font-size: 1.1875rem
+        }
+
+        .card-graphic {
+            border: 3px solid #017d79;
+            margin: 1.875rem 0
+        }
+
+        .card-graphic,
+        .card-graphic .card-body {
+            display: -ms-flexbox;
+            display: -webkit-box;
+            -ms-flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -ms-flex-pack: start;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -ms-flex-align: stretch;
+            -webkit-box-align: stretch;
+            align-items: stretch;
+            display: flex
+        }
+
+        .card-graphic .card-body {
+            padding: 1.875rem
+        }
+
+        .card-graphic .card-body .card-header,
+        .card-graphic .card-body h2,
+        .card-graphic .card-body h3,
+        .card-graphic .card-body h4,
+        .card-graphic .card-body h5,
+        .card-graphic .card-body h6 {
+            color: #1e2d34;
+            margin-bottom: .75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: left
+        }
+
+        .card-graphic .card-body p {
+            color: #1e2d34;
+            font-size: 1.1875rem
+        }
+
+        .card-graphic .card-body .card-icon {
+            margin-right: 1.25rem;
+            -ms-flex-order: 0;
+            -webkit-box-ordinal-group: 1;
+            order: 0;
+            -ms-flex: 0 1 auto;
+            -webkit-box-flex: 0;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            -ms-grid-row-align: auto;
+            align-self: auto;
+            padding: .625rem;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .card-graphic .card-body .card-icon img {
+            margin-right: .625rem;
+            width: 5.313rem;
+            height: 5.313rem;
+            min-width: 5.313rem
+        }
+
+        .card-graphic .card-body .card-icon .fa,
+        .card-graphic .card-body .card-icon .fas {
+            font-size: 3.125rem;
+            min-width: 5.313rem;
+            text-align: center;
+            color: #017d79
+        }
+
+        .card-graphic .card-body .card-text p {
+            overflow-wrap: break-word;
+            word-wrap: break-word
+        }
+
+        @media screen and (max-width:768px) {
+            .card-graphic .card-body .card-icon {
+                display: none
+            }
+        }
+
+
+
+        .tabs-horizontal {
+            border: 1px solid #cdd5dc;
+            border-radius: 5px
+        }
+
+        .tabs-horizontal .list-group-item {
+            border-top: none
+        }
+
+        .tabs-horizontal .tab-pane {
+            padding: 30px 30px 60px
+        }
+
+        @media screen and (min-width:768px) {
+            .list-group.flex-md-row .list-group-item:first-child {
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 0
+            }
+
+            .list-group.flex-md-row .list-group-item:last-child {
+                border-top-right-radius: .25rem;
+                border-right: none;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                margin-bottom: -1px
+            }
+        }
+
+        .graphic-tabs {
+            padding: 20px;
+            border: 2px solid #b3b2b3;
+            border-right: 1px solid #e0e0e0
+        }
+
+        .graphic-tabs h3,
+        .graphic-tabs h4 {
+            margin: 15px 0
+        }
+
+        .graphic-tabs .graphic-tab.list-group-item {
+            border: none !important
+        }
+
+        .graphic-tabs .graphic-tab.active {
+            background-color: #f2f4f6;
+            border-color: #b3b2b3;
+            color: #006fbf;
+            text-decoration: underline;
+            text-align: center
+        }
+
+        .graphic-tabs .graphic-tab.active h3,
+        .graphic-tabs .graphic-tab.active h4 {
+            color: #006fbf;
+            text-decoration: underline;
+            margin: 15px 0;
+            text-align: center
+        }
+
+        .graphic-tabs .content-graphic-tabs {
+            background-color: #f2f4f6;
+            padding: 20px 30px
+        }
+
+        .graphic-tabs .content-graphic-tabs hr {
+            margin: 0
+        }
+
+        @media (max-width:768px) {
+            .hidden-sm {
+                display: none !important
+            }
+        }
+
+        [contenteditable=true] .bg-img-wrapper img:first-child {
+            display: block;
+            max-width: 100%
+        }
+
+        [contenteditable=true] .bg-img-wrapper {
+            background-size: cover
+        }
+
+        [contenteditable=true] .accordion .collapse:not(.show) {
+            display: block
+        }
+
+        [contenteditable=true] .accordion .h1,
+        [contenteditable=true] .accordion .h2,
+        [contenteditable=true] .accordion .h3,
+        [contenteditable=true] .accordion .h4,
+        [contenteditable=true] .accordion .h5,
+        [contenteditable=true] .accordion .h6,
+        [contenteditable=true] .accordion h1,
+        [contenteditable=true] .accordion h2,
+        [contenteditable=true] .accordion h3,
+        [contenteditable=true] .accordion h4,
+        [contenteditable=true] .accordion h5,
+        [contenteditable=true] .accordion h6 {
+            text-align: left;
+            color: #494c4e;
+            font-weight: 700;
+            font-size: 1.25rem;
+            padding: 1.25rem;
+            border: 1px solid #cdd5dc;
+            border-radius: 0;
+            background-color: #fff
+        }
+
+        [contenteditable=true] .tab-content>.tab-pane {
+            opacity: 1;
+            display: block;
+            border: 2px solid #cdd5dc;
+            padding: 15px
+        }
+
+        [contenteditable=true] .fade:not(.show) {
+            opacity: 1
+        }
+
+        @media print {
+            .accordion .collapse:not(.show) {
+                display: block
+            }
+
+            .tab-content>.tab-pane {
+                opacity: 1;
+                display: block;
+                border: 2px solid #cdd5dc;
+                padding: 15px
+            }
+
+            .fade:not(.show) {
+                opacity: 1
+            }
+        }
+    </style>
+    <style>
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: inherit;
+            font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        p {
+            color: #333;
+            font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        }
+
+        .fUQDVE {
+            height: 220px;
+            max-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            -moz-box-pack: center;
+            justify-content: center;
+            -moz-box-align: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            background-color: rgb(192, 57, 43);
+            background-image: url("/static/banner-84ef18e01729a6202c2c9b3c8ef46a38.svg");
+            text-align: center;
+        }
+
+        .iyAsxE {
+            font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 500;
+            font-size: 2rem;
+            color: rgb(192, 57, 43);
+            background: white;
+            padding: 0.5rem;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        .gPRrpG {
+            font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 500;
+            color: rgb(192, 57, 43);
+            background: white;
+            padding: 0.5rem;
+            font-size: 1.4rem;
+            margin: 0px 1rem;
+        }
+
+        .card-graphic {
+            border: 3px solid rgb(192, 57, 43);
+            margin: 1.875rem 0;
+        }
+
+        ol li,
+        ul li {
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+
+        .card-graphic .card-body .card-icon .fa,
+        .card-graphic .card-body .card-icon .fas {
+
+            color: rgb(192, 57, 43);
+        }
+        footer p img {
+            float:right;
+            width:200px;
+        }
+    </style>
+    <title>Basic Page</title>
+</head>
+
+<body>
+    <header class="Banner__BannerWrapper-sc-1ndnsed-0 fUQDVE">
+        <div class="iyAsxE">Programmeren 1</div>
+        <div class="gPRrpG">2023/2024</div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Cursuswijzer</h1>
+                <p>In de wereld van Data Science is programmeren een van de meest voorkomende activiteiten. Veel
+                    zakelijke behoeften zijn gericht op het verzamelen, verwerken en simuleren van data met behulp van
+                    programma's. In deze cursus leer je programmeren in de programmeertaal Python.</p>
+                <p>De kennis en vaardigheden die je opdoet in de cursus Programmeren 1 vormen de basis voor alle
+                    daaropvolgende programmeercursussen. Deze vaardigheden heb je nodig in de studio vanaf periode 3.
+                </p>
+                <p>Programmeren 1 is verdeeld over zes weken. Elke week zul je nieuwe programmeervaardigheden leren, die
+                    je vervolgens direct zult toepassen in een wekelijkse huiswerkopdracht.</p>
+                <p>In de zes weken ga je op de volgende manieren aan de slag om de leerdoelen te behalen:</p>
+                <ul>
+                    <li>Voorafgaand aan het college lees je de online reader van die specifieke week;</li>
+                    <li>Elke week is er een college, hier wordt de theorie uitgelegd en werken we samen aan de
+                        huiswerkopdracht;</li>
+                    <li>Elke week maak je een huiswerkopdracht die je uiterlijk voor het volgende college moet
+                        inleveren.</li>
+                </ul>
+                <br>
+                <h2>De leerdoelen van programmeren 1 zijn:</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Je kunt variabelen en primaire datatypes herkennen en gebruiken;</li>
+                    <li class="list-group-item">Je kunt standaard functies herkennen en gebruiken, zoals 'print' en
+                        'sum';</li>
+                    <li class="list-group-item">Je kunt eenvoudige berekeningen uitvoeren;</li>
+                    <li class="list-group-item">Je kunt booleaanse expressies gebruiken;</li>
+                    <li class="list-group-item">Je kunt keuzestructuren (if-elif-else) gebruiken;</li>
+                    <li class="list-group-item">Je kunt lussen (for, while) gebruiken;</li>
+                    <li class="list-group-item">Je kunt eenvoudige lijsten definiëren, bewerken en itereren;</li>
+                    <li class="list-group-item">Je kunt eenvoudige functies definiëren en gebruiken.</li>
+                    <li class="list-group-item">Je begrijpt wanneer je functies het beste in kan zetten en wat hier de
+                        meerwaarde van is.</li>
+                </ul>
+                <br>
+                <h2>Toetsing</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Schriftelijk examen met een minimumscore van 5.5;</li>
+                    <li class="list-group-item">Programmeeropdrachten moeten voldoende worden beoordeeld.</li>
+                </ul>
+                <div class="card card-graphic">
+                    <div class="card-body">
+                        <div class="card-icon"><span class="fas fa-exclamation"></span></div>
+                        <div class="card-text">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <p>For basic editing, please check Brightspace Help: <a
+                        href="https://documentation.brightspace.com/EN/le/html_editor/instructor/html_editor_intro.htm?tocpath=Instructors%7CSet%20up%20and%20deliver%20a%20course%7CCreate%20course%20content%7CFormat%20HTML%20course%20content%7C_____0"
+                        target="_blank" rel="noopener">Format HTML course content.<span class="sr-only">(this link opens
+                            in a new window/tab)</span></a></p>
+            </div>
+            <div class="col-12">
+                <footer>
+                    <p><img src="https://brightspace.hr.nl/content/enforced/32862-ADSPRO01-1-2023-VT-OP1/ADSenAI%20logo.jpg"
+                            alt="" title=""></p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <p>
+        <script
+            src="https://brightspace.hr.nl/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/jquery/jquery-3.3.1.slim.min.js"></script>
+        <script
+            src="https://brightspace.hr.nl/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/popper-js/popper.min.js"></script>
+        <script
+            src="https://brightspace.hr.nl/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    </p>
+    <!-- Template JavaScript -->
+    <p>
+        <script
+            src="https://brightspace.hr.nl/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/js/scripts.min.js"></script>
+    </p>
+</body>
+
+</html>

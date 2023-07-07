@@ -1,5 +1,5 @@
 ---
-path: '/part-3/3-more-loops'
+path: '/part-3/4-more-loops'
 title: 'More loops'
 hidden: false
 ---
@@ -200,7 +200,7 @@ while True:
         number -= 1
 ```
 
-Here the latter `break` command only stops the innermost loop, which is used to print the numbers. 
+Here the latter `break` command only stops the innermost loop, which is used to print the numbers.
 
 ## More helper variables with loops
 

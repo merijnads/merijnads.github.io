@@ -1,56 +1,49 @@
 ---
 path: "/part-1/3-more-about-variables"
-title: "More about variables"
+title: "Meer over variabelen"
 hidden: false
 ---
+<text-box variant='learningObjectives' name='Leerdoelen'>
 
-<text-box variant='learningObjectives' name='Learning objectives'>
+Na deze sectie:
 
-After this section
-
-- You will be able to use variables in different contexts
-- You will know what kind of data can be stored in variables
-- You will understand the difference between strings, integers and floating point numbers
+- Kun je variabelen gebruiken in verschillende contexten.
+- Weet je welk soort gegevens in variabelen kunnen worden opgeslagen.
+- Begrijp je het verschil tussen strings, integers en floating-point getallen.
 
 </text-box>
 
-Please fill in this questionnaire before getting started with this section. You will get one exercise point for answering.
+Variabelen zijn nodig voor verschillende doeleinden in programmeren. Je kunt variabelen gebruiken om informatie op te slaan die later in het programma nodig zal zijn.
 
-<quiz id="1d1c07e8-4832-58f2-b8ac-357ed2d130c8"></quiz>
+In Python worden variabelen als volgt gemaakt:
 
+`variabele_naam = ...`
 
+Hier staat `...` voor de waarde die wordt opgeslagen in de variabele.
 
-Variables are needed for various purposes in programming. You can use variables to store any information that will be needed later in the program's execution.
-
-In Python programming variables are created like so:
-
-`variable_name = ...`
-
-Here `...` means the value stored in the variable.
-
-For example, when you used the `input` command to read a string from the user, you stored the string in a variable and then used the variable later in your program:
+Bijvoorbeeld, toen je het `input`-commando gebruikte om een string van de gebruiker te lezen, heb je de string opgeslagen in een variabele en later in je programma gebruikt:
 
 ```python
-name = input("What is your name? ")
-print("Hi, " + name)
+naam = input("Wat is je naam? ")
+print("Hallo, " + naam)
 ```
 
 <sample-output>
 
-What is your name? **Ghosty**
-Hi, Ghosty
+Wat is je naam? **Ghosty**
+Hallo, Ghosty
 
 </sample-output>
 
-The value stored in a variable can also be defined using other variables:
+De waarde die in een variabele is opgeslagen, kan ook worden gedefinieerd met behulp van andere variabelen:
 
 ```python
-given_name = "Paul"
-family_name = "Python"
+voornaam = "Paul"
+achternaam = "Python"
 
-name = given_name + " " + family_name
+naam = voornaam + " " + achternaam
 
-print(name)
+print(naam)
 ```
 
 <sample-output>
@@ -59,79 +52,79 @@ Paul Python
 
 </sample-output>
 
-Here the values stored in the three variables are not obtained from user input. They remain the same every time the program is executed. This is called _hard-coding_ data into the program.
+Hier worden de waarden in de drie variabelen niet verkregen uit invoer van de gebruiker. Ze blijven hetzelfde elke keer dat het programma wordt uitgevoerd. Dit wordt _hard-coding_ van gegevens in het programma genoemd.
 
-## Changing the value of a variable
+## Het veranderen van de waarde van een variabele
 
-As implied by the name _variable_, the value stored in a variable can change. In the previous section we noticed that the new value replaces the old one.
+Zoals de naam _variabele_ al impliceert, kan de waarde die in een variabele is opgeslagen veranderen. In de vorige sectie hebben we gemerkt dat de nieuwe waarde de oude vervangt.
 
-During the execution of the following program, the variable `word` will have three different values:
+Tijdens de uitvoering van het volgende programma zal de variabele `woord` drie verschillende waarden hebben:
 
 ```python
-word = input("Please type in a word: ")
-print(word)
+woord = input("Typ alsjeblieft een woord: ")
+print(woord)
 
-word = input("And another word: ")
-print(word)
+woord = input("En nog een woord: ")
+print(woord)
 
-word = "third"
-print(word)
+woord = "derde"
+print(woord)
 ```
 
 <sample-output>
 
-Please type in a word: **first**
-first
-And another word: **second**
-second
-third
+Typ alsjeblieft een woord: **eerste**
+eerste
+En nog een woord: **tweede**
+tweede
+derde
 
 </sample-output>
 
-The value stored in the variable changes each time the variable is assigned a new value.
+De waarde die in de variabele is opgeslagen, verandert telkens wanneer de variabele een nieuwe waarde krijgt toegewezen.
 
-The new value of a variable can be derived from its old value. In the following example the variable `word` is first assigned a value based on user input. Then it is assigned a new value, which is the old value with three exclamation marks added to the end.
+De nieuwe waarde van een variabele kan worden afgeleid uit de oude waarde. In het volgende voorbeeld wordt de variabele `woord` eerst een waarde toegewezen op basis van gebruikersinvoer. Vervolgens wordt het een nieuwe waarde toegewezen, die de oude waarde is met drie uitroeptekens toegevoegd aan het einde.
 
 ```python
-word = input("Please type in a word: ")
-print(word)
+woord = input("Typ alsjeblieft een woord: ")
+print(woord)
 
-word = word + "!!!"
-print(word)
+woord = woord + "!!!"
+print(woord)
 ```
 
 <sample-output>
 
-Please type in a word: **test**
+Typ alsjeblieft een woord: **test**
 test
 test!!!
 
 </sample-output>
 
-<text-box variant="hint" name="Choosing a good name for a variable">
+<text-box variant="hint" name="Een goede naam kiezen voor een variabele">
 
-* It is often useful to name variables according to what they are used for. For example, if the variable contains a word, the name `word` is a better choice than, say, `a`.
+* Het is vaak nuttig om variabelen een naam te geven op basis van waar ze voor worden gebruikt. Bijvoorbeeld, als de variabele een woord bevat, is de naam `woord` een betere keuze dan bijvoorbeeld `a`.
 
-* There is no set limit to the length of a variable name in Python, but there are some other limitations. A variable name should begin with a letter, and it can only contain letters, numbers and underscores &#95;.
+* Er is geen vaste limiet voor de lengte van een variabelenaam in Python, maar er zijn enkele andere beperkingen. Een variabelenaam moet beginnen met een letter en kan alleen letters, cijfers en underscores &#95; bevatten.
 
-* Lowercase and uppercase letters are different characters. The variables `name`, `Name` and `NAME` are all different variables. While this rule has a few exceptions, we will ignore those for now.
+* Hoofdletters en kleine letters worden als verschillende tekens beschouwd. De variabelen `naam`, `Naam` en `NAAM` zijn allemaal verschillende variabelen. Hoewel deze regel enkele uitzonderingen heeft, zullen we die voor nu negeren.
 
-* It is a common programming practice in Python to use only lowercase characters in variable names. If the variable name consists of multiple words, use an underscore between the words. While this rule also has a few exceptions, we will ignore those for now.
+* Het is een gebruikelijk in Python om alleen kleine letters te gebruiken in variabelenamen. Als de variabelenaam uit meerdere woorden bestaat, gebruik dan een underscore tussen de woorden. Dit noemen we `snake_case`.
 
 </text-box>
 
 ## Integers
 
-Thus far, we have only stored strings in variables, but there are also many other types of information we will want to store and access later. Let's have a look at integers first. Integers are numbers that do not have a decimal or fractional part, such as `-15`, `0` and `1`.
+Tot nu toe hebben we alleen strings (tekst) opgeslagen in variabelen, maar er zijn ook veel andere soorten informatie die we willen opslaan en later willen gebruiken. Laten we eerst kijken naar integers. Integers zijn hele getallen, dus zonder decimale of fractionele delen. Voorbeelden van integers zijn `-15`, `0` en `1`.
 
-The following program creates the variable `age`, which contains an integer value.
+Het volgende programma maakt de variabele `leeftijd` aan, die een integer-waarde bevat.
 
 ```python
-age = 24
-print(age)
+leeftijd = 24
+print(leeftijd)
 ```
 
-The program prints out just this:
+Het programma drukt alleen dit af:
 
 <sample-output>
 
@@ -139,16 +132,16 @@ The program prints out just this:
 
 </sample-output>
 
-Notice the lack of quotation marks here. In fact, if we were to add quotation marks around the number, this would mean our variable would no longer be an integer, but a string instead. A string can contain numbers, but it is processed differently.
+Let op het ontbreken van aanhalingstekens hier. Sterker nog, als we aanhalingstekens rond het getal zouden zetten, zou onze variabele niet langer een integer zijn, maar in plaats daarvan een string. Een string kan getallen bevatten, maar ze worden anders verwerkt.
 
-So, why does it matter that variables have a type, when the following program still prints out the same thing twice?
+Dus waarom is het belangrijk dat variabelen een type hebben, terwijl het volgende programma toch twee keer hetzelfde afdrukt?
 
 ```python
-number1 = 100
-number2 = "100"
+getal1 = 100
+getal2 = "100"
 
-print(number1)
-print(number2)
+print(getal1)
+print(getal2)
 ```
 
 <sample-output>
@@ -158,152 +151,186 @@ print(number2)
 
 </sample-output>
 
-Variable types matter because different operations affect different types of variables in different ways. Let's have a look at an example:
+Variabeletypes zijn belangrijk omdat verschillende bewerkingen verschillende typen variabelen op verschillende manieren beïnvloeden. Laten we eens kijken naar een paar voorbeelden:
+
+**Twee integers**
 
 ```python
-number1 = 100
-number2 = "100"
+getal1 = 100
+getal2 = 100
 
-print(number1 + number1)
-print(number2 + number2)
+print(getal1 + getal1)
 ```
-
-This prints out the following:
 
 <sample-output>
 
 200
+
+</sample-output>
+
+**Integer plus string**
+
+```python
+getal1 = 100
+getal2 = "100"
+
+print(getal1 + getal1)
+```
+
+<sample-output>
+
+200
+
+</sample-output>
+
+**String plus string**
+```python
+getal1 = "100"
+getal2 = "100"
+
+print(getal1 + getal1)
+```
+
+<sample-output>
+
 100100
 
 </sample-output>
 
-For integer values the `+` operator means addition, but for string values it means concatenation, or "stringing together".
+Voor integerwaarden betekent de `+`-operator optelling, maar voor stringwaarden betekent deze concatenatie, ofwel "samenvoegen".
 
-Not all operators are available for all types of variables. While numbers can be divided using the division operator `/`, attempting to divide a string by a number causes an error:
+Niet alle operatoren zijn beschikbaar voor alle soorten variabelen. Terwijl getallen kunnen worden gedeeld met behulp van de delingsoperator `/`, veroorzaakt een poging om een string door een getal te delen een fout:
 
 ```python
-number = "100"
-print(number / 2)
+getal = "100"
+print(getal / 2)
 ```
 
 <sample-output>
 TypeError: unsupported operand type(s) for /: 'str' and 'int'
 </sample-output>
 
-## Combining values when printing
 
-Similarly, the following program will not work, because `"The result is "` and `result` are of two different types:
+Begrijp jij wat deze foutmelding betekent?
+
+
+## Waarden combineren bij het afdrukken
+
+Op dezelfde manier werkt het volgende programma niet, omdat `"De uitkomst is "` en `resultaat` twee verschillende typen hebben:
 
 ```python
-result = 10 * 25
-# the following line produces an error
-print("The result is " + result)
+resultaat = 10 * 25
+# de volgende regel veroorzaakt een fout
+print("De uitkomst is " + resultaat)
 ```
 
-The program does not print out anything, but instead throws an error:
+Het programma drukt niets af, maar veroorzaakt in plaats daarvan een fout:
 
 <sample-output>
 
 TypeError: unsupported operand type(s) for +: 'str' and 'int'
 
+
+
 </sample-output>
 
-Here, Python tells us that combining two different types of values will not work just like that. In this case, `"The result is "` is of type string, while the value stored in `result` is of type integer.
 
-If we do want to print out a string and an integer in a single command, the integer can be cast as a string with the `str` function, and the two strings can then be combined normally. For example, this would work:
+
+Hier vertelt Python ons dat het combineren van twee verschillende typen waarden niet zomaar werkt. In dit geval is `"De uitkomst is "` van het type string, terwijl de waarde opgeslagen in `resultaat` van het type integer is.
+
+Als we inderdaad een string en een integer in één opdracht willen afdrukken, kan de integer worden omgezet in een string met behulp van de `str`-functie, en kunnen de twee strings vervolgens normaal worden gecombineerd. Bijvoorbeeld, dit zou werken:
 
 ```python
-result = 10 * 25
-print("The result is " + str(result))
+resultaat = 10 * 25
+print("De uitkomst is " + str(resultaat))
 ```
 
 <sample-output>
 
-The result is 250
+De uitkomst is 250
 
 </sample-output>
 
-The `print` command also has built-in functionalities that support combining different types of values. The simplest way is to add a comma between the values. All the values will be printed out regardless of their type:
+Het `print`-commando heeft ook ingebouwde functionaliteiten die het combineren van verschillende soorten waarden ondersteunen. De eenvoudigste manier is om een komma tussen de waarden te plaatsen. Alle waarden worden afgedrukt, ongeacht hun type:
 
 ```python
-result = 10 * 25
-print("The result is", result)
+resultaat = 10 * 25
+print("De uitkomst is", resultaat)
 ```
 
 <sample-output>
 
-The result is 250
+De uitkomst is 250
 
 </sample-output>
 
-Notice that there is an automatically added whitespace character between the values separated by a comma here.
+Let op dat er automatisch een spatiekarakter wordt toegevoegd tussen de waarden die door een komma worden gescheiden.
 
-## Printing with f-strings
+## Afdrukken met f-strings
 
-What if we want to have more flexibility and control over what we print out? So called _f-strings_ are another way of formatting printouts in Python. The syntax can initially look a bit confusing, but in the end f-strings are often the simplest way of formatting text.
+Wat als we meer flexibiliteit en controle willen over wat we afdrukken? Zogenaamde _f-strings_ zijn een andere manier om tekst op te maken in Python. De syntax kan in het begin wat verwarrend lijken, maar uiteindelijk zijn f-strings vaak de eenvoudigste manier om tekst op te maken.
 
-With f-strings the previous example would look like this:
+Met f-strings zou het vorige voorbeeld er als volgt uitzien:
 
 ```python
-result = 10 * 25
-print(f"The result is {result}")
+resultaat = 10 * 25
+print(f"De uitkomst is {resultaat}")
 ```
 
-Let's break this apart. In the very beginning of the string we are printing out there is the character _f_. This tells Python that what follows is an f-string. Within the string, enclosed in curly brackets, is the variable name `result`. The value it contains becomes a part of the printed string. The printout is exactly the same as in the previous examples:
+Laten we dit uit elkaar halen. Aan het begin van de string die we willen afdrukken staat het karakter _f_. Dit vertelt Python dat wat volgt een f-string is. Binnen de string, omringd door accolades, staat de variabelenaam `resultaat`. De waarde die het bevat, wordt een deel van de afgedrukte string. De uitvoer is precies hetzelfde als in de vorige voorbeelden:
 
 <sample-output>
 
-The result is 250
+De uitkomst is 250
 
 </sample-output>
 
-A single f-string can contain multiple variables. For example this code
+Eén enkele f-string kan meerdere variabelen bevatten. Bijvoorbeeld, deze code
 
 ```python
-name = "Mark"
-age = 37
-city = "Palo Alto"
-print(f"Hi {name}, you are {age} years old. You live in {city}.")
+naam = "Mark"
+leeftijd = 37
+woonplaats = "Palo Alto"
+print(f"Hallo {naam}, je bent {leeftijd} jaar oud. Je woont in {woonplaats}.")
 ```
 
-prints out this:
+drukt het volgende af:
 
 <sample-output>
 
-Hi Mark, you are 37 years old. You live in Palo Alto.
+Hallo Mark, je bent 37 jaar oud. Je woont in Palo Alto.
 
 </sample-output>
 
-It is difficult to create a printout exactly like this using the comma notation in the `print` command. For example, this program
+Het is moeilijk om een afdruk precies zoals deze te maken met de komma-notatie in het `print`-commando. Bijvoorbeeld, dit programma
 
 ```python
-name = "Mark"
-age = 37
-city = "Palo Alto"
-print("Hi", name, ", you are", age, "years old. You live in", city, ".")
+naam = "Mark"
+leeftijd = 37
+woonplaats = "Palo Alto"
+print("Hallo", naam, ", je bent", leeftijd, "jaar oud. Je woont in", woonplaats, ".")
 ```
 
-prints out the following:
+drukt het volgende af:
 
 <sample-output>
 
-Hi Mark , you are 37 years old. You live in Palo Alto .
+Hallo Mark , je bent 37 jaar oud. Je woont in Palo Alto .
 
 </sample-output>
 
-Notice the automatically inserted whitespace between each comma-separated part of the printout. Preventing `print` from adding the extra spaces is technically possible, but not worth the trouble given that we can instead use f-strings.
+In zijn eenvoud kan de komma-notatie van het `print`-commando vaak handig zijn, maar het kan soms meer problemen veroorzaken dan het waard is. F-strings zijn meestal een betrouwbaardere optie. In deel 4 leer je meer over de handige functies van f-strings als het gaat om het opmaken van afdrukken.
 
-In its simplicity the comma notation of the `print` command can often be useful, but it does sometimes cause more trouble than it's worth. F-strings are usually a more reliable option. In part 4 you will learn more about the handy features of f-strings when it comes to formatting printouts.
 
-<text-box variant="hint" name="F-strings and Python versions">
+<text-box variant="hint" name="Kwaliteit">
 
-If you are using an older version of Python, f-strings may not work. They were introduced in Python version 3.6. Later on during the course you will install Python on your own computer. Unfortunately, the more modern versions of Python are not always available for older operating systems. If that is the case with your computer, when there are exercises requiring the use of f-strings, you can always try them out in the in-browser exercise templates in these early parts of this course.
+Het voorbeeld met F-strings is korter dan het werken met komma-notatie. Vaak is kortere code een teken van betere code. Maar dit mag niet ten koste gaan van de leesbaarheid.
 
 </text-box>
 
-<in-browser-programming-exercise name="Extra space" tmcname="part01-10b_extra_space" height=400px>
+<in-browser-programming-exercise name="Extra spatie" tmcname="part01-10b_extra_space" height=400px>
 
-Your friend is working on an app for jobseekers. She sends you this bit of code:
+Je vriend werkt aan een app voor werkzoekenden. Ze stuurt je dit stukje code:
 
 ```python
 name = "Tim Tester"
@@ -325,7 +352,7 @@ print("- ", skill3, " (", level3, " )")
 print("I am looking for a job with a salary of", lower, "-", upper, "euros per month")
 ```
 
-The program should print out _exactly_ the following:
+Het programma zou _precies_ het volgende moeten afdrukken:
 
 <sample-output>
 
@@ -342,97 +369,111 @@ I am looking for a job with a salary of 2000-3000 euros per month
 
 </sample-output>
 
-The code works almost correctly, but not quite. This exercise has very strict tests, which check the output for every single bit of whitespace.
+Het codefragment werkt bijna correct, maar net niet helemaal. Deze oefening heeft zeer strenge tests, die de uitvoer controleren op elk stukje witruimte.
 
-Please fix the code so that the printout looks right. Notice especially how the comma notation in the `print` command automatically inserts a space around the different comma-separated parts.
+Pas de code aan zodat de uitvoer er correct uitziet. Let vooral op hoe de komma-notatie in het `print`-commando automatisch een spatie invoegt rond de verschillende door komma's gescheiden delen.
 
-The easiest way to transform the code so that it meets requirements is to use f-strings.
+**De gemakkelijkste manier om de code te transformeren zodat deze aan de vereisten voldoet, is het gebruik van f-strings.**
 
-Hint: you can print an empty line by adding an empty `print` command, or by adding the newline character `\n` into your string.
+Dus in plaats van
 
-Do remember to be extra careful when formatting printouts also in the future on this course. Some of the exercises have tests that require your output to be exactly as specified in the examples given. For example, please use actual whitespace characters in your code, instead of ASCII character codes for whitespace, or some such.
+`print("Hallo", naam)`
+
+gebruiken we
+
+`print(f"Hallo {naam}")`
+
+Hint: je kunt een lege regel afdrukken door een leeg `print`-commando toe te voegen, of door het newline-teken `\n` in je string op te nemen.
 
 </in-browser-programming-exercise>
 
-## Floating point numbers
+## Floating-point getallen
 
-`Floating point number` or _float_ is a term you will come across often in programming. It refers to numbers with a decimal point. They can be used much in the same way as integer values.
+`Floating-point getal` of _float_ is een term die je vaak tegen zult komen in programmeren. Het verwijst naar getallen met een decimaalpunt. Ze kunnen op dezelfde manier worden gebruikt als integerwaarden.
 
-This program calculates the mean of three floating point numbers:
+Dit programma berekent het gemiddelde van drie floating-point getallen:
 
 ```python
-number1 = 2.5
-number2 = -1.25
-number3 = 3.62
+getal1 = 2.5
+getal2 = -1.25
+getal3 = 3.62
 
-mean = (number1 + number2 + number3) / 3
-print(f"Mean: {mean}")
+gemiddelde = (getal1 + getal2 + getal3) / 3
+print(f"Gemiddelde: {gemiddelde}")
 ```
 
 <sample-output>
 
-Mean: 1.6233333333333333
+Gemiddelde: 1.6233333333333333
 
 </sample-output>
 
-<in-browser-programming-exercise name="Arithmetics" tmcname="part01-11_arithmetics">
+<in-browser-programming-exercise name="Rekenkunde" tmcname="part01-11_arithmetics">
 
-This program already contains two integer variables, `x` and `y`:
+Dit programma bevat al twee integervariabelen, `x` en `y`:
 
 ```python
 x = 27
 y = 15
 ```
 
-Please complete the program so that it also prints out the following:
+Maak het programma af zodat het ook het volgende afdrukt:
 
 <sample-output>
 
+<pre>
 27 + 15 = 42
 27 - 15 = 12
 27 * 15 = 405
 27 / 15 = 1.8
+</pre>
 
 </sample-output>
 
-The program should work correctly even if the values of the variables are changed. That is, if the first two lines are replaced with this
+Het programma moet correct werken, zelfs als de waarden van de variabelen worden gewijzigd. Dat wil zeggen, als de eerste twee regels worden vervangen door dit
 
 ```python
 x = 4
 y = 9
 ```
 
-the program should print out the following:
+dan zou het programma het volgende moeten afdrukken:
 
 <sample-output>
 
+<pre>
 4 + 9 = 13
 4 - 9 = -5
 4 * 9 = 36
 4 / 9 = 0.4444444444444444
+</pre>
 
 </sample-output>
 
+Hint: Je kunt berekening eerst opslaan in een andere variabele, bijvoorbeeld `z`. Of je kunt direct een berekening doen in een F-string: `print(f"{x/y}")`
+
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Fix the code: Print a single line" tmcname="part01-12_print_a_single_line">
+<in-browser-programming-exercise name="Herstel de code: Druk een enkele regel af" tmcname="part01-12_print_a_single_line">
 
-Each `print` command usually prints out a line of its own, complete with a change of line at the end. However, if the `print` command is given an additional argument `end = ""`, it will not print a line change.
+Elke `print`-opdracht drukt meestal een eigen regel af, compleet met een regelovergang aan het einde. Als aan de `print`-opdracht echter een extra argument `end = ""` wordt gegeven, wordt er geen regelovergang afgedrukt.
 
-For example:
+Bijvoorbeeld:
 
 ```python
-print("Hi ", end="")
-print("there!")
+print("Hallo ", end="")
+print("daar!")
 ```
 
 <sample-output>
 
-Hi there!
+Hallo daar!
 
 </sample-output>
 
-Please fix this program so that the entire calculation, complete with result, is printed out on a single line. Do not change the number of `print` commands used.
+Herstel dit programma zodat de volledige berekening, inclusief het resultaat, op één regel wordt afgedrukt. Verander het aantal gebruikte `print`-opdrachten niet.
+
+Hint: Voordat je de code aanpast, druk op *RUN* zo dat je weet wat de beginsituatie is.
 
 ```python
 
@@ -446,11 +487,3 @@ print(5 + 8 - 4)
 ```
 
 </in-browser-programming-exercise>
-
-<!--
-
-A quiz to review the contents of this section:
-
-<quiz id="49bf296e-41d1-5982-89a9-c784b630eaee"></quiz>
-
--->

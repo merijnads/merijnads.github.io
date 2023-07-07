@@ -1,5 +1,5 @@
 ---
-path: '/part-3/1-loops-with-conditions'
+path: '/part-3/2-loops-with-conditions'
 title: 'Loops with conditions'
 hidden: false
 ---
@@ -27,7 +27,7 @@ When the going inevitably gets tough, a word of consolation: a task that seems i
 
 </text-box>
 
-In the previous section we learnt to use the `while True` loop to repeat sections of code. In that construction the condition of the loop is `True`, so the condition is fulfilled every time. We needed to explicitly break out from the loop each time to avoid an infinite loop. For example: 
+In the previous section we learnt to use the `while True` loop to repeat sections of code. In that construction the condition of the loop is `True`, so the condition is fulfilled every time. We needed to explicitly break out from the loop each time to avoid an infinite loop. For example:
 
 ```python
 # Print numbers until the variable a equals 5
@@ -101,7 +101,7 @@ Execution finished.
 
 To create a loop you'll often need to include three distinct steps: initialisation, condition, and updating the iteration variables.
 
-_Initialisation_ refers to setting the initial value(s) of the variable(s) used within the condition of the loop. These are often called the iteration or iterator variables. This is performed before the loop is first entered. The _condition_ defines for how long the loop is to be executed. It is set out at the very beginning of the loop. Finally, within each repetition of the loop the variables involved in the condition are _updated_, so that each iteration brings the loop one step closer to its conclusion. The following image illustrates these steps: 
+_Initialisation_ refers to setting the initial value(s) of the variable(s) used within the condition of the loop. These are often called the iteration or iterator variables. This is performed before the loop is first entered. The _condition_ defines for how long the loop is to be executed. It is set out at the very beginning of the loop. Finally, within each repetition of the loop the variables involved in the condition are _updated_, so that each iteration brings the loop one step closer to its conclusion. The following image illustrates these steps:
 
 <!--- this is here in case the following image needs to be updated
 ```python
@@ -292,7 +292,7 @@ One way around this is "hard-coding" the input while testing:
 limit = 8 # int(input("Upper limit"))
 number = 1
 while number == limit:
-   # more code 
+   # more code
 ```
 When the program works with the one hard-coded input, it is easy to test it with other hard-coded inputs as well. When it seems to work correctly all round, it can be tested with input from the user.
 
@@ -318,7 +318,7 @@ The slightly broken code from the debugging example in the [previous section](/p
 
 The red arrow points to where the execution of the program is at the moment. The tool displays what has been printed out so far, and also shows the value each variable has at each step. The execution moves forward line by line as you press _Next_.
 
-All you need to do to use the visualisation tool is to copy your code and paste it into the [code window](http://www.pythontutor.com/visualize.html#mode=edit) of the tool. The tool does have some limitations compared to the version of Python used on this course. If you come across any cryptic error messages, it may be better to try some other debugging method. 
+All you need to do to use the visualisation tool is to copy your code and paste it into the [code window](http://www.pythontutor.com/visualize.html#mode=edit) of the tool. The tool does have some limitations compared to the version of Python used on this course. If you come across any cryptic error messages, it may be better to try some other debugging method.
 
 More experienced programmers are rarely heavy users of the visualisation tool, but for a beginner it can be a valuable aid. Programming as a discipline has little room for luck or chance. It is essential that a programmer understands what values are created by their code at any given moment in the execution. If the values stored in variables are not as expected, there is most likely a bug in the program.
 
@@ -372,7 +372,7 @@ Please don't use the value `True` as the condition of your `while` loop in this 
 
 <in-browser-programming-exercise name="Powers of base n" tmcname="part03-05_powers_of_base_n">
 
-Please change the program from the previous exercise so that the user gets to input also the base which is multiplied (in the previous program the base was always 2). 
+Please change the program from the previous exercise so that the user gets to input also the base which is multiplied (in the previous program the base was always 2).
 
 <sample-output>
 
