@@ -1,52 +1,52 @@
 ---
 path: '/part-3/3-lists'
-title: 'Lists'
+title: 'Lijsten'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name="Learning objectives">
+<text-box variant='learningObjectives' name="Leerdoelen">
 
-After this section
+Na deze sectie
 
-- You will know what lists are in Python
-- You will be able access a specified item within a list
-- You will know how to add items to a list, and how to remove them
-- You will be familiar with built-in list functions and methods
+- Weet je wat lijsten zijn in Python
+- Kun je een specifiek item in een lijst benaderen
+- Weet je hoe je items aan een lijst kunt toevoegen en verwijderen
+- Ben je bekend met ingebouwde lijstfuncties en -methoden
 
 </text-box>
 
-Thus far in our programs we have stored data with variables, each bit of data usually having its own named variable. This obviously has some limitations, as it can get cumbersome to define separate variables for everything when there is a lot of data to handle.
+Tot nu toe hebben we gegevens in onze programma's opgeslagen met behulp van variabelen, waarbij elk stukje gegevens meestal zijn eigen benoemde variabele heeft. Dit heeft uiteraard enkele beperkingen, aangezien het lastig kan worden om aparte variabelen te definiëren voor alles wanneer er veel gegevens moeten worden verwerkt.
 
-A Python _list_ is a collection of values which is accessed via a single variable name. The contents of the list are written within square brackets. The values contained in the list are called _items_, or sometimes _elements_.
+Een Python _lijst_ is een verzameling waarden die wordt benaderd via één variabelenaam. De inhoud van de lijst wordt tussen vierkante haken geschreven. De waarden in de lijst worden _items_ genoemd, of soms _elementen_.
 
-The following command creates a new, empty list
+De volgende opdracht maakt een nieuwe, lege lijst:
 
 ```python
-my_list = []
+mijn_lijst = []
 ```
 
-whereas this command creates a list with five items in it:
+terwijl deze opdracht een lijst maakt met vijf items:
 
 ```python
-my_list = [7, 2, 2, 5, 2]
+mijn_lijst = [7, 2, 2, 5, 2]
 ```
 
-## Accessing items in a list
+## Toegang tot items in een lijst
 
-The items in a list are indexed in exactly the same way as characters in a string. Indexing starts from zero, and the last index is the length of the list minus 1:
+De items in een lijst worden geïndexeerd op dezelfde manier als karakters in een string. De indexering begint bij nul, en de laatste index is de lengte van de lijst min één:
 
-<img src="4_3_1.png" alt="Lists are indexed starting from 0">
+<img src="4_3_1.png" alt="Lijsten beginnen bij index 0">
 
-A single list item can be accessed just like a single character in a string is accessed, with square brackets:
+Een enkel item in de lijst kan net als een enkel karakter in een string worden benaderd met behulp van vierkante haken:
 
 ```python
-my_list = [7, 2, 2, 5, 2]
+mijn_lijst = [7, 2, 2, 5, 2]
 
-print(my_list[0])
-print(my_list[1])
-print(my_list[3])
+print(mijn_lijst[0])
+print(mijn_lijst[1])
+print(mijn_lijst[3])
 
-print("The sum of the first two items:", my_list[0] + my_list[1])
+print("De som van de eerste twee items:", mijn_lijst[0] + mijn_lijst[1])
 ```
 
 <sample-output>
@@ -54,15 +54,15 @@ print("The sum of the first two items:", my_list[0] + my_list[1])
 7
 2
 5
-The sum of the first two items: 9
+De som van de eerste twee items: 9
 
 </sample-output>
 
-The entire contents of the list can also be printed out:
+De volledige inhoud van de lijst kan ook worden afgedrukt:
 
 ```python
-my_list = [7, 2, 2, 5, 2]
-print(my_list)
+mijn_lijst = [7, 2, 2, 5, 2]
+print(mijn_lijst)
 ```
 
 <sample-output>
@@ -71,13 +71,13 @@ print(my_list)
 
 </sample-output>
 
-Unlike strings, lists are mutable, which means their contents can change. You can assign a new value to an item within a list, just like you can assign a new value to a variable:
+In tegenstelling tot strings zijn lijsten _veranderbaar_ (mutable), wat betekent dat hun inhoud kan worden gewijzigd. Je kunt een nieuwe waarde toekennen aan een item in een lijst, net zoals je een nieuwe waarde kunt toekennen aan een variabele:
 
 ```python
-my_list = [7, 2, 2, 5, 2]
-print(my_list)
-my_list[1] = 3
-print(my_list)
+mijn_lijst = [7, 2, 2, 5, 2]
+print(mijn_lijst)
+mijn_lijst[1] = 3
+print(mijn_lijst)
 ```
 
 <sample-output>
@@ -87,11 +87,11 @@ print(my_list)
 
 </sample-output>
 
-The function `len` gives you the number of items in a list:
+De functie `len` geeft je het aantal items in een lijst:
 
 ```python
-my_list = [7, 2, 2, 5, 2]
-print(len(my_list))
+mijn_lijst = [7, 2, 2, 5, 2]
+print(len(mijn_lijst))
 ```
 
 <sample-output>
@@ -101,41 +101,47 @@ print(len(my_list))
 </sample-output>
 
 
-<programming-exercise name='Change the value of an item' tmcname='part04-12_change_value_of_item'>
+<programming-exercise name='De waarde van een item wijzigen' tmcname='part04-12_change_value_of_item'>
 
-Please write a program which initialises a list with the values `[1, 2, 3, 4, 5]`. Then the program should ask the user for an index and a new value, replace the value at the given index, and print the list again. This should be looped over until the user gives -1 for the index. You can assume all given index values will fall within your list.
+Schrijf een programma dat eerst een lijst initialiseert met de waarden `[1, 2, 3, 4, 5]`. Vervolgens vraagt het programma de gebruiker om een index en een nieuwe waarde, vervangt de waarde op de opgegeven index en drukt de lijst opnieuw af.
 
-An example execution of the program:
+Een voorbeelduitvoering van het programma:
 
 <sample-output>
 
 Index: **0**
-New value: **10**
+Nieuwe waarde: **10**
 [10, 2, 3, 4, 5]
+
+</sample-output>
+<sample-output>
+
 Index: **2**
-New value: **250**
+Nieuwe waarde: **250**
 [10, 2, 250, 4, 5]
+
+</sample-output>
+<sample-output>
+
 Index: **4**
-New value: **-45**
+Nieuwe waarde: **-45**
 [10, 2, 250, 4, -45]
-Index: **-1**
 
 </sample-output>
 
-**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == "__main__"` block.
 
 </programming-exercise>
 
-## Adding items to a list
+## Items toevoegen aan een lijst
 
-The `append` method adds items to the end of a list. It works like this:
+De methode `append` voegt items toe aan het einde van een lijst. Het werkt als volgt:
 
 ```python
-numbers = []
-numbers.append(5)
-numbers.append(10)
-numbers.append(3)
-print(numbers)
+nummers = []
+nummers.append(5)
+nummers.append(10)
+nummers.append(3)
+print(nummers)
 ```
 
 <sample-output>
@@ -144,76 +150,77 @@ print(numbers)
 
 </sample-output>
 
-The following example makes use of two separate lists:
+Het volgende voorbeeld maakt gebruik van twee afzonderlijke lijsten:
 
 ```python
-numbers = []
-shoe_sizes = []
+nummers = []
+schoenmaten = []
 
-numbers.append(5)
-numbers.append(10)
-numbers.append(3)
+nummers.append(5)
+nummers.append(10)
+nummers.append(3)
 
-shoe_sizes.append(37)
-shoe_sizes.append(44)
-shoe_sizes.append(40)
-shoe_sizes.append(28)
+schoenmaten.append(37)
+schoenmaten.append(44)
+schoenmaten.append(40)
+schoenmaten.append(28)
 
-print("Numbers:")
-print(numbers)
+print("Nummers:")
+print(nummers)
 
-print("Shoe sizes:")
-print(shoe_sizes)
+print("Schoenmaten:")
+print(schoenmaten)
 ```
 
-The item is appended to the list on which the method is called:
+Het item wordt toegevoegd aan de lijst waarop de methode wordt aangeroepen:
 
 <sample-output>
 
-Numbers:
+Nummers:
 [5, 10, 3]
-Shoe sizes:
+Schoenmaten:
 [37, 44, 40, 28]
 
 </sample-output>
 
-<programming-exercise name='Add items to a list' tmcname='part04-13_add_items_to_list'>
+<programming-exercise name='Items toevoegen aan een lijst' tmcname='part04-13_add_items_to_list'>
 
-Please write a program which first asks the user for the number of items to be added. Then the program should ask for the given number of values, one by one, and add them to a list in the order they were typed in. Finally, the list is printed out.
+Schrijf een programma dat vijf nieuwe waarden toevoegd aan een lijst. Het programma vraagt de waarden, één voor één, en voegt ze toe aan een lijst. Ten slotte wordt de lijst afgedrukt.
 
-An example of expected behaviour:
+Een voorbeeld van de verwachte werking:
 
 <sample-output>
 
-How many items: **3**
+
 Item 1: **10**
 Item 2: **250**
 Item 3: **34**
-[10, 250, 34]
+Item 4: **17**
+Item 5: **94**
+[10, 250, 34, 17, 94]
 
 </sample-output>
 
-**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == "__main__"` block.
 
 </programming-exercise>
 
-## Adding to a specific location
+## Toevoegen op een specifieke locatie
 
-If you want to specify a location in the list where an item should be added, you can use the `insert` method. The method adds an item at the specified index. All the items already in the list with an index equal to or higher than the specified index are moved one index further, "to the right":
+Als je een locatie in de lijst wilt specificeren waar een item moet worden toegevoegd, kun je de methode `insert` gebruiken. De methode voegt een item toe op de opgegeven index. Alle items die al in de lijst staan met een index gelijk aan of hoger dan de opgegeven index, worden één index verder "naar rechts" verplaatst:
 
-<img src="4_3_2.png" alt = "Inserting an item to a list">
+<img src="4_3_2.png" alt = "Een item invoegen in een lijst">
 
-So, for instance this program
+Dus bijvoorbeeld dit programma
 
 ```python
-numbers = [1, 2, 3, 4, 5, 6]
-numbers.insert(0, 10)
-print(numbers)
-numbers.insert(2, 20)
-print(numbers)
+nummers = [1, 2, 3, 4, 5, 6]
+nummers.insert(0, 10)
+print(nummers)
+nummers.insert(2, 20)
+print(nummers)
 ```
 
-prints out this:
+geeft de volgende uitvoer:
 
 <sample-output>
 
@@ -222,22 +229,22 @@ prints out this:
 
 </sample-output>
 
-## Removing items from a list
+## Items verwijderen uit een lijst
 
-There are two different approaches to removing an item from a list:
+Er zijn twee verschillende manieren om een item uit een lijst te verwijderen:
 
-* If the _index_ of the item is known, you can use the method `pop`.
-* If the _contents_ of the item are known, you can use the method `remove`.
+* Als de _index_ van het item bekend is, kun je de methode `pop` gebruiken.
+* Als de _inhoud_ van het item bekend is, kun je de methode `remove` gebruiken.
 
-So, the method `pop` takes the index of the item you want to remove as its argument. The following program removes items at indexes 2 and 3 from the list. Notice how the indexes of the remaining items change when one is removed.
+De methode `pop` neemt de index van het item dat je wilt verwijderen als argument. Het volgende programma verwijdert items op de indexen 2 en 3 uit de lijst. Let op hoe de indexen van de overgebleven items veranderen wanneer er één wordt verwijderd.
 
 ```python
-my_list = [1, 2, 3, 4, 5, 6]
+mijn_lijst = [1, 2, 3, 4, 5, 6]
 
-my_list.pop(2)
-print(my_list)
-my_list.pop(3)
-print(my_list)
+mijn_lijst.pop(2)
+print(mijn_lijst)
+mijn_lijst.pop(3)
+print(mijn_lijst)
 ```
 
 <sample-output>
@@ -247,14 +254,14 @@ print(my_list)
 
 </sample-output>
 
-It's useful to remember that the method `pop` also _returns_ the removed item:
+Het is handig om te onthouden dat de methode `pop` ook het verwijderde item _teruggeeft_:
 
 ```python
-my_list = [4, 2, 7, 2, 5]
+mijn_lijst = [4, 2, 7, 2, 5]
 
-number = my_list.pop(2)
-print(number)
-print(my_list)
+nummer = mijn_lijst.pop(2)
+print(nummer)
+print(mijn_lijst)
 ```
 
 <sample-output>
@@ -264,18 +271,18 @@ print(my_list)
 
 </sample-output>
 
-The method `remove`, on the other hand, takes the value of the item to be removed as its argument. For example, this program
+De methode `remove` daarentegen neemt de waarde van het item dat moet worden verwijderd als argument. Bijvoorbeeld dit programma
 
 ```python
-my_list = [1, 2, 3, 4, 5, 6]
+mijn_lijst = [1, 2, 3, 4, 5, 6]
 
-my_list.remove(2)
-print(my_list)
-my_list.remove(5)
-print(my_list)
+mijn_lijst.remove(2)
+print(mijn_lijst)
+mijn_lijst.remove(5)
+print(mijn_lijst)
 ```
 
-prints out this:
+geeft de volgende uitvoer:
 
 <sample-output>
 
@@ -284,15 +291,15 @@ prints out this:
 
 </sample-output>
 
-The method removes the _first_ occurrence of the value in the list, much like the string function `find` returns the first occurrence of a substring:
+De methode verwijdert de _eerste_ voorkomst van de waarde in de lijst, net zoals de string-functie `find` de eerste voorkomst van een substring retourneert:
 
 ```python
-my_list = [1, 2, 1, 2]
+mijn_lijst = [1, 2, 1, 2]
 
-my_list.remove(1)
-print(my_list)
-my_list.remove(1)
-print(my_list)
+mijn_lijst.remove(1)
+print(mijn_lijst)
+mijn_lijst.remove(1)
+print(mijn_lijst)
 ```
 
 <sample-output>
@@ -302,81 +309,15 @@ print(my_list)
 
 </sample-output>
 
-<programming-exercise name='Addition and removal' tmcname='part04-14_addition_and_removal'>
 
-Please write a program which asks the user to choose between addition and removal. Depending on the choice, the program _adds an item to_ or _removes an item from_ the end of a list. The item that is added must always be one greater than the last item in the list. The first item to be added must be 1.
+## Sorteren van lijsten
 
-The list is printed out in the beginning and after each operation. Have a look at the example execution below:
-
-<sample-output>
-
-The list is now []
-a(d)d, (r)emove or e(x)it: **d**
-The list is now [1]
-a(d)d, (r)emove or e(x)it: **d**
-The list is now [1, 2]
-a(d)d, (r)emove or e(x)it: **d**
-The list is now [1, 2, 3]
-a(d)d, (r)emove or e(x)it: **r**
-The list is now [1, 2]
-a(d)d, (r)emove or e(x)it: **d**
-The list is now [1, 2, 3]
-a(d)d, (r)emove or e(x)it: **x**
-Bye!
-
-</sample-output>
-
-You may assume that, if the list is empty, there will not be an attempt to remove items.
-
-**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == "__main__"` block.
-
-</programming-exercise>
-
-If the specified item is not in the list, the `remove` function causes an error. Just like with strings, we can check for the presence of an item with the `in` operator:
+De items in een lijst kunnen worden _gesorteerd_ van klein naar groot met de methode `sort`.
 
 ```python
-my_list = [1, 3, 4]
-
-if 1 in my_list:
-    print("The list contains item 1")
-
-if 2 in my_list:
-    print("The list contains item 2")
-```
-
-<sample-output>
-
-The list contains item 1
-
-</sample-output>
-
-<programming-exercise name='Same word twice' tmcname='part04-15_same_word_twice'>
-
-Please write a program which asks the user for words. If the user types in a word for the second time, the program should print out the number of different words typed in, and exit.
-
-<sample-output>
-
-Word: **once**
-Word: **upon**
-Word: **a**
-Word: **time**
-Word: **upon**
-You typed in 4 different words
-
-</sample-output>
-
-**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == "__main__"` block.
-
-</programming-exercise>
-
-## Sorting lists
-
-The items in a list can be _sorted_ from smallest to greatest with the method `sort`.
-
-```python
-my_list = [2,5,1,2,4]
-my_list.sort()
-print(my_list)
+mijn_lijst = [2,5,1,2,4]
+mijn_lijst.sort()
+print(mijn_lijst)
 ```
 
 <sample-output>
@@ -385,11 +326,11 @@ print(my_list)
 
 </sample-output>
 
-Notice how the method modifies the list itself. Sometimes we don't want to change the original list, so we use the function `sorted` instead. It _returns_ a sorted list:
+Merk op hoe de methode de lijst zelf wijzigt. Soms willen we de oorspronkelijke lijst niet veranderen, dus gebruiken we in plaats daarvan de functie `sorted`. Deze functie _retourneert_ een gesorteerde lijst:
 
 ```python
-my_list = [2,5,1,2,4]
-print(sorted(my_list)))
+mijn_lijst = [2,5,1,2,4]
+print(sorted(mijn_lijst)))
 ```
 
 <sample-output>
@@ -398,13 +339,13 @@ print(sorted(my_list)))
 
 </sample-output>
 
-Remember the difference between the two: `sort` changes the order of the original list in place, whereas `sorted` creates a new, ordered copy of the list. With `sorted` we can preserve the original order of the list:
+Onthoud het verschil tussen beide: `sort` verandert de volgorde van de oorspronkelijke lijst, terwijl `sorted` een nieuwe, geordende kopie van de lijst maakt. Met `sorted` kunnen we de oorspronkelijke volgorde van de lijst behouden:
 
 ```python
-original = [2, 5, 1, 2, 4]
-in_order = sorted(original)
-print(original)
-print(in_order)
+origineel = [2, 5, 1, 2, 4]
+geordend = sorted(origineel)
+print(origineel)
+print(geordend)
 ```
 
 <sample-output>
@@ -414,280 +355,118 @@ print(in_order)
 
 </sample-output>
 
-<programming-exercise name='List twice' tmcname='part04-16_list_twice'>
 
-Please write a program which asks the user to type in values and adds them to a list. After each addition, the list is printed out in two different ways:
-- in the order the items were added
-- ordered from smallest to greatest
+## Maximum, minimum en som
 
-The program exits when the user types in 0.
+De functies `max` en `min` retourneren respectievelijk het grootste en het kleinste item in een lijst. De functie `sum` retourneert de som van alle items in een lijst.
 
-An example of expected behaviour:
+```python
+mijn_lijst = [5, 2, 3, 1, 4]
+
+grootste = max(mijn_lijst)
+kleinste = min(mijn_lijst)
+som_lijst = sum(mijn_lijst)
+
+print("Kleinste:", kleinste)
+print("Grootste:", grootste)
+print("Som:", som_lijst)
+```
 
 <sample-output>
 
-New item: **3**
-The list now: [3]
-The list in order: [3]
-New item: **1**
-The list now: [3, 1]
-The list in order: [1, 3]
-New item: **9**
-The list now: [3, 1, 9]
-The list in order: [1, 3, 9]
-New item: **5**
-The list now: [3, 1, 9, 5]
-The list in order: [1, 3, 5, 9]
-New item: **0**
-Bye!
+Kleinste: 1
+Grootste: 5
+Som: 15
 
 </sample-output>
 
-**NB:** this exercise doesn't ask you to write any functions, so you should __not__ place any code within an `if __name__ == "__main__"` block.
+## Methoden versus functies
 
-</programming-exercise>
-
-## Maximum, minimum and sum
-
-The functions `max` and `min`, short for maximum and minimum, return the greatest and smallest item in a list, respectively. The function `sum` returns the sum of all items in a list.
+Er zijn twee verschillende manieren om lijsten te verwerken in Python, wat verwarrend kan zijn. In de meeste gevallen zul je lijst-_methoden_ gebruiken, zoals `append` en `sort`. Ze worden gebruikt met de punt `.` operator op de lijstvariabele:
 
 ```python
-my_list = [5, 2, 3, 1, 4]
+mijn_lijst = []
 
-greatest = max(my_list))
-smallest = min(my_list))
-list_sum = sum(my_list))
+# aanroepen van methoden
+mijn_lijst.append(3)
+mijn_lijst.append(1)
+mijn_lijst.append(7)
+mijn_lijst.append(2)
 
-print("Smallest:", smallest)
-print("Greatest:", greatest)
-print("Sum:", list_sum)
+# nog een methodeaanroep
+mijn_lijst.sort()
+```
+
+Sommige _functies_ nemen graag een lijst als argument. Hierboven zagen we dat de functies `max`, `min`, `len` en `sorted` dat doen:
+
+```python
+mijn_lijst = [3, 2, 7, 1]
+
+# functieaanroepen nemen de lijst als argument
+grootste = max(mijn_lijst))
+kleinste = min(mijn_lijst))
+lengte = len(mijn_lijst))
+
+print("Kleinste:", kleinste)
+print("Grootste:", grootste)
+print("Lengte van de lijst:", lengte)
+
+# nog een functieaanroep
+# de lijst zelf is een argument, de functie retourneert een gesorteerde kopie
+geordend = sorted(mijn_lijst))
+print(geordend)
 ```
 
 <sample-output>
 
-Smallest: 1
-Greatest: 5
-Sum: 15
-
-</sample-output>
-
-## Methods vs functions
-
-There are two different ways of processing lists in Python, which can get confusing. For the most part you will use list _methods_, such as `append` and `sort`. They are used with the dot `.` operator on the list variable:
-
-```python
-my_list = []
-
-# method calls
-my_list.append(3)
-my_list.append(1)
-my_list.append(7)
-my_list.append(2)
-
-# another method call
-my_list.sort()
-```
-
-Some _functions_ are happy to take a list as an argument. Above we saw the functions `max`,  `min`, `len` and `sorted` do just that:
-
-```python
-my_list = [3, 2, 7, 1]
-
-# function calls take the list as an argument
-greatest = max(my_list))
-smallest = min(my_list))
-length = len(my_list))
-
-print("Smallest:", smallest)
-print("Greatest:", greatest)
-print("Length of the list:", length)
-
-# another function call
-# the list itself is an argument, the function returns a sorted copy
-in_order = sorted(my_list))
-print(in_order)
-```
-
-<sample-output>
-
-Smallest: 1
-Greatest: 7
-Length of the list: 4
+Kleinste: 1
+Grootste: 7
+Lengte van de lijst: 4
 [1, 2, 3, 7]
 
 </sample-output>
 
-## A list as an argument or a return value
+## Lijsten en for-lussen
 
-Just like the built-in functions above, our own functions can also take a list as an argument and produce a list as a return value. The following function works out the central value in an ordered list, also called the _median_ value:
-
-```python
-def median(my_list: list):
-    ordered = sorted(my_list))
-    list_centre = len(ordered) // 2
-    return ordered[list_centre]
-```
-
-The function creates an ordered version of the list given as an argument and returns the item in the very middle. Notice the integer division operator `//` used here. The index of a list should always be an integer.
-
-The function works like this:
+Lijsten kunnen effectief worden verwerkt met behulp van `for`-lussen. Hier is een voorbeeld dat de som van alle items in een lijst berekent:
 
 ```python
-shoe_sizes = [45, 44, 36, 39, 40]
-print("The median of the shoe sizes is", median(shoe_sizes))
+getallen = [5, 2, 6, 1, 3]
+som = 0
+for nummer in getallen:
+    som += nummer
 
-ages = [1, 56, 34, 22, 5, 77, 5]
-print("The median of the ages is", median(ages))
+print("De som van de getallen is", som)
 ```
 
 <sample-output>
 
-The median of the shoe sizes is 40
-The median of the ages is 22
+De som van de getallen is 17
 
 </sample-output>
 
-A function can also return a list. The following function asks the user to type in integers and returns the input as a list:
+De variabele `nummer` neemt de waarde aan van elk item in de lijst, één voor één. De som wordt bijgewerkt door elk nummer toe te voegen aan de huidige som.
+
+Je kunt ook de `range`-functie gebruiken in combinatie met de `len`-functie om de indexen van een lijst te gebruiken:
 
 ```python
-def input_numbers():
-    numbers = []
-    while True:
-        user_input = input("Please type in an integer, leave empty to exit: ")
-        if len(user_input) == 0:
-            break
-        numbers.append(int(user_input))
-    return numbers
-```
+getallen = [5, 2, 6, 1, 3]
+for i in range(len(getallen)):
+    getallen[i] = getallen[i] * 2
 
-The function makes use of a helper variable `numbers`, which is a list. All the numbers typed in by the user are added to the list. When the loop is exited from, the function returns the list with the statement `return numbers`.
-
-Calling the function like this
-
-```python
-numbers = input_numbers()
-
-print("The greatest number is", max(numbers))
-print("The median of the numbers is", median(numbers))
-```
-
-could print this, for example:
-
-<sample-output>
-
-Please type in an integer, leave empty to exit: **5**
-Please type in an integer, leave empty to exit: **-22**
-Please type in an integer, leave empty to exit: **4**
-Please type in an integer, leave empty to exit: **35**
-Please type in an integer, leave empty to exit: **1**
-Please type in an integer, leave empty to exit:
-The greatest number is 35
-The median of the numbers is 4
-
-</sample-output>
-
-This small example demonstrates one of the most important uses of functions: they can help you divide your code into smaller, easily understandable and logical wholes.
-
-Of course the same functionality could be achieved without writing any of our own functions:
-
-```python
-numbers = []
-while True:
-    user_input = input("Please type in an integer, leave empty to exit: ")
-    if len(user_input) == 0:
-        break
-    numbers.append(int(user_input))
-
-ordered = sorted(numbers)
-list_centre = len(ordered) // 2
-median = ordered[list_centre]
-
-print("The greatest number is", max(numbers))
-print("The median of the numbers is", median)
-```
-
-In this version, following the programming logic is more difficult, as it is no longer clear which commands are a part of which functionality. The code fulfils the same purposes - reading in input, calculating the median value, and so on - but the structure is less clear.
-
-Organising your code into separate functions will improve you program's readability, but also make it easier to handle logical wholes. This in turn helps you that verify the program works as intended, as each function can be tested separately.
-
-Another important use for functions is making code _reusable_. If you need to achieve some functionality twice is your program, it is a good idea to create your own function and name it appropriately:
-
-```python
-print("Shoe sizes:")
-shoe_sizes = input_numbers()
-
-print("Weights:")
-weights = input_numbers()
-
-print("Heights:")
-heights = input_numbers()
-```
-
-<programming-exercise name='The length of a list' tmcname='part04-17_length_of_list'>
-
-Please write a function named `length` which takes a list as its argument and returns the length of the list.
-
-```python
-my_list = [1, 2, 3, 4, 5]
-result = length(my_list))
-print("The length is", result)
-
-# the list given as an argument doesn't need to be stored in any variable
-result = length([1, 1, 1, 1])
-print("The length is", result)
+print(getallen)
 ```
 
 <sample-output>
 
-The length is 5
-The length is 4
+[10, 4, 12, 2, 6]
 
 </sample-output>
 
-</programming-exercise>
-
-<programming-exercise name='Arithmetic mean' tmcname='part04-18_mean'>
-
-Please write a function named `mean`, which takes a list of integers as an argument. The function returns the arithmetic mean of the values in the list.
-
-```python
-my_list = [1, 2, 3, 4, 5]
-result = mean(my_list))
-print("mean value is", result)
-```
-
-<sample-output>
-
-mean value is 3.0
-
-</sample-output>
-
-</programming-exercise>
-
-<programming-exercise name='The range of a list' tmcname='part04-19_range_of_list'>
-
-Please write a function named  `range_of_list`, which takes a list of integers as an argument. The function returns the difference between the smallest and the largest value in the list.
+De `range(len(getallen))`-expressie genereert een reeks van indexen die overeenkomen met de positie van elk item in de lijst. Vervolgens wordt elk item vermenigvuldigd met 2 en bijgewerkt in de oorspronkelijke lijst.
 
 
-```python
-my_list = [1, 2, 3, 4, 5]
-result = range_of_list(my_list))
-print("The range of the list is", result)
-```
 
-<sample-output>
+## Samenvatting
 
-The range of the list is 4
-
-</sample-output>
-
-</programming-exercise>
-
-
-There are many more ways to use lists in Python. The Python [documentation](https://docs.python.org/3/tutorial/datastructures.html) is a good place to start if you want to know more.
-
-<!---
-A quiz to review the contents of this section:
-
-<quiz id="4849cd69-1938-5f4f-8805-8445f0f5c015"></quiz>
--->
+Lijsten zijn een krachtige manier om meerdere waarden op te slaan en te verwerken in Python. Ze stellen ons in staat om gegevens efficiënt te ordenen, te wijzigen en te doorzoeken. In dit deel hebben we geleerd hoe we items kunnen toevoegen aan een lijst, items kunnen verwijderen, de maximale en minimale waarde kunnen vinden, en lijsten kunnen sorteren. We hebben ook gezien hoe we lijsten kunnen verwerken met behulp van lussen en hoe we lijsten kunnen gebruiken als argumenten en retourwaarden voor functies.

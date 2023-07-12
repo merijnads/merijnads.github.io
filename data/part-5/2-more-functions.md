@@ -507,6 +507,76 @@ The outer function call `difference(7, 5)` returns the value 2, which is stored 
 
 In summary, values returned by functions work exactly like any other value in Python. They can be printed out, stored in variables, used in expressions and used as arguments in other function calls.
 
+## Een lijst als argument of retourwaarde
+
+Net als de ingebouwde functies hierboven kunnen onze eigen functies ook een lijst als argument nemen en een lijst als retourwaarde produceren. De volgende functie berekent de centrale waarde in een geordende lijst, ook wel de _mediaan_ genoemd:
+
+```python
+def mediaan(mijn_lijst: list):
+    geordend = sorted(mijn_lijst))
+    lijst_midden = len(geordend) // 2
+    return geordend[lijst_midden]
+```
+
+De functie maakt een geordende versie van de lijst die als argument wordt meegegeven en retourneert het item in het midden. Let op de gehele delingsoperator `//` die hier wordt gebruikt. Het indexnummer van een lijst moet altijd een geheel getal zijn.
+
+De functie werkt als volgt:
+
+```python
+schoenmaten = [45, 44, 36, 39, 40]
+print("De mediaan van de schoenmaten is", mediaan(schoenmaten))
+
+leeftijden = [1, 56, 34, 22, 5, 77, 5]
+print("De mediaan van de leeftijden is", mediaan(leeftijden))
+```
+
+<sample-output>
+
+De mediaan van de schoenmaten is 40
+De mediaan van de leeftijden is 22
+
+</sample-output>
+
+Een functie kan ook een lijst retourneren. De volgende functie vraagt de gebruiker om integers in te voeren en retourneert de invoer als een lijst:
+
+```python
+def invoer_getallen():
+    getallen = []
+    while True:
+        gebruikers_invoer = input("Voer alstublieft een geheel getal in, laat leeg om te stoppen: ")
+        if len(gebruikers_invoer) == 0:
+            break
+        getallen.append(int(gebruikers_invoer))
+    return getallen
+```
+
+De functie maakt gebruik van een hulpvariabele `getallen`, die een lijst is. Alle getallen die door de gebruiker worden ingevoerd, worden aan de lijst toegevoegd. Wanneer de lus wordt verlaten, retourneert de functie de lijst met de instructie `return getallen`.
+
+Als we de functie als volgt aanroepen
+
+```python
+getallen = invoer_getallen()
+
+print("Het grootste getal is", max(getallen))
+print("De mediaan van de getallen is", mediaan(getallen))
+```
+
+kan dit bijvoorbeeld de volgende uitvoer opleveren:
+
+<sample-output>
+
+Voer alstublieft een geheel getal in, laat leeg om te stoppen: **5**
+Voer alstublieft een geheel getal in, laat leeg om te stoppen: **-22**
+Voer alstublieft een ge
+
+heel getal in, laat leeg om te stoppen: **0**
+Voer alstublieft een geheel getal in, laat leeg om te stoppen: **9**
+Voer alstublieft een geheel getal in, laat leeg om te stoppen: ****
+Het grootste getal is 9
+De mediaan van de getallen is 2
+
+</sample-output>
+
 ## The difference between return and print
 
 Sometimes the difference between a function _returning_ a value and a _print statement_ within a function can be confusing. Let's have a look at two different ways of implementing a function for working out which of two values is greater:
