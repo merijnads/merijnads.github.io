@@ -1,104 +1,104 @@
 ---
 path: '/part-2/3-else-elif'
-title: 'More conditionals'
+title: 'Meer keuzestructuren (else-elif)'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name="Learning objectives">
+<text-box variant='learningObjectives' name="Leerdoelen">
 
-After this section
+Na deze sectie:
 
-- You will know how to create multiple branches within conditional statements
-- You will understand the purpose of `if`, `elif` and `else` statements within a conditional statement
-- You will be able to use the modulo operation `%` in Boolean expressions
+- Weet je hoe je meerdere takken kunt maken binnen conditionele instructies.
+- Begrijp je het doel van `if`, `elif` en `else` instructies binnen een conditionele instructie.
+- Kun je de modulo-operatie `%` gebruiken in booleaanse expressies.
 
 </text-box>
 
-Let's have a look at a program which asks the user to input a number, and then prints out different messages based on whether the number is negative, positive, or equal to zero:
+Laten we eens kijken naar een programma dat de gebruiker vraagt om een getal in te voeren en vervolgens verschillende berichten afdrukt op basis van of het getal negatief, positief of gelijk aan nul is:
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ alstublieft een getal in: "))
 
 if number < 0:
-    print("The number is negative")
+    print("Het getal is negatief")
 
 if number >= 0:
-    print("The number is positive or zero")
+    print("Het getal is positief of nul")
 ```
 
-This looks a bit clumsy and repetitive. We only ever want to execute one of the `if` blocks, because the input will always be either below zero, or zero or above. That is, either `number < 0` or `number >= 0` is true, but never both at the same time. So, the first conditional statement actually contains all we need here. If it is true, the number is negative. If it is false, the number equals zero or is positive.
+Dit ziet er een beetje onhandig en repetitief uit. We willen altijd maar één van de `if`-blokken uitvoeren, omdat de invoer altijd negatief zal zijn, of nul of groter. Dat wil zeggen, ofwel `number < 0` of `number >= 0` is waar, maar nooit beide tegelijk. Dus de eerste conditionele instructie bevat eigenlijk alles wat we hier nodig hebben. Als het waar is, is het getal negatief. Als het onwaar is, is het getal gelijk aan nul of positief.
 
-Instead of creating a whole another conditional statement, as in the example above, it is possible to create another branch of the same conditional statement to cover all cases _where the condition was false_. This is called the `else` statement.
+In plaats van een hele nieuwe conditionele instructie te maken, zoals in het bovenstaande voorbeeld, is het mogelijk om een andere tak van dezelfde conditionele instructie te maken om alle gevallen _waar de voorwaarde onwaar was_ te behandelen. Dit wordt de `else`-instructie genoemd.
 
-The previous example rewritten:
+Het vorige voorbeeld herschreven:
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ alstublieft een getal in: "))
 
 if number < 0:
-    print("The number is negative")
+    print("Het getal is negatief")
 else:
-    print("The number is positive or zero")
+    print("Het getal is positief of nul")
 ```
 
-When using an if-else construction, one and exactly one of the branches will always be executed. The following picture illustrates the structure:
+Bij het gebruik van een if-else constructie zal één en precies één van de takken altijd worden uitgevoerd. De volgende afbeelding illustreert de structuur:
 
 <img src="2_2_1.png">
 
-NB: there can never be an else branch without an if branch before it. The if-else construction as a whole forms a single _conditional statement_.
+NB: er kan nooit een else-tak zijn zonder een if-tak ervoor. De if-else-constructie als geheel vormt een enkele _conditionele instructie_.
 
-The following example checks whether a number given by the user is even or not. Parity can be checked with the modulo operator `%`, which produces the remainder of an integer division operation. When divided by two, if the remainder is zero, the number is even. Otherwise the number is odd.
+Het volgende voorbeeld controleert of een getal dat door de gebruiker wordt gegeven even is of niet. De pariteit kan worden gecontroleerd met de modulo-operator `%`, die het restant van een gehele deling geeft. Als het bij deling door twee een restant van nul oplevert, is het getal even. Anders is het getal oneven.
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ alstublieft een getal in: "))
 
 if number % 2 == 0:
-    print("The number is even")
+    print("Het getal is even")
 else:
-    print("The number is odd")
+    print("Het getal is oneven")
 ```
 
 <sample-output>
 
-Please type in a number: **5**
-The number is odd
+Typ alstublieft een getal in: **5**
+Het getal is oneven
 
 </sample-output>
 
-Another example with string comparison:
+Een ander voorbeeld met een stringvergelijking:
 
 ```python
-correct = "kittycat"
-password = input("Please type in the password: ")
+correct = "katje"
+password = input("Typ alstublieft het wachtwoord in: ")
 
 if password == correct:
-    print("Welcome")
+    print("Welkom")
 else:
-    print("No admittance")
+    print("Geen toegang")
 ```
 
-With two different inputs this should print out:
+Met twee verschillende invoeringen zou dit het volgende moeten afdrukken:
 
 <sample-output>
 
-Please type in the password: **kittycat**
-Welcome
+Typ alstublieft het wachtwoord in: **katje**
+Welkom
 
 </sample-output>
 
 <sample-output>
 
-Please type in the password: **monkey**
-No admittance
+Typ alstublieft het wachtwoord in: **aap**
+Geen toegang
 
 </sample-output>
 
 
-<in-browser-programming-exercise name="Age of maturity" tmcname="part02-04_age_of_maturity" height="400px">
+<in-browser-programming-exercise name="Meerderjarigheid" tmcname="part02-04_age_of_maturity" height="400px">
 
-Please write a program which asks the user for their age. The program should then print out a message based on whether the user is of age or not, using 18 as the age of maturity.
+Schrijf alsjeblieft een programma dat de gebruiker vraagt naar zijn leeftijd. Het programma moet vervolgens een bericht afdrukken op basis van of de gebruiker meerderjarig is of niet, waarbij 18 als de leeftijd van meerderjarigheid wordt gebruikt.
 
-Some examples of expected behaviour:
+Enkele voorbeelden van verwachte uitvoer:
 
 <sample-output>
 
@@ -117,96 +117,98 @@ You are of age!
 
 </in-browser-programming-exercise>
 
-## Alternative branches using the elif statement
+## Alternatieve takken met behulp van de elif-instructie
 
-Often there are more than two options the program should account for. For example, the result of a football match could go three ways: home wins, away wins, or there is a tie.
+Vaak zijn er meer dan twee opties waar het programma rekening mee moet houden. Bijvoorbeeld, de uitslag van een voetbalwedstrijd kan drie kanten op gaan: de thuisploeg wint, de uitspelende ploeg wint, of er is een gelijkspel.
 
-A conditional statement can be added to with an `elif` branch. It is short for the words "else if", which means the branch will contain an alternative to the original condition. Importantly, an `elif` statement is executed only if none of the preceding branches is executed.
+Een conditionele instructie kan worden uitgebreid met een `elif`-tak. Dit is een verkorte vorm van de woorden "anders als", wat betekent dat de tak een alternatief bevat voor de oorspronkelijke voorwaarde. Belangrijk is dat een `elif`-instructie alleen wordt uitgevoerd als geen van de voorgaande takken is uitgevoerd.
 
 <img src="2_2_2.png">
 
-Let's have a look at a program which determines the winner of a match:
+Laten we eens kijken naar een programma dat de winnaar van een wedstrijd bepaalt:
 
 ```python
-goals_home = int(input("Home goals scored: "))
-goals_away = int(input("Away goals scored: "))
+doelpunten_thuis = int(input("Aantal doelpunten thuisploeg: "))
+doelpunten_uit = int(input("Aantal doelpunten uitspelende ploeg: "))
 
-if goals_home > goals_away:
-    print("The home team won!")
-elif goals_away > goals_home:
-    print("The away team won!")
+if doelpunten_thuis > doelpunten_uit:
+    print("De thuisploeg heeft gewonnen!")
+elif doelpunten_uit > doelpunten_thuis:
+    print("De uitspelende ploeg heeft gewonnen!")
 else:
-    print("It's a tie!")
+    print("Het is een gelijkspel!")
 ```
 
-This program could print out three different statements given different inputs:
+Dit programma kan drie verschillende verklaringen afdrukken op basis van verschillende invoeringen:
 
 <sample-output>
 
-Home goals scored: **4**
-Away goals scored: **2**
-The home team won!
+Aantal doelpunten thuisploeg: **4**
+Aantal doelpunten uitspelende ploeg: **2**
+De thuisploeg heeft gewonnen!
 
 </sample-output>
 
 <sample-output>
 
-Home goals scored: **0**
-Away goals scored: **6**
-The away team won!
+Aantal doelpunten thuisploeg: **0**
+Aantal doelpunten uitspelende ploeg: **6**
+De uitspelende ploeg heeft gewonnen!
 
 </sample-output>
 
 <sample-output>
 
-Home goals scored: **3**
-Away goals scored: **3**
-It's a tie!
+Aantal doelpunten thuisploeg: **3**
+Aantal doelpun
+
+ten uitspelende ploeg: **3**
+Het is een gelijkspel!
 
 </sample-output>
 
-In the above example there are three alternative branches, exactly one of which will always be executed. However, there is no limit to the number of `elif` branches a conditional statement can contain, and the `else` branch is not mandatory.
+In het bovenstaande voorbeeld zijn er drie alternatieve takken, waarvan er precies één altijd zal worden uitgevoerd. Er is echter geen limiet aan het aantal `elif`-takken dat een conditionele instructie kan bevatten, en de `else`-tak is niet verplicht.
 
-This is also a valid conditional statement:
+Dit is ook een geldige conditionele instructie:
 
 ```python
-print("Holiday calendar")
-date = input("What is the date today? ")
+print("Vakantiekalender")
+datum = input("Wat is de datum vandaag? ")
 
-if date == "Dec 26":
-    print("It's Boxing Day")
-elif date == "Dec 31":
-    print("It's Hogmanay")
-elif date == "Jan 1":
-    print("It's New Year's Day")
+if datum == "26 dec":
+    print("Het is Tweede Kerstdag")
+elif datum == "31 dec":
+    print("Het is Oudejaarsavond")
+elif datum == "1 jan":
+    print("Het is Nieuwjaarsdag")
 
-print("Thanks and bye.")
+print("Bedankt en tot ziens.")
 ```
 
 <sample-output>
 
-Holiday calendar
-What is the date today? **Dec 31**
-It's Hogmanay
-Thanks and bye.
+Vakantiekalender
+Wat is de datum vandaag? **31 dec**
+Het is Oudejaarsavond
+Bedankt en tot ziens.
 
 </sample-output>
 
-Notice the previous example has no `else` branch. If the user inputs a date which is not mentioned in any of the `if` or `elif` branches, or inputs a date in a different format, none of the three branches of the conditional statement is executed.
+Let op dat het vorige voorbeeld geen `else`-tak heeft. Als de gebruiker een datum invoert die niet wordt genoemd in een van de `if`- of `elif`-takken, of een datum invoert in een andere indeling, wordt geen van de drie takken van de conditionele instructie uitgevoerd.
 
 <sample-output>
 
-Holiday calendar
-What is the date today? **Dec 25**
-Thanks and bye.
+Vakantiekalender
+Wat is de datum vandaag? **25 dec**
+Bedankt en tot ziens.
 
 </sample-output>
 
-<in-browser-programming-exercise name="Greater than or equal to" tmcname="part02-05_greater_or_equal"  height="400px">
+<in-browser-programming-exercise name="Groter dan of gelijk aan" tmcname="part02-05_greater_or_equal"  height="400px">
 
-Please write a program which asks for two integer numbers. The program should then print out whichever is greater. If the numbers are equal, the program should print a different message.
+Schrijf alsjeblieft een programma dat vraagt om twee gehele getallen. Het programma moet vervolgens het grootste van de twee afdrukken. Als de getallen gelijk zijn, moet het programma een ander bericht afdrukken.
 
-Some examples of expected behaviour:
+Enkele voorbeelden van verwachte uitvoer:
 
 <sample-output>
 
@@ -232,14 +234,15 @@ The numbers are equal!
 
 </sample-output>
 
+
 </in-browser-programming-exercise>
 
 
-<in-browser-programming-exercise name="The elder" tmcname="part02-06_elder" height="550px">
+<in-browser-programming-exercise name="De oudste" tmcname="part02-06_elder" height="550px">
 
-Please write a program which asks for the names and ages of two persons. The program should then print out the name of the elder.
+Schrijf alsjeblieft een programma dat vraagt naar de namen en leeftijden van twee personen. Het programma moet vervolgens de naam van de oudste persoon afdrukken.
 
-Some examples of expected behaviour:
+Enkele voorbeelden van verwachte uitvoer:
 
 <sample-output>
 
@@ -265,19 +268,20 @@ Bill and Jean are the same age
 
 </sample-output>
 
+
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Alphabetically last" tmcname="part02-07_alphabetically_last"  height="500px">
+<in-browser-programming-exercise name="Alfabetisch laatste" tmcname="part02-07_alphabetically_last"  height="500px">
 
-Python comparison operators can also be used on strings. String `a` is smaller than string `b` if it comes alphabetically before `b`. Notice however that the comparison is only reliable if
-- the characters compared are of the same case, i.e. both UPPERCASE or both lowercase
-- only the standard English alphabet of a to z, or A to Z, is used.
+Vergelijkingsoperatoren in Python kunnen ook worden gebruikt op strings. String `a` is kleiner dan string `b` als deze alfabetisch voor `b` komt. Let echter op dat de vergelijking alleen betrouwbaar is als
+- de vergeleken tekens van dezelfde case zijn, dus beide HOOFDLETTERS of beide kleine letters
+- alleen het standaard Engelse alfabet van a tot z, of A tot Z, wordt gebruikt.
 
-Please write a program which asks the user for two words. The program should then print out whichever of the two comes alphabetically last.
+Schrijf alsjeblieft een programma dat de gebruiker vraagt om twee woorden. Het programma moet vervolgens het woord dat alfabetisch als laatste komt afdrukken.
 
-You can assume all words will be typed in lowercase entirely.
+Je kunt ervan uitgaan dat alle woorden volledig in kleine letters worden ingevoerd.
 
-Some examples of expected behaviour:
+Enkele voorbeelden van verwachte uitvoer:
 
 <sample-output>
 
@@ -307,7 +311,7 @@ You gave the same word twice.
 
 <!--
 
-A quiz to review the contents of this section:
+Een quiz om de inhoud van deze sectie te herhalen:
 
 <quiz id="82f644fe-5d89-5153-842a-11d5d11bc059"></quiz>
 

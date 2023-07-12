@@ -1,5 +1,5 @@
 ---
-path: '/part-4/2-more-functions'
+path: '/part-5/2-more-functions'
 title: 'More functions'
 hidden: false
 ---
@@ -79,7 +79,7 @@ This terminology may all seem a bit superfluous, but computer science as a disci
 
 ## Error messages when running tests
 
-Most exercises on this course have automatic tests attached to them. If your program doesn't work as specified in the task, the tests will show an error message, which may or may not be helpful. It is usually worth the trouble to read the error message carefully. 
+Most exercises on this course have automatic tests attached to them. If your program doesn't work as specified in the task, the tests will show an error message, which may or may not be helpful. It is usually worth the trouble to read the error message carefully.
 
 In some situations the error message might not tell you very much at all. In the next exercise below you may come across this error message:
 

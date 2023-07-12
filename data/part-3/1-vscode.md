@@ -1,5 +1,5 @@
 ---
-path: '/part-4/1-vscode'
+path: '/part-3/1-vscode'
 title: 'The Visual Studio Code editor, Python interpreter and built-in debugging tool'
 hidden: false
 ---

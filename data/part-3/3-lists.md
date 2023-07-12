@@ -1,5 +1,5 @@
 ---
-path: '/part-4/3-lists'
+path: '/part-3/3-lists'
 title: 'Lists'
 hidden: false
 ---
@@ -15,7 +15,7 @@ After this section
 
 </text-box>
 
-Thus far in our programs we have stored data with variables, each bit of data usually having its own named variable. This obviously has some limitations, as it can get cumbersome to define separate variables for everything when there is a lot of data to handle. 
+Thus far in our programs we have stored data with variables, each bit of data usually having its own named variable. This obviously has some limitations, as it can get cumbersome to define separate variables for everything when there is a lot of data to handle.
 
 A Python _list_ is a collection of values which is accessed via a single variable name. The contents of the list are written within square brackets. The values contained in the list are called _items_, or sometimes _elements_.
 
@@ -502,7 +502,7 @@ print("Smallest:", smallest)
 print("Greatest:", greatest)
 print("Length of the list:", length)
 
-# another function call 
+# another function call
 # the list itself is an argument, the function returns a sorted copy
 in_order = sorted(my_list))
 print(in_order)
@@ -564,7 +564,7 @@ The function makes use of a helper variable `numbers`, which is a list. All the 
 
 Calling the function like this
 
-```python 
+```python
 numbers = input_numbers()
 
 print("The greatest number is", max(numbers))

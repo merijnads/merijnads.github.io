@@ -1,5 +1,5 @@
 ---
-path: '/part-3/2-loops-with-conditions'
+path: '/part-4/2-loops-with-conditions'
 title: 'Loops with conditions'
 hidden: false
 ---

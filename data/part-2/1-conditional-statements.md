@@ -1,159 +1,156 @@
 ---
 path: "/part-2/1-conditional-statements"
-title: "Conditional statements"
+title: "Keuzestructuren (if)"
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name="Learning objectives">
+<text-box variant='learningObjectives' name="Leerdoelen">
 
-After this section
+Na deze sectie:
 
-- You will be able to use a simple conditional statement in programming
-- You will know what a Boolean value is
-- You will be able to express conditionals with comparison operators
+- Kun je een eenvoudige voorwaardelijke instructie gebruiken in programmeren.
+- Weet je wat een Booleaanse waarde is.
+- Kun je voorwaardelijke instructies uitdrukken met vergelijkingsoperatoren.
 
 </text-box>
 
-Thus far, every program we have written has been executed line by line in order. Instead of executing every line of code every single time a program is run, it is often useful to create sections of the program which are are only executed in certain situations.
+Tot nu toe hebben we programma's geschreven die regel voor regel worden uitgevoerd. In plaats van elke regel code telkens uit te voeren wanneer een programma wordt gestart, is het vaak nuttig om secties van het programma te maken die alleen in bepaalde situaties worden uitgevoerd.
 
-For example, the following code checks whether the user is of age:
+Bijvoorbeeld, de volgende code controleert of de gebruiker meerderjarig is:
 
 ```python
-age = int(input("How old are you? "))
+age = int(input("Hoe oud ben je? "))
 
 if age > 17:
-    print("You are of age!")
-    print("Here's a copy of GTA6 for you.")
+    print("Je bent meerderjarig!")
+    print("Hier is een kopie van GTA6 voor jou.")
 
-print("Next customer, please!")
+print("Volgende klant, alsjeblieft!")
 ```
 
-When the user is over the age of 17, the execution of the program should look like this:
+Wanneer de gebruiker ouder is dan 17, zou de uitvoering van het programma er als volgt uitzien:
 
 <sample-output>
 
-How old are you? **18**
-You are of age!
-Here's a copy of GTA6 for you.
-Next customer, please!
+Hoe oud ben je? **18**
+Je bent meerderjarig!
+Hier is een kopie van GTA6 voor jou.
+Volgende klant, alsjeblieft!
 
 </sample-output>
 
-If the user is 17 or under, only this is printed out:
+Als de gebruiker 17 jaar of jonger is, wordt alleen dit afgedrukt:
 
 <sample-output>
 
-How old are you? **16**
-Next customer, please!
+Hoe oud ben je? **16**
+Volgende klant, alsjeblieft!
 
 </sample-output>
 
-These examples show us that the value given as input affects which parts of the program are executed. The program contains a _conditional statement_ with a block of code which is executed only if the condition in the statement is true.
+Deze voorbeelden laten ons zien dat de waarde die als invoer wordt gegeven van invloed is op welke delen van het programma worden uitgevoerd. Het programma bevat een _voorwaardelijke instructie_ met een codeblok dat alleen wordt uitgevoerd als de voorwaarde in de instructie waar is.
 
-<img src="1_5_1.png">
+<img src="2_5_1.png">
 
-In a conditional statement the keyword `if` is followed by a _condition_, such as a comparison of two values. The code block following this header line is only executed if the condition is true.
+In een voorwaardelijke instructie wordt het trefwoord `if` gevolgd door een _voorwaarde_, zoals een vergelijking van twee waarden. Het codeblok dat volgt op deze kopregel wordt alleen uitgevoerd als de voorwaarde waar is.
 
-Notice the colon character following the `if` header. In the following code there is no colon:
+Let op het dubbele punt-teken na de `if`-kopregel. In de volgende code is er geen dubbele punt:
 
 ```python
 age = 10
 
-# no colon at the end of the following line
+# geen dubbele punt aan het einde van de volgende regel
 if age > 17
-    print("You are of age.")
+    print("Je bent meerderjarig.")
 ```
 
-Upon execution this causes an error:
+Bij het uitvoeren veroorzaakt dit een foutmelding:
 
 <sample-output>
 <pre>
-File "program.py", line 3
+Bestand "programma.py", regel 3
   if age > 17
             ^
-SyntaxError: invalid syntax
+SyntaxError: expected ':'
 </pre>
 </sample-output>
 
-## Comparison operators
+## Vergelijkingsoperatoren
 
-Very typically conditions consist of comparing two values. Here is a table with the most common comparison operators used in Python:
+In de meeste gevallen bestaan voorwaarden uit het vergelijken van twee waarden. Hier is een tabel met de meest gebruikte vergelijkingsoperatoren in Python:
 
-| Operator | Purpose        | Example  |
-|:--------:|----------------|----------|
-| `==`     | Equal to       | `a == b` |
-| `!=`     | Not equal to   | `a != b` |
-| `>`      | Greater than   | `a > b`  |
-| `>=`     | Greater than or equal to | `a >= b` |
-| `<`      | Less than      | `a < b`  |
-| `<=`     | Less than or equal to    | `a <= b` |
+| Operator | Betekenis      | Voorbeeld |
+|:--------:|----------------|-----------|
+| `==`     | Gelijk aan     | `a == b`  |
+| `!=`     | Niet gelijk aan | `a != b` |
+| `>`      | Groter dan     | `a > b`   |
+| `>=`     | Groter dan of gelijk aan | `a >= b` |
+| `<`      | Kleiner dan    | `a < b`   |
+| `<=`     | Kleiner dan of gelijk aan | `a <= b` |
 
-Let's have a look at a program which prints out different things based on whether the number the user inputs is negative, positive, or equal to zero:
+Laten we eens kijken naar een programma dat verschillende dingen afdrukt op basis van of het getal dat de gebruiker invoert negatief, positief of gelijk aan nul is:
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ een getal in: "))
 
 if number < 0:
-    print("The number is negative.")
+    print("Het getal is negatief.")
 
 if number > 0:
-    print("The number is positive.")
+    print("Het getal is positief.")
 
 if number == 0:
-    print("The number is zero.")
+    print("Het getal is nul.")
 ```
 
-Examples of how the program functions with three different inputs:
+Voorbeelden van hoe het programma werkt met drie verschillende invoeren:
 
 <sample-output>
 
-Please type in a number: **15**
-The number is positive.
+Typ een getal in: **15**
+Het getal is positief.
 
 </sample-output>
 
 <sample-output>
 
-Please type in a number: **-18**
-The number is negative.
+Typ een getal in: **-18**
+Het getal is negatief.
 
 </sample-output>
 
 <sample-output>
 
-Please type in a number: **0**
-The number is zero.
+Typ een getal in: **0**
+Het getal is nul.
 
 </sample-output>
 
-## Indentation
+## Inspringen
 
-Python recognises that a block of code is part of a conditional statement if each line of code in the block is _indented_ the same. That is, there should be a bit of whitespace at the beginning of every line of code within the code block. Each line should have the same amount of whitespace.
+Python herkent dat een codeblok onderdeel is van een voorwaardelijke instructie als elke regel code in het blok op dezelfde manier is _ingesprongen_. Er moet een beetje witruimte aan het begin van elke regel code binnen het codeblok zijn. Elke regel moet dezelfde hoeveelheid witruimte hebben.
 
-For example:
+Bijvoorbeeld:
 
 ````python
-password = input("Please type in a password: ")
+password = input("Typ een wachtwoord in: ")
 
-if password == "kittycat":
-    print("You knew the password!")
-    print("You must be either the intended user...")
-    print("...or quite an accomplished hacker.")
+if password == "cat":
+    print("Je kende het wachtwoord!")
+    print("Je moet ofwel de beoogde gebruiker zijn...")
+    print("...of een zeer bekwame hacker.")
 
-print("The program has finished its execution. Thanks and bye!")
+print("Het programma is klaar met zijn uitvoering. Bedankt en tot ziens!")
 ````
 
-You can use the Tab key, short for _tabulator_ key, to insert a set amount of whitespace.
+Je kunt de Tab-toets, afgekort als _tabulator_-toets, gebruiken om een ​​bepaalde hoeveelheid witruimte in te voegen.
 
-<img src="1_5_keyboard.png">
+<img src="2_5_keyboard.png">
 
-Many text editors will automatically indent the following line when the Enter key is pressed after a colon character. When you want to end an indented code block you can use the `Backspace` key to return to the beginning of the line.
+Veel teksteditors zullen automatisch de volgende regel inspringen wanneer de Enter-toets wordt ingedrukt na een dubbele punt. Wanneer je een ingesprongen codeblok wilt beëindigen, kun je de `Backspace`-toets gebruiken om terug te keren naar het begin van de regel.
 
-<img src="1_5_keyboard2.png">
-<small><center>
-The source of the keyboard pictures:
- <a href="https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311803">Pixabay</a>
-</center></small>
+<img src="2_5_keyboard2.png">
+
 
 <in-browser-programming-exercise name="Orwell" tmcname="part01-21_orwell">
 
@@ -173,7 +170,6 @@ Orwell
 </sample-output>
 
 </in-browser-programming-exercise>
-
 <in-browser-programming-exercise name="Absolute value" tmcname="part01-22_absolute_value">
 
 Please write a program which asks the user for an integer number. If the number is less than zero, the program should print out the number multiplied by -1. Otherwise the program prints out the the number as is. Please have a look at the examples of expected behaviour below.
@@ -268,47 +264,46 @@ Thank you!
 
 </in-browser-programming-exercise>
 
+## Booleaanse waarden en Booleaanse expressies
 
-## Boolean values and Boolean expressions
+Elke voorwaarde die in een voorwaardelijke instructie wordt gebruikt, resulteert in een waarheidswaarde, dat wil zeggen `True` (waar) of `False` (onwaar). Bijvoorbeeld, de voorwaarde `a < 5` is waar als `a` kleiner is dan 5, en onwaar als `a` gelijk is aan of groter is dan 5.
 
-Any condition used in a conditional statement will result in a truth value, that is, either true or false. For example, the condition `a < 5` is true if `a` is less than 5, and false if `a` is equal to or greater than 5.
+Deze waarden worden vaak _Booleaanse_ waarden genoemd, genoemd naar de Engelse wiskundige George Boole. In Python worden ze behandeld door het gegevenstype `bool`. Variabelen van het type `bool` kunnen alleen de waarden `True` of `False` hebben.
 
-These types of values are often called _Boolean_ values, named after the English mathematician George Boole. In Python they are handled by the `bool` data type. Variables of type `bool` can only have two values: `True` or `False`.
+Elk stuk code dat resulteert in een Booleaanse waarde wordt een _Booleaanse expressie_ genoemd. Bijvoorbeeld, de voorwaarde in een voorwaardelijke instructie is altijd een Booleaanse expressie, en de woorden _voorwaarde_ en _Booleaanse expressie_ kunnen vaak door elkaar worden gebruikt.
 
-Any bit of code that results in a Boolean value is called a _Boolean expression_. For example, the condition in a conditional statement is always a Boolean expression, and the words _condition_ and _Boolean expression_ can often be used interchangeably.
-
-The result of a Boolean expression can be stored in a variable just like the result of any numerical calculation:
+Het resultaat van een Booleaanse expressie kan worden opgeslagen in een variabele, net als het resultaat van een numerieke berekening:
 
 ```python
 a = 3
-condition = a < 5
-print(condition)
-if condition:
-    print("a is less than 5")
+voorwaarde = a < 5
+print(voorwaarde)
+if voorwaarde:
+    print("a is kleiner dan 5")
 ```
 
 <sample-output>
 
 True
-a is less than 5
+a is kleiner dan 5
 
 </sample-output>
 
-The Python keywords `True` and `False` can also be used directly. In the following example the `print` command is executed every time, because the value of the condition is `True`:
+De trefwoorden `True` en `False` van Python kunnen ook direct worden gebruikt. In het volgende voorbeeld wordt het `print`-commando elke keer uitgevoerd, omdat de waarde van de voorwaarde `True` is:
 
 ```python
-condition = True
-if condition:
-    print("This is printed every time.")
+voorwaarde = True
+if voorwaarde:
+    print("Dit wordt elke keer afgedrukt.")
 ```
 
 <sample-output>
 
-This is printed every time.
+Dit wordt elke keer afgedrukt.
 
 </sample-output>
 
-A program like this is not very useful, but later on during the course you will see examples of Boolean variables coming in very handy.
+Een programma als dit is niet erg nuttig, maar later in de cursus zul je voorbeelden zien waarin Booleaanse variabelen erg handig zijn.
 
 <in-browser-programming-exercise name="Calculator" tmcname="part01-25_calculator">
 
@@ -518,15 +513,3 @@ The roots are 2.0 and -4.0
 </sample-output>
 
 </in-browser-programming-exercise>
-
-<!--
-
-A quiz to review the contents of this section:
-
-<quiz id="bc7e500f-a91e-5709-8ae6-34637ff01737"></quiz>
-
--->
-
-Please respond to a quick questionnaire on this week's materials. The questionnaire is worth one exercise point.
-
-<quiz id="9606c6c1-70f4-5236-bd3e-7208b56e7b9e"></quiz>

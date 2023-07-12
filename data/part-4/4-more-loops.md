@@ -1,5 +1,5 @@
 ---
-path: '/part-3/4-more-loops'
+path: '/part-4/4-more-loops'
 title: 'More loops'
 hidden: false
 ---

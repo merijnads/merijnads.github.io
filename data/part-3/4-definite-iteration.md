@@ -1,5 +1,5 @@
 ---
-path: '/part-4/4-definite-iteration'
+path: '/part-3/4-definite-iteration'
 title: 'Definite iteration'
 hidden: false
 ---
@@ -8,7 +8,7 @@ hidden: false
 
 After this section
 
-- You will know the difference between definite and indefinite iteration 
+- You will know the difference between definite and indefinite iteration
 - You will know how a Python `for` loop works
 - You will be able to use a `for` loop to iterate through lists and strings
 
@@ -377,7 +377,7 @@ new [2, 4]
 
 <programming-exercise name='The sum of lists' tmcname='part04-27_sum_of_lists'>
 
-Please write a function named `list_sum` which takes two lists of integers as arguments. The function returns a new list which contains the sums of the items at each index in the two original lists. You may assume both lists have the same number of items. 
+Please write a function named `list_sum` which takes two lists of integers as arguments. The function returns a new list which contains the sums of the items at each index in the two original lists. You may assume both lists have the same number of items.
 
 An example of the function at work:
 

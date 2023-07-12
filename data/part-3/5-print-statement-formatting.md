@@ -1,5 +1,5 @@
 ---
-path: '/part-4/5-print-statement-formatting'
+path: '/part-3/5-print-statement-formatting'
 title: Print statement formatting
 hidden: false
 ---

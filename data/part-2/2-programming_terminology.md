@@ -1,117 +1,117 @@
 ---
 path: '/part-2/2-programming-terminology'
-title: 'Programming terminology'
+title: 'De taal van de programmeur'
 ---
 
-<text-box variant='learningObjectives' name="Learning objectives">
+<text-box variant='learningObjectives' name="Leerdoelen">
 
-After this section
+Na deze sectie:
 
-- You will be familiar with some essential terminology in programming
-- You will know the difference between a statement and an expression
-- You will be able to find out the data type of an evaluated expression
-- You will have learnt to use debugging methods to find mistakes in your code
+- Ben je bekend met enkele essentiële terminologieën in programmeren.
+- Ken je het verschil tussen een statement en een expressie.
+- Kun je het gegevenstype van een geëvalueerde expressie achterhalen.
+- Heb je geleerd hoe je fouten in je code kunt opsporen met behulp van debugmethoden.
 
 </text-box>
 
-In the first part of this course we didn't pay much attention to terminology, so let's have a look at some central concepts in programming.
+In het eerste deel van deze cursus hebben we niet veel aandacht besteed aan terminologie, dus laten we eens kijken naar enkele centrale concepten in het programmeren.
 
 ## Statement
 
-A _statement_ is a part of the program which executes something. It often, but not always, refers to a single command.
+Een _statement_ is een deel van het programma dat iets uitvoert. Het verwijst vaak, maar niet altijd, naar een enkel commando.
 
-For example, `print("Hi!")` is a statement which prints out a line of text. Likewise, `number = 2` is a statement which assigns a value to a variable.
+Bijvoorbeeld, `print("Hallo!")` is een statement dat een regel tekst afdrukt. Evenzo is `number = 2` een statement dat een waarde toekent aan een variabele.
 
-A statement can also be more complicated. It can, for instance, contain other statements. The following statement spans three lines:
+Een statement kan ook complexer zijn. Het kan bijvoorbeeld andere statements bevatten. Het volgende statement beslaat drie regels:
 
 ```python
 if name == "Anna":
-    print("Hi!")
+    print("Hallo!")
     number = 2
 ```
 
-In the above case there are two statements (a print statement and an assignment statement) within a conditional statement.
+In het bovenstaande geval zijn er twee statements (een print-statement en een toekenningsstatement) binnen een conditioneel statement.
 
 ## Block
 
-A _block_ is a group of consecutive statements that are at the same level in the structure of the program. For example, the block of a conditional statement contains those statements which are executed only if the condition is true.
+Een _block_ is een groep opeenvolgende statements die op hetzelfde niveau in de structuur van het programma staan. Bijvoorbeeld, het block van een conditioneel statement bevat de statements die alleen worden uitgevoerd als de voorwaarde waar is.
 
 ```python
 if age > 17:
-    # beginning of the conditional block
-    print("You are of age!")
+    # begin van het conditionele block
+    print("Je bent volwassen!")
     age = age + 1
-    print("You are now one year older...")
-    # end of the conditional block
+    print("Je bent nu één jaar ouder...")
+    # einde van het conditionele block
 
-print("This here belongs to another block")
+print("Dit hoort bij een ander block")
 ```
 
-In Python blocks are expressed by indenting all code in the block by the same amount of whitespace.
+In Python worden blocks aangegeven door alle code in het block dezelfde inspringing te geven.
 
-NB: the main block of a Python program must always be at the leftmost edge of the file, without indentation:
+NB: het hoofdblock van een Python-programma moet altijd aan de linkerzijde van het bestand staan, zonder inspringing:
 
 ```python
-# this program will not work because it is not written at the leftmost egde of the file
-  print("hello world")
-  print("this program is not very good...")
+# dit programma werkt niet omdat het niet aan de linkerzijde van het bestand is geschreven
+  print("hallo wereld")
+  print("dit programma is niet erg goed...")
 ```
 
-## Expression
+## Expressie
 
-An _expression_ is a bit of code that results in a determined data type. When the program is executed, the expression is evaluated so that it has a value that can then be used in the program.
+Een _expressie_ is een stuk code dat resulteert in een bepaald gegevenstype. Wanneer het programma wordt uitgevoerd, wordt de expressie geëvalueerd, zodat deze een waarde heeft die vervolgens in het programma kan worden gebruikt.
 
-Here are a few examples of expressions:
+Hier zijn enkele voorbeelden van expressies:
 
-| Expression | Value  | Type    | Python data type |
-|------------|--------|---------|------------------|
-|`2 + 4 + 3` | `9`    | integer | `int` |
-|`"abc" + "de"` | `"abcde"` | string | `str`|
-|`11 / 2`    | `5.5`  | floating point number | `float` |
-|`2 * 5 > 9` | `True` | Boolean value | `bool`|
+| Expressie          | Waarde    | Type      | Python-gegevenstype |
+|--------------------|-----------|-----------|---------------------|
+| `2 + 4 + 3`        | `9`       | integer   | `int`               |
+| `"abc" + "de"`     | `"abcde"` | string    | `str`               |
+| `11 / 2`           | `5.5`     | kommagetal | `float`             |
+| `2 * 5 > 9`        | `True`    | Booleaanse waarde | `bool`        |
 
-Because all expressions have a type, they can be assigned to variables:
+Omdat alle expressies een type hebben, kunnen ze aan variabelen worden toegewezen:
 
 ```python
-# the variable x is assigned the value of the expression 1 + 2
+# de variabele x krijgt de waarde van de expressie 1 + 2
 x = 1 + 2
 ```
 
-Simple expressions can be assembled together to form more complicated expressions, for example with arithmetic operations:
+Eenvoudige expressies kunnen worden samengevoegd tot complexere expressies, bijvoorbeeld met behulp van wiskundige operaties:
 
 ```python
-# the variable y is assigned the value of the expression '3 times x plus x squared'
+# de variabele y krijgt de waarde van de expressie '3 keer x plus x in het kwadraat'
 y = 3 * x + x**2
 ```
 
-## Function
+## Functie
 
-A _function_ executes some functionality. Functions can also take one or more _arguments_, which are data that can be fed to and processed by the function. Arguments are sometimes also referred to as _parameters_. There is a technical distinction between an argument and a parameter, but the words are often used interchangeably. For now it should suffice to remember that both terms refer to the idea of some data passed to the function.
+Een _functie_ voert bepaalde functionaliteit uit. Functies kunnen ook één of meer _argumenten_ aannemen, wat gegevens zijn die aan de functie kunnen worden doorgegeven en verwerkt. Argumenten worden soms ook wel _parameters_ genoemd. Er is een technisch onderscheid tussen een argument en een parameter, maar de woorden worden vaak door elkaar gebruikt. Voor nu volstaat het om te onthouden dat beide termen verwijzen naar het idee van enkele gegevens die aan de functie worden doorgegeven.
 
-A function is executed when it is _called_. That is, when the function (and its arguments, if any) is mentioned in the code. The following statement calls the `print` function with the argument `"this is an argument"`:
-
-```python
-print("this is an argument")
-```
-
-Another function you've already used often is the `input` function, which asks the user for input. The argument of this function is the message that is shown to the user:
+Een functie wordt uitgevoerd wanneer deze wordt _aangeroepen_. Dat wil zeggen, wanneer de functie (en de argumenten, indien aanwezig) in de code worden genoemd. De volgende statement roept de functie `print` aan met het argument `"dit is een argument"`:
 
 ```python
-name = input("Please type in your name: ")
+print("dit is een argument")
 ```
 
-In this case the function also _returns_ a value. After the function has been executed, the section of code where it was called is replaced by the value it returns; it is another expression that has now been evaluated. The function `input` returns a string value containing whatever the user typed in at the prompt. The value a function returns is often stored in a variable so that it can be used in the program later on.
+Een andere functie die je al vaak hebt gebruikt, is de `input`-functie, die de gebruiker om invoer vraagt. Het argument van deze functie is het bericht dat aan de gebruiker wordt getoond:
 
-## Data type
+```python
+name = input("Typ alsjeblieft je naam: ")
+```
 
-_Data type_ refers to the characteristics of any value present in the program. In the following bit of code the data type of the variable `name` is string or `str`, and the data type of the variable `result` is integer or `int`:
+In dit geval _retourneert_ de functie ook een waarde. Nadat de functie is uitgevoerd, wordt het gedeelte van de code waarin deze is aangeroepen vervangen door de waarde die deze retourneert; het is een andere expressie die nu is geëvalueerd. De functie `input` retourneert een stringwaarde met daarin wat de gebruiker heeft ingevoerd bij de prompt. De waarde die een functie retourneert, wordt vaak opgeslagen in een variabele zodat deze later in het programma kan worden gebruikt.
+
+## Gegevenstype
+
+_Het gegevenstype_ verwijst naar de eigenschappen van een waarde die aanwezig is in het programma. In de volgende code heeft de variabele `name` het gegevenstype string of `str`, en heeft de variabele `result` het gegevenstype integer of `int`:
 
 ```python
 name = "Anna"
 result = 100
 ```
 
-You can use the function `type` to find out the data type of any expression. An example of its use:
+Je kunt de functie `type` gebruiken om het gegevenstype van een expressie te achterhalen. Een voorbeeld van het gebruik ervan:
 
 ```python
 print(type("Anna"))
@@ -127,20 +127,22 @@ print(type(100))
 
 ## Syntax
 
-Similarly to natural languages, the _syntax_ of a programming language determines how the code of a program should be written. Each programming language has its own specific syntax.
+Net als bij natuurlijke talen bepaalt de _syntax_ van een programmeertaal hoe de code van een programma moet worden geschreven. Elke programmeertaal heeft zijn eigen specifieke syntax.
 
-The syntax of Python specifies, among other things, that the first line of an `if` statement should end in a colon character, and the block of the statement should be indented:
+De
+
+ syntax van Python specificeert onder andere dat de eerste regel van een `if`-statement moet eindigen met een dubbele punt, en het block van het statement moet worden ingesprongen:
 
 ```python
 if name == "Anna":
-    print("Hi!")
+    print("Hallo!")
 ```
 
-If the syntactic rules of the programming language are not followed, there will be an error:
+Als de syntactische regels van de programmeertaal niet worden gevolgd, treedt er een fout op:
 
 ```python
 if name == "Anna"
-    print("Hi!")
+    print("Hallo!")
 ```
 
 <sample-output>
@@ -155,21 +157,21 @@ SyntaxError: invalid syntax
 
 </sample-output>
 
-## Debugging
+## Debuggen
 
-If the syntax of the program is correct but the program still doesn't function as intended, there is a _bug_ in the program.
+Als de syntax van het programma correct is maar het programma nog steeds niet werkt zoals bedoeld, is er een _bug_ in het programma.
 
-Bugs manifest in different ways. Some bugs cause an error during execution. For example, the following program
+Bugs manifesteren zich op verschillende manieren. Sommige bugs veroorzaken een fout tijdens de uitvoering. Bijvoorbeeld, het volgende programma
 
 ```python
 x = 10
 y = 0
 result = x / y
 
-print(f"{x} divided by {y} is {result}")
+print(f"{x} gedeeld door {y} is {result}")
 ```
 
-causes this error:
+veroorzaakt deze fout:
 
 <sample-output>
 
@@ -179,163 +181,165 @@ ZeroDivisionError: integer division or modulo by zero on line 3
 
 </sample-output>
 
-The problem here is mathematical in nature: division by zero is not allowed, and this halts the execution of the program.
+Het probleem hier is van wiskundige aard: deling door nul is niet toegestaan, en dit stopt de uitvoering van het programma.
 
-Errors during execution are usually rather easy to fix, because the error message states the line of code causing the error. Of course the actual reason for the bug might be somewhere quite different than the line of code causing the error.
+Fouten tijdens de uitvoering zijn meestal vrij eenvoudig te verhelpen, omdat de foutmelding aangeeft op welke regel van de code de fout optreedt. Natuurlijk kan de werkelijke oorzaak van de bug ergens anders liggen dan de regel code die de fout veroorzaakt.
 
-Sometimes a bug in the program is revealed because the result the code produces is wrong. Discovering and locating this type of bug can be challenging. In the programming exercises on this course the tests are usually intended to reveal bugs of this type. Before a bug can be fixed, its cause must first be located.
+Soms wordt een bug in het programma zichtbaar omdat het resultaat dat de code oplevert onjuist is. Het ontdekken en lokaliseren van dit type bug kan uitdagend zijn. In de programmeeroefeningen van deze cursus zijn de tests meestal bedoeld om bugs van dit type aan het licht te brengen. Voordat een bug kan worden opgelost, moet eerst de oorzaak worden achterhaald.
 
-Programming jargon refers to discovering the causes of bugs as _debugging_. It is an extremely important skill in any programmer's toolbox. Professional programmers often spend more time debugging than writing fresh code.
+In programmeertaal wordt het ontdekken van de oorzaken van bugs _debuggen_ genoemd. Het is een zeer belangrijke vaardigheid in de gereedschapskist van elke programmeur. Professionele programmeurs besteden vaak meer tijd aan debuggen dan aan het schrijven van nieuwe code.
 
-A simple yet effective way of debugging a program is adding debugging print statements to your code. Verifying the results of your code with `print` commands gives a quick confirmation the code does what you want it to do.
+Een eenvoudige maar effectieve manier om een programma te debuggen, is het toevoegen van debugging-printopdrachten aan je code. Door de resultaten van je code te verifiëren met `print`-opdrachten krijg je snel bevestiging dat de code doet wat je wilt dat deze doet.
 
-The following is an attempt to solve one of the exercises from the [previous section](/part-1/5-conditional-statements):
+Dit is een poging om een van de oefeningen uit het [vorige gedeelte](/part-1/5-conditional-statements) op te lossen:
 
 ```python
-hourly_wage = float(input("Hourly wage: "))
-hours = int(input("Hours worked: "))
-day = input("Day of the week: ")
+uurloon = float(input("Uurloon: "))
+uren = int(input("Gewerkte uren: "))
+dag = input("Dag van de week: ")
 
-daily_wages = hourly_wage * hours
-if day == "sunday":
-    daily_wages * 2
+dagloon = uurloon * uren
+if dag == "zondag":
+    dagloon * 2
 
-print(f"Daily wages: {daily_wages} euros")
+print(f"Dagloon: {dagloon} euro")
 ```
 
-The program doesn't work quite right. Executing the tests prints out the following:
+Het programma werkt niet helemaal goed. Bij het uitvoeren van de tests wordt het volgende afgedrukt:
 
 <sample-output>
 
 <pre>
 FAIL: PythonEditorTest: test_sunday_1
 
-With input 20.0,6,Sunday correct wage 240.0 is not found in output Daily wages: 120.0 euros
+Met input 20.0,6,zondag wordt de juiste beloning van 240.0 niet gevonden in de uitvoer Dagloon: 120.0 euro
 </pre>
 
 </sample-output>
 
-When debugging the exercises on this course, the first step is often checking how the program behaves with the input specified in the test that failed. Indeed the result isn't what was expected:
+Bij het debuggen van de oefeningen in deze cursus is de eerste stap vaak controleren hoe het programma zich gedraagt met de input die is gespecificeerd in de test die is mislukt. Inderdaad, het resultaat is niet wat werd verwacht:
 
 <sample-output>
 
-Daily wages: 120.0 euros
+Dagloon: 120.0 euro
 
 </sample-output>
 
-Debugging usually means running the program multiple times. It can come in handy to temporarily "hard-code" the problematic input, instead of asking the user for input each time. In this case hard-coding could look like this:
+Debuggen betekent vaak dat het programma meerdere keren wordt uitgevoerd. Het kan handig zijn om de problematische input tijdelijk "hardcoded" in te stellen in plaats van de gebruiker telkens om input te vragen. In dit geval kan hardcoding er als volgt uitzien:
 
 ```python
-# hourly_wage = float(input("Hourly wage: "))
-# hours = int(input("Hours worked: "))
-# day = input("Day of the week: ")
-hourly_wage = 20.0
-hours = 6
-day = "Sunday"
+# uurloon = float(input("Uurloon: "))
+# uren = int(input("Gewerkte uren: "))
+# dag = input("Dag van de week: ")
+uurloon = 20.0
+uren = 6
+dag = "zondag"
 
-daily_wages = hourly_wage * hours
-if day == "sunday":
-    daily_wages * 2
+dagloon = uurloon * uren
+if dag == "zondag":
+    dagloon * 2
 
-print(f"Daily wages: {daily_wages} euros")
+print(f"Dagloon: {dagloon} euro")
 ```
 
-The next step could be adding _debugging print statements_. The problematic part of the code is in the section dealing with Sundays, so let's add `print` commands before and after the line that should double the daily wages on Sundays:
+De volgende stap kan zijn om _debugging-printopdrachten_ toe te voegen. Het problematische deel van de code bevindt zich in het gedeelte dat zich bezighoudt met zondagen, dus laten we `print`-opdrachten toevoegen voor en na de regel die het dagloon zou moeten verdubbelen:
 
 ```python
 # ...
 
-daily_wages = hourly_wage * hours
-if day == "sunday":
-    print("wages before:", daily_wages)
-    daily_wages * 2
-    print("wages after doubling:", daily_wages)
+dagloon = uurloon * uren
+if dag == "zondag":
+    print("loon voor:", dagloon)
+    dagloon * 2
+    print("loon na verdubbeling:", dagloon)
 
-print(f"Daily wages: {daily_wages} euros")
+print(f"Dagloon: {dagloon} euro")
 ```
 
-Running the code now reveals nothing - the debugging print statements aren't printed at all. It seems that the contents of the `if` block are never executed, so there must be a problem with the conditional statement. Let's try printing out the value of the Boolean expression:
+Het opnieuw uitvoeren van de code laat niets zien - de debugging-printopdrachten worden helemaal niet afgedrukt. Het lijkt erop dat de inhoud van het `if`-block nooit wordt uitgevoerd, dus er moet een probleem zijn met de conditionele statement. Laten we de waarde van de booleaanse expressie afdrukken:
 
 ```python
 # ...
 
-daily_wages = hourly_wage * hours
-print("condition:", day == "sunday")
-if day == "sunday":
-    print("wages before:", daily_wages)
-    daily_wages * 2
-    print("wages after doubling:", daily_wages)
+dagloon = uurloon * uren
+print("conditie:", dag == "zondag")
+if dag == "zondag":
+    print("loon voor:", dagloon)
+    dagloon * 2
+    print("loon na verdubbeling:", dagloon)
 
-print(f"Daily wages: {daily_wages} euros")
+print(f"Dagloon: {dagloon} euro")
 ```
 
-Indeed, the value is `False`, so the contents of the if block are never executed:
+Inderdaad, de waarde is `False`, dus de inhoud van het `if`-block wordt nooit uitgevoerd:
 
 <sample-output>
 
-condition:  False
-Daily wages: 120.0 euros
+conditie: False
+Dagloon: 120.0 euro
 
 </sample-output>
 
-The issue must then lie within the condition of the `if` statement. As in so many situations in programming, the case of letters matters also in comparisons. Notice how the "sunday" in the Boolean expression has not been capitalized, but in the input it was. Let's fix this (in both the `print` command and the `if` statement):
+Het probleem moet dan liggen in de voorwaarde van de `if`-verklaring. Zoals in zoveel situaties in het programmeren, doet de hoofdlettergebruik ertoe bij vergelijkingen. Let op hoe "zondag" in
+
+ de booleaanse expressie niet is gecapitaliseerd, maar in de invoer wel. Laten we dit corrigeren (zowel in de `print`-opdracht als in de `if`-verklaring):
 
 ```python
 # ...
 
-daily_wages = hourly_wage * hours
-print("condition:", day == "Sunday")
-if day == "Sunday":
-    print("wages before:", daily_wages)
-    daily_wages * 2
-    print("wages after doubling:", daily_wages)
+dagloon = uurloon * uren
+print("conditie:", dag == "Zondag")
+if dag == "Zondag":
+    print("loon voor:", dagloon)
+    dagloon * 2
+    print("loon na verdubbeling:", dagloon)
 
-print(f"Daily wages: {daily_wages} euros")
+print(f"Dagloon: {dagloon} euro")
 ```
 
-Running this prints out the following:
+Het opnieuw uitvoeren van de code resulteert in het volgende:
 
 <sample-output>
 
-condition: True
-wages before: 120
-wages after doubling: 120
-Daily wages: 120.0 euros
+conditie: True
+loon voor: 120
+loon na verdubbeling: 120
+Dagloon: 120.0 euro
 
 </sample-output>
 
-It seems the value stored in `daily_wages` is correct at first: `hourly_wage = 20.0` and `hours = 6`, and 20.0 * 6 = 120.0. The command which is supposed to double the figure doesn't do so, however, so there must be a problem with the command. And indeed the command
+Het lijkt erop dat de waarde die is opgeslagen in `dagloon` in eerste instantie correct is: `uurloon = 20.0` en `uren = 6`, en 20.0 * 6 = 120.0. De opdracht die de figuur moet verdubbelen, doet dat echter niet, dus er moet een probleem zijn met de opdracht. En inderdaad, de opdracht
 
 ```python
-daily_wages * 2
+dagloon * 2
 ```
 
-does double the value, but it doesn't store the new value anywhere. Let's change it so it also stores the new value:
+verdubbelt de waarde, maar slaat de nieuwe waarde niet ergens op. Laten we dit veranderen, zodat het ook de nieuwe waarde opslaat:
 
 ```python
-daily_wages *= 2
+dagloon *= 2
 ```
 
-Running the program again reveals that the printout at the end is now also correct:
+Het opnieuw uitvoeren van het programma laat zien dat de uitvoer aan het einde nu ook correct is:
 
 <sample-output>
 
-condition: True
-wages before: 120
-wages after doubling: 240
-Daily wages: 240.0 euros
+conditie: True
+loon voor: 120
+loon na verdubbeling: 240
+Dagloon: 240.0 euro
 
 </sample-output>
 
-When the program has been fixed, remember to remove all debugging print statements and other code added for debugging purposes.
+Wanneer het programma is gerepareerd, vergeet dan niet alle debugging-printopdrachten en andere code die voor debugdoeleinden is toegevoegd, te verwijderen.
 
-This example was quite simple, and in such a short program one could probably figure out the bugs just by reading the code carefully. However, using debugging print statements is often a quick way to get a feeling for where the problem might lie. Print statements can be used to figure out which parts of the program seem to work correctly, so bug tracking efforts can be concentrated on the sections of code which are the most likely culprits.
+Dit voorbeeld was vrij eenvoudig, en in zo'n kort programma kun je waarschijnlijk de bugs vinden door de code zorgvuldig te lezen. Het gebruik van debugging-printopdrachten is echter vaak een snelle manier om een idee te krijgen waar het probleem zou kunnen liggen. Printopdrachten kunnen worden gebruikt om te achterhalen welke delen van het programma correct lijken te werken, zodat de inspanningen voor het opsporen van bugs kunnen worden geconcentreerd op de delen van de code die waarschijnlijk de schuldige zijn.
 
-Debugging print statements are only one tool for debugging programs. We will come back to this subject later on during this course. You should now get into the habit of using debugging print statements to look for mistakes in your code. Programming professionals cannot get by without using them, so it is a very useful tool for beginners as well.
+Debugging-printopdrachten zijn slechts één tool voor het debuggen van programma's. We zullen later in deze cursus terugkomen op dit onderwerp. Je moet nu de gewoonte ontwikkelen om debugging-printopdrachten te gebruiken om fouten in je code op te sporen. Professionele programmeurs kunnen niet zonder ze, dus het is ook een zeer nuttige tool voor beginners.
 
 <in-browser-programming-exercise name="Fix the syntax" tmcname="part02-01_fix_syntax" height="400px">
 
-The following program contains several _syntactic errors_. Please fix the program so that the syntax is in order and the program works as specified by the examples below.
+Het volgende programma bevat verschillende _syntactische fouten_. Los de fouten op, zodat de syntax in orde is en het programma werkt zoals gespecificeerd in de onderstaande voorbeelden.
 
 ```python
   number = input("Please type in a number: ")
@@ -372,7 +376,7 @@ Have a nice day!
 
 <in-browser-programming-exercise name="Number of characters" tmcname="part02-02_number_of_characters">
 
-The function `len` can be used to find out the length of a string, among other things. The function returns the number of characters in a string.
+De functie `len` kan worden gebruikt om de lengte van een string te achterhalen, onder andere. De functie geeft het aantal tekens in een string terug.
 
 Some examples of how this works:
 
@@ -400,7 +404,7 @@ print(length)
 
 </sample-output>
 
-Please write a program which asks the user for a word and then prints out the number of characters, if there was more than one typed in.
+Schrijf een programma dat de gebruiker om een woord vraagt en vervolgens het aantal tekens afdrukt, als er meer dan één is ingevoerd.
 
 Examples of expected behaviour:
 
@@ -431,7 +435,7 @@ Thank you!
 
 <in-browser-programming-exercise name="Typecasting" tmcname="part02-03_typecasting">
 
-When programming in Python, often we need to change the data type of a value. For example, a floating point number can be converted into an integer with the function `int`:
+Bij het programmeren in Python moeten we vaak het gegevenstype van een waarde veranderen. Bijvoorbeeld, een kommagetal kan worden omgezet in een geheel getal met de functie `int`:
 
 ```python
 
@@ -476,12 +480,3 @@ Decimal part: 0.34
 </sample-output>
 
 </in-browser-programming-exercise>
-
-<!--
-
-A quiz to review the contents of this section:
-
-<quiz id="eb4b41d3-b83b-5815-a1d5-ae9b377aa274"></quiz>
-
-
--->

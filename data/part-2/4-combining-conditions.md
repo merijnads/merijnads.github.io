@@ -1,39 +1,39 @@
 ---
 path: '/part-2/4-combining-conditions'
-title: 'Combining conditions'
+title: 'And, or en not'
 hidden: false
 ---
 
-<text-box variant='learningObjectives' name="Learning objectives">
+<text-box variant='learningObjectives' name="Leerdoelen">
 
-After this section
+Na deze sectie:
 
-- You will know how to use the operators `and`, `or` and `not` in conditions
-- You will be able to write nested conditionals
+- Weet je hoe je de operatoren `and`, `or` en `not` kunt gebruiken in voorwaarden.
+- Kun je geneste voorwaardelijke statements schrijven.
 
 </text-box>
 
-## Logical operators
+## Logische operatoren
 
-You can combine conditions with the logical operators `and` and `or`. The operator `and` specifies that all the given conditions must be true at the same time. The operator `or` specifies that at least one of the given conditions must be true.
+Je kunt voorwaarden combineren met de logische operatoren `and` en `or`. De operator `and` geeft aan dat alle opgegeven voorwaarden tegelijkertijd waar moeten zijn. De operator `or` geeft aan dat ten minste één van de opgegeven voorwaarden waar moet zijn.
 
-For example, the condition `number >= 5 and number <= 8` determines that `number` must simultaneously be at least 5 and at most 8. That is, it must be between 5 and 8.
+Bijvoorbeeld, de voorwaarde `number >= 5 and number <= 8` bepaalt dat `number` tegelijkertijd minimaal 5 en maximaal 8 moet zijn. Dat wil zeggen, het moet tussen 5 en 8 liggen.
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ alsjeblieft een getal in: "))
 if number >= 5 and number <= 8:
-    print("The number is between 5 and 8")
+    print("Het getal ligt tussen 5 en 8")
 ```
 
-Meanwhile, the condition `number < 5 or number > 8` determines that `number` must be either less than 5 or greater than 8. That is, it must not be within the range of 5 to 8.
+Ondertussen bepaalt de voorwaarde `number < 5 or number > 8` dat `number` ofwel kleiner dan 5 ofwel groter dan 8 moet zijn. Dat wil zeggen, het mag niet binnen het bereik van 5 tot 8 vallen.
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ alsjeblieft een getal in: "))
 if number < 5 or number > 8:
-    print("The number is not within the range of 5 to 8")
+    print("Het getal valt niet binnen het bereik van 5 tot 8")
 ```
 
-The following truth table contains the behaviour of these operators in different situations:
+De volgende waarheidstabel bevat het gedrag van deze operatoren in verschillende situaties:
 
 a     | b     | a and b | a or b |
 :----:|:-----:|:-------:|:------:|
@@ -42,70 +42,70 @@ True  | False | False   | True   |
 False | True  | False   | True   |
 True  | True  | True    | True   |
 
-Sometimes it is necessary to know if something is _not_ true. The operator `not` negates a condition:
+Soms is het nodig om te weten of iets _niet_ waar is. De operator `not` keert een voorwaarde om:
 
 a     | not a
 :----:|:----:
 True  | False
 False | True
 
-The above example with the range of 5 to 8 _excluded_ could also be programmed like this:
+Het bovenstaande voorbeeld met het bereik van 5 tot 8 _uitgesloten_ kan ook als volgt worden geprogrammeerd:
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ alsjeblieft een getal in: "))
 if not (number >= 5 and number <= 8):
-    print("The number is not within the range of 5 to 8")
+    print("Het getal valt niet binnen het bereik van 5 tot 8")
 ```
 
-Especially in programming, logical operators are often called _Boolean operators_.
+Met name in programmeren worden logische operatoren vaak _Boolean-operatoren_ genoemd.
 
-<text-box variant='hint' name="Simplified combined conditions">
+<text-box variant='hint' name="Vereenvoudigde gecombineerde voorwaarden">
 
-The condition `x >= a and x <= b` is a very common way of checking whether the number `x` falls within the range of `a` to `b`. An expression with this structure works the same way in most programming languages.
+De voorwaarde `x >= a and x <= b` is een zeer gebruikelijke manier om te controleren of het getal `x` binnen het bereik van `a` tot `b` valt. Een expressie met deze structuur werkt op dezelfde manier in de meeste programmeertalen.
 
-Python also allows a simplified notation for combining conditions: `a <= x <= b` achieves the same result as the longer version using `and`. This shorter notation might be more familiar from mathematics, but it is not very widely used in Python programming, possibly because very few other programming languages have a similar shorthand.
+Python staat ook een vereenvoudigde notatie toe voor het combineren van voorwaarden: `a <= x <= b` bereikt hetzelfde resultaat als de langere versie met behulp van `and`. Deze kortere notatie is misschien bekender uit de wiskunde, maar wordt niet veel gebruikt in Python-programmering, mogelijk omdat maar weinig andere programmeertalen een vergelijkbare verkorte notatie hebben.
 
 </text-box>
 
-## Combining and chaining conditions
+## Voorwaarden combineren en verbinden
 
-The following program asks the user to type in four numbers. It then works out which of the four is the greatest, with the help of some conditions:
+Het volgende programma vraagt de gebruiker om vier getallen in te voeren. Vervolgens bepaalt het programma welk van de vier getallen het grootst is, met behulp van enkele voorwaarden:
 
 ```python
-n1 = int(input("Number 1: "))
-n2 = int(input("Number 2: "))
-n3 = int(input("Number 3: "))
-n4 = int(input("Number 4: "))
+n1 = int(input("Getal 1: "))
+n2 = int(input("Getal 2: "))
+n3 = int(input("Getal 3: "))
+n4 = int(input("Getal 4: "))
 
 if n1 > n2 and n1 > n3 and n1 > n4:
-    greatest = n1
+    grootste = n1
 elif n2 > n3 and n2 > n4:
-    greatest = n2
+    grootste = n2
 elif n3 > n4:
-    greatest = n3
+    grootste = n3
 else:
-    greatest = n4
+    grootste = n4
 
-print(f" {greatest} is the greatest of the numbers.")
+print(f" {grootste} is het grootste van de getallen.")
 ```
 
 <sample-output>
 
-Number 1: **2**
-Number 2: **4**
-Number 3: **1**
-Number 4: **1**
-4 is the greatest of the numbers.
+Getal 1: **2**
+Getal 2: **4**
+Getal 3: **1**
+Getal 4: **1**
+4 is het grootste van de getallen.
 
 </sample-output>
 
-In the above example the first condition `n1 > n2 and n1 > n3 and n1 > n4` is true only if all three conditions within are true.
+In het bovenstaande voorbeeld is de eerste voorwaarde `n1 > n2 and n1 > n3 and n1 > n4` waar alleen als alle drie de voorwaarden erin waar zijn.
 
-<in-browser-programming-exercise name="Age check" tmcname="part02-08_age_check">
+<in-browser-programming-exercise name="Leeftijdscontrole" tmcname="part02-08_age_check">
 
-Please write a program which asks for the user's age. If the age is not plausible, that is, it is under 5 or something that can't be an actual human age, the program should print out a comment.
+Schrijf alsjeblieft een programma dat de leeftijd van de gebruiker vraagt. Als de leeftijd niet plausibel is, dat wil zeggen, als deze onder de 5 ligt of iets is dat geen werkelijke leeftijd kan zijn, moet het programma een opmerking afdrukken.
 
-Have a look at the examples of expected behaviour below to figure out which comment is applicable in each case.
+Bekijk de voorbeelden van verwacht gedrag hieronder om te bepalen welke opmerking in elk geval van toepassing is.
 
 <sample-output>
 
@@ -128,15 +128,16 @@ That must be a mistake
 
 </sample-output>
 
+
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Nephews" tmcname="part02-09_nephews">
+<in-browser-programming-exercise name="Neefjes" tmcname="part02-09_nephews">
 
-Please write a program which asks for the user's name. If the name is Huey, Dewey or Louie, the program should recognise the user as one of Donald Duck's nephews.
+Schrijf alsjeblieft een programma dat de naam van de gebruiker vraagt. Als de naam Huey, Dewey of Louie is, moet het programma de gebruiker herkennen als een van de neefjes van Donald Duck.
 
-In a similar fashion, if the name is Morty or Ferdie, the program should recognise the user as one of Mickey Mouse's nephews.
+Op een vergelijkbare manier, als de naam Morty of Ferdie is, moet het programma de gebruiker herkennen als een van de neefjes van Mickey Mouse.
 
-Some examples:
+Enkele voorbeelden:
 
 <sample-output>
 
@@ -161,9 +162,9 @@ You're not a nephew of any character I know of.
 
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Grades and points" tmcname="part02-10_grades_and_points">
+<in-browser-programming-exercise name="Cijfers en punten" tmcname="part02-10_grades_and_points">
 
-The table below outlines the grade boundaries on a certain university course. Please write a program which asks for the amount of points received and then prints out the grade attained according to the table.
+De onderstaande tabel geeft de cijfergrenzen weer voor een bepaalde universitaire cursus. Schrijf alsjeblieft een programma dat de ontvangen punten vraagt en vervolgens het behaalde cijfer volgens de tabel afdrukt.
 
 points   | grade
 :--:|:----:
@@ -199,13 +200,15 @@ Grade: impossible!
 
 </sample-output>
 
+
+
 </in-browser-programming-exercise>
 
 <in-browser-programming-exercise name="FizzBuzz" tmcname="part02-11_fizzbuzz">
 
-Please write a program which asks the user for an integer number. If the number is divisible by three, the program should print out Fizz. If the number is divisible by five, the program should print out Buzz. If the number is divisible by both three and five, the program should print out FizzBuzz.
+Schrijf alsjeblieft een programma dat de gebruiker om een geheel getal vraagt. Als het getal deelbaar is door drie, moet het programma Fizz afdrukken. Als het getal deelbaar is door vijf, moet het programma Buzz afdrukken. Als het getal zowel deelbaar is door drie als door vijf, moet het programma FizzBuzz afdrukken.
 
-Some examples of expected behaviour:
+Enkele voorbeelden van verwacht gedrag:
 
 <sample-output>
 
@@ -236,54 +239,53 @@ FizzBuzz
 
 </in-browser-programming-exercise>
 
-## Nested conditionals
+## Geneste voorwaardelijke statements
 
-Conditional statements can also be nested within other conditional statements. For example, the following program checks whether a number is above zero, and then whether it is odd or even:
+Voorwaardelijke statements kunnen ook genest zijn in andere voorwaardelijke statements. Bijvoorbeeld, het volgende programma controleert of een getal groter is dan nul, en vervolgens of het even of oneven is:
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ alsjeblieft een getal in: "))
 
 if number > 0:
     if number % 2 == 0:
-        print("The number is even")
+        print("Het getal is even")
     else:
-        print("The number is odd")
+        print("Het getal is oneven")
 else:
-    print("The number is negative or zero")
+    print("Het getal is negatief of nul")
 ```
 
-Some examples of how this program behaves:
+Enkele voorbeelden van hoe dit programma zich gedraagt:
 
 <sample-output>
 
-Please type in a number: **3**
-The number is odd
+Typ alsjeblieft een getal in: **3**
+Het getal is oneven
 
-Please type in a number: **18**
-The number is even
+Typ alsjeblieft een getal in: **18**
+Het getal is even
 
-Please type in a number: **-4**
-The number is negative or zero
+Typ alsjeblieft een getal in: **-4**
+Het getal is negatief of nul
 
 </sample-output>
 
-With nested conditional statements it is crucial to get the indentations right. Indentations determine which branches are linked together. For example, an `if` branch and an `else` branch with the same amount of whitespace are determined to be branches of the same conditional statement.
+Bij geneste voorwaardelijke statements is het belangrijk om de inspringingen correct te krijgen. Inspringingen bepalen welke takken aan elkaar gekoppeld zijn. Bijvoorbeeld, een `if`-tak en een `else`-tak met dezelfde hoeveelheid witruimte worden beschouwd als takken van hetzelfde voorwaardelijke statement.
 
-The same result can often be achieved using either nested conditional statements or conditions combined with logical operators. The example below is functionally no different from the example above, in the sense that it will print out the exactly same things with the same inputs:
+Hetzelfde resultaat kan vaak worden bereikt met geneste voorwaardelijke statements of voorwaarden gecombineerd met logische operatoren. Het onderstaande voorbeeld is functioneel niet anders dan het bovenstaande voorbeeld, in die zin dat het precies dezelfde dingen afdrukt met dezelfde invoer:
 
 ```python
-number = int(input("Please type in a number: "))
+number = int(input("Typ alsjeblieft een getal in: "))
 
 if number > 0 and number % 2 == 0:
-    print("The number is even")
+    print("Het getal is even")
 elif number > 0 and number % 2 != 0:
-    print("The number is odd")
+    print("Het getal is oneven")
 else:
-    print("The number is negative or zero")
+    print("Het getal is negatief of nul")
 ```
 
-Neither approach is intrinsically better than the other, but in different situations one or the other may seem more logical. In this particular example most people tend to find the first version with nesting to be more intuitive.
-
+Geen van beide benaderingen is intrinsiek beter dan de andere, maar in verschillende situaties kan de ene of de andere logischer lijken. In dit specifieke voorbeeld vinden de meeste mensen de eerste versie met geneste voorwaarden intuïtiever.
 <in-browser-programming-exercise name="Leap year" tmcname="part02-12_leap_year">
 
 Generally, any year that is divisible by four is a leap year. However, if the year is additionally divisible by 100, it is a leap year only if it also divisible by 400.
@@ -386,11 +388,3 @@ Amount of tax: 1950.0 euros
 </sample-output>
 
 </in-browser-programming-exercise>
-
-<!--
-
-A quiz to review the contents of this section:
-
-<quiz id="6bfd7e0d-2998-5697-80dc-418703fabbbf"></quiz>
-
--->
