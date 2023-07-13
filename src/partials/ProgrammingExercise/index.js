@@ -142,27 +142,6 @@ class ProgrammingExercise extends React.Component {
         <div>
           {CourseSettings.showExerciseDescriptionWhenNotLoggedIn ? (
             <div>
-              {!this.context.loggedIn && (
-                <StyledAlert severity="warning">
-                  {this.props.t("loginToSeeExercisePoints")}
-                </StyledAlert>
-              )}
-              {points && points > 1 && (
-                <Small>
-                  <p>
-                    {this.props.t("submitNB")}{" "}
-                    <a
-                      href="https://www.mooc.fi/fi/installation/netbeans"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      {this.props.t("submitHowTo")}
-                    </a>
-                    .
-                  </p>
-                  <StyledDivider />
-                </Small>
-              )}
               <ExerciseDescription>{children}</ExerciseDescription>
             </div>
           ) : (

@@ -143,45 +143,47 @@ class ProgrammingExerciseCard extends React.Component {
               <StyledRefreshIcon icon={faRedo} />
             </Button>
           )}
-          <PointsWrapper>
-            <PointsLabel>{this.props.t("points")}:</PointsLabel>
-            <PointContentWrapper>
-              {awardedPoints !== undefined ? (
-                <PointsText>{awardedPoints}</PointsText>
-              ) : (
-                <StyledQuizPointsContentLoader
-                  animate={!points}
-                  speed={2}
-                  width={30}
-                  height={40}
-                  viewBox="0 0 30 40"
-                  backgroundOpacity={0.6}
-                  foregroundOpacity={0.6}
-                  backgroundColor="#ffffff"
-                  foregroundColor="#dddddd"
-                >
-                  <rect x="0" y="10" rx="12" ry="12" width="30" height="30" />
-                </StyledQuizPointsContentLoader>
-              )}
-              <PointsText>/</PointsText>
-              {points ? (
-                <PointsText>{points}</PointsText>
-              ) : (
-                <StyledQuizPointsContentLoader
-                  speed={2}
-                  width={30}
-                  height={40}
-                  viewBox="0 0 30 40"
-                  backgroundOpacity={0.6}
-                  foregroundOpacity={0.6}
-                  backgroundColor="#ffffff"
-                  foregroundColor="#dddddd"
-                >
-                  <rect x="0" y="10" rx="12" ry="12" width="30" height="30" />
-                </StyledQuizPointsContentLoader>
-              )}
-            </PointContentWrapper>
-          </PointsWrapper>
+          {this.context.loggedIn ? (
+            <PointsWrapper>
+              <PointsLabel>{this.props.t("points")}:</PointsLabel>
+              <PointContentWrapper>
+                {awardedPoints !== undefined ? (
+                  <PointsText>{awardedPoints}</PointsText>
+                ) : (
+                  <StyledQuizPointsContentLoader
+                    animate={!points}
+                    speed={2}
+                    width={30}
+                    height={40}
+                    viewBox="0 0 30 40"
+                    backgroundOpacity={0.6}
+                    foregroundOpacity={0.6}
+                    backgroundColor="#ffffff"
+                    foregroundColor="#dddddd"
+                  >
+                    <rect x="0" y="10" rx="12" ry="12" width="30" height="30" />
+                  </StyledQuizPointsContentLoader>
+                )}
+                <PointsText>/</PointsText>
+                {points ? (
+                  <PointsText>{points}</PointsText>
+                ) : (
+                  <StyledQuizPointsContentLoader
+                    speed={2}
+                    width={30}
+                    height={40}
+                    viewBox="0 0 30 40"
+                    backgroundOpacity={0.6}
+                    foregroundOpacity={0.6}
+                    backgroundColor="#ffffff"
+                    foregroundColor="#dddddd"
+                  >
+                    <rect x="0" y="10" rx="12" ry="12" width="30" height="30" />
+                  </StyledQuizPointsContentLoader>
+                )}
+              </PointContentWrapper>
+            </PointsWrapper>
+          ) : undefined}
         </Header>
         <CardContent>
           <Body>{children}</Body>

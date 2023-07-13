@@ -212,7 +212,6 @@ Typ alsjeblieft een positief geheel getal: **4**
 
 </sample-output>
 
-**NB:** In deze oefening wordt niet gevraagd om functies te schrijven, dus je moet __geen__ code binnen een `if __name__ == "__main__"`-blok plaatsen.
 
 </programming-exercise>
 
@@ -260,7 +259,6 @@ if __name__ == "__main__":
 
 Vanaf nu zullen er geen herinneringen meer zijn in de sjablonen om het `if __name__ == "__main__"`-blok te gebruiken. De automatische tests zullen nog steeds vereisen dat je dit gebruikt, dus je moet het blok zelf toevoegen wanneer je je functie test binnen de hoofdfunctie van je programma.
 
-**NB:** Sommige oefeningen, zoals de oefening _Palindromes_ die hier in deze sectie volgt, verwachten ook dat je code schrijft die de door jou geschreven functie aanroept. Deze code mag _niet_ binnen een `if __name__ == "__main__"`-blok worden geplaatst. De automatische tests zullen geen enkele code in dat blok uitvoeren, dus je oplossing is niet volledig als je je functieaanroepen daar plaatst.
 
 <programming-exercise name='Lijst van sterren' tmcname='part04-22_list_of_stars'>
 
@@ -280,17 +278,6 @@ Bijvoorbeeld, met de functieaanroep `lijst_van_sterren([3, 7, 1, 1, 2])` zou het
 
 </sample-output>
 
-<!-- **NB:** Er zijn momenteel problemen met het uitvoeren van enkele van de testen in Windows. Als je de volgende foutmelding tegenkomt:
-
-<img src="4_3_2.png" alt="Lus door een lijst">
-
-kun je de tests uitvoeren door ze naar de server te sturen door te kiezen voor de knop voor het uitvoeren van de tests in het TMC-menu dat wordt geopend door op het symbool rechts van de knop voor het uitvoeren van de tests te klikken en _Submit solutions_ te selecteren.
-
-Het probleem kan worden opgelost door naar het installatiemenu van de extensie te gaan en de "TMC Data" te veranderen naar een andere locatie waarvan het pad naar de bestanden korter is, de knop _change path_ in de onderstaande afbeelding. Het kan even duren voordat de verplaatsing is voltooid, dus wacht tot de bewerking is voltooid.
-
-<img src="4_3_3.png" alt="Lus door een lijst">
-
-Er wordt momenteel gewerkt aan een betere oplossing voor dit probleem. -->
 
 </programming-exercise>
 
