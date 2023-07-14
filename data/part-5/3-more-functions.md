@@ -1,5 +1,5 @@
 ---
-path: '/part-5/2-more-functions'
+path: '/part-5/3-more-functions'
 title: 'More functions'
 hidden: false
 ---

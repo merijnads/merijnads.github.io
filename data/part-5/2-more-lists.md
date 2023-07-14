@@ -1,5 +1,5 @@
 ---
-path: '/part-5/1-more-lists'
+path: '/part-5/2-more-lists'
 title: 'More lists'
 hidden: false
 ---
@@ -14,18 +14,6 @@ After this section
 
 </text-box>
 
-<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->
-<text-box variant='hint' name="About the exercises on this course">
-
-Becoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.
-
-Some of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _only 25 % of the points in each part is required to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).
-
-**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.
-
-When the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time.
-
-</text-box>
 
 ## Lists with different types of data
 
@@ -410,7 +398,7 @@ my_sum = sum_of_row(m, 1)
 print(my_sum) # prints out 33 (which equals 9 + 1 + 12 + 11)
 ```
 
-Working with columns within a matrix is slightly more complicated, as the matrix is stored by rows: 
+Working with columns within a matrix is slightly more complicated, as the matrix is stored by rows:
 
 ```python
 def sum_of_column(my_matrix, column_no: int):
@@ -462,7 +450,7 @@ Instead, we will have to keep track of the indexes of the elements, for example 
 m = [[1,2,3], [4,5,6], [7,8,9]]
 
 for i in range(len(m)): # using the number of rows in the matrix
-    for j in range(len(m[i])): # using the number of items on each row 
+    for j in range(len(m[i])): # using the number of items on each row
         m[i][j] += 1
 
 print(m)
@@ -554,7 +542,7 @@ Any common game with a gameboard layout can be modelled in a similar fashion. Am
 
 <programming-exercise name='Go' tmcname='part05-03_go'>
 
-In a game of Go two players take turns to place black and white stones on a game board. The winner is the player who manages to encircle a bigger area on the board with their own game pieces. 
+In a game of Go two players take turns to place black and white stones on a game board. The winner is the player who manages to encircle a bigger area on the board with their own game pieces.
 
 Please write a function named `who_won(game_board: list)`, which takes a two-dimensional array as its argument. The array consists of integer values, which represent the following situations:
 
@@ -602,7 +590,7 @@ False
 
 <programming-exercise name='Sudoku: check column' tmcname='part05-05_sudoku_column'>
 
-Please write a function named `column_correct(sudoku: list, column_no: int)`, which takes a two-dimensional array representing a sudoku grid, and an integer referring to a single column, as its arguments. Columns are indexed from 0. 
+Please write a function named `column_correct(sudoku: list, column_no: int)`, which takes a two-dimensional array representing a sudoku grid, and an integer referring to a single column, as its arguments. Columns are indexed from 0.
 
 The function should return `True` or `False`, depending on whether the column is filled in correctly, that is, whether it contains each of the numbers 1 to 9 at most once.
 
@@ -634,7 +622,7 @@ True
 
 <programming-exercise name='Sudoku: check block' tmcname='part05-06_sudoku_block'>
 
-Please write a function named `block_correct(sudoku: list, row_no: int, column_no: int)`, which takes a two-dimensional array representing a sudoku grid, and two integers referring to the row and column indexes of a single square, as its arguments. Rows and columns are indexed from 0. 
+Please write a function named `block_correct(sudoku: list, row_no: int, column_no: int)`, which takes a two-dimensional array representing a sudoku grid, and two integers referring to the row and column indexes of a single square, as its arguments. Rows and columns are indexed from 0.
 
 The function should return `True` or `False` depending on whether the 3 by 3 block to the right and down from the given indexes is filled in correctly. That is, whether the block contains each of the numbers 1 to 9 at most once.
 
@@ -688,9 +676,9 @@ This second block would not be checked in an actual game of sudoku, but your fun
 
 Please write a function named `sudoku_grid_correct(sudoku: list)`, which takes a two-dimensional array representing a sudoku grid as its argument. The function should use the functions from the three previous exercises to determine whether the complete sudoku grid is filled in correctly. Copy the functions from the exercises above into your Python code file for this exercise.
 
-The function should check each of the nine rows, columns and 3 by 3 blocks in the grid. If all contain each of the numbers 1 to 9 at most once, the function returns `True`. If a single one is filled in incorrectly, the function returns `False`. 
+The function should check each of the nine rows, columns and 3 by 3 blocks in the grid. If all contain each of the numbers 1 to 9 at most once, the function returns `True`. If a single one is filled in incorrectly, the function returns `False`.
 
-The image of a sudoku grid above these exercises has the nine blocks within the grid indicated with thicker borders. These are the blocks the function should check, and they begin at the indexes (0, 0), (0, 3), (0, 6), (3, 0), (3, 3), (3, 6), (6, 0), (6, 3) and (6, 6). 
+The image of a sudoku grid above these exercises has the nine blocks within the grid indicated with thicker borders. These are the blocks the function should check, and they begin at the indexes (0, 0), (0, 3), (0, 6), (3, 0), (3, 3), (3, 6), (6, 0), (6, 3) and (6, 6).
 
 ```python
 sudoku1 = [

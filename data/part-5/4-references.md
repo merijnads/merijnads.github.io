@@ -1,5 +1,5 @@
 ---
-path: '/part-5/2-references'
+path: '/part-5/4-references'
 title: 'References'
 hidden: false
 ---
@@ -531,7 +531,7 @@ _ _ _  _ _ _  _ _ _
 
 </sample-output>
 
-**Hint** 
+**Hint**
 When dealing with nested lists you should be extra careful when copying. What all needs to be explicitly copied, and where do changes actually have an effect? The [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) is a great help here, too, although the size of the sudoku grid will make the view less orderly than usual.
 
 </programming-exercise>

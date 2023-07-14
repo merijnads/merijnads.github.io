@@ -1,5 +1,5 @@
 ---
-path: '/part-5/4-defining-functions'
+path: '/part-5/1-defining-functions'
 title: 'Defining functions'
 hidden: false
 ---

@@ -1,5 +1,5 @@
 ---
-path: '/part-5/3-dictionary'
+path: '/part-6/3-dictionary'
 title: 'Dictionary'
 hidden: false
 ---
