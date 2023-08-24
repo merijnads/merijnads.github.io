@@ -103,7 +103,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --host=0.0.0.0",
     "serve": "gatsby serve",
     "format": "prettier --write 'src/**/*.js'",
     "prettier-check": "prettier  --list-different 'src/**/*.js'",

@@ -26,7 +26,7 @@ In de vorige secties heb je voorbeelden gezien van basisrekenkunde. In de volgen
 | `%`           | Modulo        | `9 % 2`      |`1`    |
 | `**`          | Exponentiëren | `2 ** 3`    |`8`    |
 
-De volgorde van bewerkingen is vergelijkbaar met wiskunde: eerst worden de machtsverheffingen berekend, daarna vermenigvuldiging en deling, en tot slot optellen en aftrekken. De volgorde kan worden gewijzigd met behulp van haakjes./zw
+De volgorde van bewerkingen is vergelijkbaar met wiskunde: eerst worden de machtsverheffingen berekend, daarna vermenigvuldiging en deling, en tot slot optellen en aftrekken. De volgorde kan worden gewijzigd met behulp van haakjes.
 
 Bijvoorbeeld deze code:
 
@@ -144,13 +144,13 @@ De BMI is 28,02137829801649
 
 <in-browser-programming-exercise name="Vermenigvuldig met vijf" tmcname="part01-13_times_five">
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt om een getal. Het programma drukt vervolgens het getal vermenigvuldigd met vijf af.
+Schrijf een programma dat de gebruiker vraagt om een getal. Het programma drukt vervolgens het getal vermenigvuldigd met vijf af.
 
 Het programma zou als volgt moeten werken:
 
 <sample-output>
 
-Typ alsjeblieft een getal: **3**
+Typ een getal: **3**
 3 keer 5 is 15
 
 </sample-output>
@@ -159,7 +159,7 @@ Typ alsjeblieft een getal: **3**
 
 <in-browser-programming-exercise name="Naam en leeftijd" tmcname="part01-14_name_and_age">
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt naar hun naam en geboortejaar. Het programma drukt vervolgens een bericht af zoals hieronder:
+Schrijf een programma dat de gebruiker vraagt naar hun naam en geboortejaar. Het programma drukt vervolgens een bericht af zoals hieronder:
 
 <sample-output>
 
@@ -302,7 +302,7 @@ leeftijd = int(input("Wat is je leeftijd? "))
 
 <in-browser-programming-exercise name="Seconden in een dag" tmcname="part01-15_seconds_in_a_day">
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt om een aantal dagen. Het programma drukt vervolgens het aantal seconden af in de opgegeven aantal dagen.
+Schrijf een programma dat de gebruiker vraagt om een aantal dagen. Het programma drukt vervolgens het aantal seconden af in de opgegeven aantal dagen.
 
 Het programma zou als volgt moeten werken:
 
@@ -327,7 +327,7 @@ Seconds in that many days: 604800
 
 <in-browser-programming-exercise name="Herstel de code: Product" tmcname="part01-16_product">
 
-Dit programma vraagt de gebruiker om drie getallen. Het programma drukt vervolgens hun product af, dat wil zeggen, de getallen vermenigvuldigd met elkaar. Er is echter iets mis met het programma - het werkt niet helemaal goed, zoals je kunt zien als je het uitvoert. Los het alsjeblieft op.
+Dit programma vraagt de gebruiker om drie getallen. Het programma drukt vervolgens hun product af, dat wil zeggen, de getallen vermenigvuldigd met elkaar. Er is echter iets mis met het programma - het werkt niet helemaal goed, zoals je kunt zien als je het uitvoert. Los het op.
 
 Een voorbeeld van de verwachte uitvoering van het programma:
 
@@ -344,7 +344,7 @@ The product is 30
 
 <in-browser-programming-exercise name="Som en product" tmcname="part01-17_sum_and_product">
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt om twee getallen. Het programma drukt vervolgens de som en het product van de twee getallen af.
+Schrijf een programma dat de gebruiker vraagt om twee getallen. Het programma drukt vervolgens de som en het product van de twee getallen af.
 
 Het programma zou als volgt moeten werken:
 
@@ -363,7 +363,7 @@ The product of the numbers: 21
 
 <in-browser-programming-exercise name="Som en gemiddelde" tmcname="part01-18_sum_and_mean">
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt om vier getallen. Het programma drukt vervolgens de som en het gemiddelde van de getallen af.
+Schrijf een programma dat de gebruiker vraagt om vier getallen. Het programma drukt vervolgens de som en het gemiddelde van de getallen af.
 
 Het programma zou als volgt moeten werken:
 
@@ -383,7 +383,7 @@ The sum of the numbers is 16 and the mean is 4.0
 
 <in-browser-programming-exercise name="Uitgaven aan voedsel" tmcname="part01-19_food_expenditure">
 
-Schrijf alsjeblieft een programma dat de gebruiker een schatting vraagt van hun typische uitgaven aan voedsel.
+Schrijf een programma dat de gebruiker een schatting vraagt van hun typische uitgaven aan voedsel.
 
 Het programma vraagt de gebruiker hoe vaak ze per week in de studentenkantine eten. Vervolgens vraagt het naar de prijs van een typische studentenlunch en het geld dat ze gedurende de week aan boodschappen uitgeven.
 
@@ -411,7 +411,7 @@ Weekly: 38.5 euros
 
 <in-browser-programming-exercise name="Studenten in groepen" tmcname="part01-20_students_in_groups">
 
-Schrijf alsjeblieft een programma dat vraagt naar het aantal studenten op een cursus en de gewenste groepsgrootte. Het programma drukt vervolgens het aantal gevormde groepen af op basis van de studenten op de cursus. Als de verdeling niet gelijk is, kan één van de groepen minder leden hebben dan opgegeven.
+Schrijf een programma dat vraagt naar het aantal studenten op een cursus en de gewenste groepsgrootte. Het programma drukt vervolgens het aantal gevormde groepen af op basis van de studenten op de cursus. Als de verdeling niet gelijk is, kan één van de groepen minder leden hebben dan opgegeven.
 
 Als het niet lukt om je code zoals verwacht te laten werken, is het absoluut prima om verder te gaan en later terug te komen bij deze oefening. Het onderwerp van de volgende sectie is [voorwaardelijke instructies](/part-1/5-conditional-statements). Deze oefening kan ook worden opgelost met een voorwaardelijke constructie.
 
