@@ -1,5 +1,5 @@
 ---
-path: "/part-1/4-arithmetic-operations"
+path: "/part-2/1-arithmetic-operations"
 title: "Rekenkundige bewerkingen"
 hidden: false
 ---
@@ -48,7 +48,7 @@ drukt het volgende af:
 
 Een berekening bestaat meestal uit *operanden* en *operatoren*:
 
-<img src="1_4_1.png">
+<img src="2_1_1.png">
 
 Het gegevenstype van een operand bepaalt meestal het gegevenstype van het resultaat: als twee gehele getallen bij elkaar worden opgeteld, is het resultaat ook een geheel getal. Als een floating point nummer wordt afgetrokken van een ander floating point nummer, is het resultaat een floating point nummer. Sterker nog, als één van de operanden in een expressie een floating point nummer is, is het resultaat altijd een floating point nummer, ongeacht de andere operanden.
 
@@ -233,9 +233,7 @@ Hiermee kunnen we het bovenstaande programma wat beknopter schrijven:
 ```python
 som = 0
 
-getal = int(input("Eer
-
-ste getal: "))
+getal = int(input("Eerste getal: "))
 som += getal
 
 getal = int(input("Tweede getal: "))

@@ -1,5 +1,5 @@
 ---
-path: '/part-2/4-combining-conditions'
+path: '/part-3/1-combining-conditions'
 title: 'And, or en not'
 hidden: false
 ---

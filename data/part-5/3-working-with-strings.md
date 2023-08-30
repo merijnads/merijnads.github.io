@@ -1,5 +1,5 @@
 ---
-path: '/part-4/3-working-with-strings'
+path: '/part-5/3-working-with-strings'
 title: 'Working with strings'
 hidden: false
 ---

@@ -1,5 +1,5 @@
 ---
-path: '/part-3/6-strings-and-lists'
+path: '/part-5/6-strings-and-lists'
 title: 'More strings and lists'
 hidden: false
 ---
