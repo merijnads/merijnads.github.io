@@ -426,44 +426,7 @@ Lengte van de lijst: 4
 
 </sample-output>
 
-## Lijsten en for-lussen
 
-Lijsten kunnen effectief worden verwerkt met behulp van `for`-lussen. Hier is een voorbeeld dat de som van alle items in een lijst berekent:
-
-```python
-getallen = [5, 2, 6, 1, 3]
-som = 0
-for nummer in getallen:
-    som += nummer
-
-print("De som van de getallen is", som)
-```
-
-<sample-output>
-
-De som van de getallen is 17
-
-</sample-output>
-
-De variabele `nummer` neemt de waarde aan van elk item in de lijst, één voor één. De som wordt bijgewerkt door elk nummer toe te voegen aan de huidige som.
-
-Je kunt ook de `range`-functie gebruiken in combinatie met de `len`-functie om de indexen van een lijst te gebruiken:
-
-```python
-getallen = [5, 2, 6, 1, 3]
-for i in range(len(getallen)):
-    getallen[i] = getallen[i] * 2
-
-print(getallen)
-```
-
-<sample-output>
-
-[10, 4, 12, 2, 6]
-
-</sample-output>
-
-De `range(len(getallen))`-expressie genereert een reeks van indexen die overeenkomen met de positie van elk item in de lijst. Vervolgens wordt elk item vermenigvuldigd met 2 en bijgewerkt in de oorspronkelijke lijst.
 
 
 

@@ -97,7 +97,7 @@ print("dit is een argument")
 Een andere functie die je al vaak hebt gebruikt, is de `input`-functie, die de gebruiker om invoer vraagt. Het argument van deze functie is het bericht dat aan de gebruiker wordt getoond:
 
 ```python
-name = input("Typ alsjeblieft je naam: ")
+name = input("Typ je naam: ")
 ```
 
 In dit geval _retourneert_ de functie ook een waarde. Nadat de functie is uitgevoerd, wordt het gedeelte van de code waarin deze is aangeroepen vervangen door de waarde die deze retourneert; het is een andere expressie die nu is geëvalueerd. De functie `input` retourneert een stringwaarde met daarin wat de gebruiker heeft ingevoerd bij de prompt. De waarde die een functie retourneert, wordt vaak opgeslagen in een variabele zodat deze later in het programma kan worden gebruikt.

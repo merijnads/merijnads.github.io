@@ -73,10 +73,49 @@ for item in my_list:
 
 In vergelijking met het voorbeeld aan het begin van deze sectie is de structuur veel gemakkelijker te begrijpen. Een `for`-lus maakt rechtlijnige doorloop van een verzameling items zeer eenvoudig.
 
+## Lijsten en for-lussen
+
+Lijsten kunnen effectief worden verwerkt met behulp van `for`-lussen. Hier is een voorbeeld dat de som van alle items in een lijst berekent:
+
+```python
+getallen = [5, 2, 6, 1, 3]
+som = 0
+for nummer in getallen:
+    som += nummer
+
+print("De som van de getallen is", som)
+```
+
+<sample-output>
+
+De som van de getallen is 17
+
+</sample-output>
+
+De variabele `nummer` neemt de waarde aan van elk item in de lijst, één voor één. De som wordt bijgewerkt door elk nummer toe te voegen aan de huidige som.
+
+Je kunt ook de `range`-functie gebruiken in combinatie met de `len`-functie om de indexen van een lijst te gebruiken:
+
+```python
+getallen = [5, 2, 6, 1, 3]
+for i in range(len(getallen)):
+    getallen[i] = getallen[i] * 2
+
+print(getallen)
+```
+
+<sample-output>
+
+[10, 4, 12, 2, 6]
+
+</sample-output>
+
+De `range(len(getallen))`-expressie genereert een reeks van indexen die overeenkomen met de positie van elk item in de lijst. Vervolgens wordt elk item vermenigvuldigd met 2 en bijgewerkt in de oorspronkelijke lijst.
+
 Hetzelfde principe geldt voor karakters in een string:
 
 ```python
-name = input("Typ alsjeblieft je naam: ")
+name = input("Typ je naam: ")
 
 for character in name:
     print(character)
@@ -84,7 +123,7 @@ for character in name:
 
 <sample-output>
 
-Typ alsjeblieft je naam: **Grace**
+Typ je naam: **Grace**
 G
 r
 a
@@ -95,13 +134,13 @@ e
 
 <programming-exercise name='Sterrenregen' tmcname='part04-20_star_studded'>
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt om een string in te typen. Het programma drukt vervolgens elk ingevoerd karakter op een aparte regel af. Na elk karakter moet er een ster (*) op een eigen regel worden afgedrukt.
+Schrijf een programma dat de gebruiker vraagt om een string in te typen. Het programma drukt vervolgens elk ingevoerd karakter op een aparte regel af. Na elk karakter moet er een ster (*) op een eigen regel worden afgedrukt.
 
 Zo zou het moeten werken:
 
 <sample-output>
 
-Typ alsjeblieft een string: **Python**
+Typ een string: **Python**
 P
 *
 y
@@ -192,7 +231,7 @@ for i in range(6, 2, -1):
 
 <programming-exercise name='Van negatief naar positief' tmcname='part04-21_negative_to_positive'>
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt om een positief geheel getal N. Het programma drukt vervolgens alle getallen af tussen -N en N (inclusief), maar _laat het getal
+Schrijf een programma dat de gebruiker vraagt om een positief geheel getal N. Het programma drukt vervolgens alle getallen af tussen -N en N (inclusief), maar _laat het getal
 
 0 buiten beschouwing_. Elk getal moet op een aparte regel worden afgedrukt.
 
@@ -200,7 +239,7 @@ Een voorbeeld van het verwachte gedrag:
 
 <sample-output>
 
-Typ alsjeblieft een positief geheel getal: **4**
+Typ een positief geheel getal: **4**
 -4
 -3
 -2
@@ -243,35 +282,54 @@ print(numbers)
 
 </sample-output>
 
-## Herinnering aan de vereisten van de automatische tests
+## Rekenen met lijsten
 
-Tot nu toe, toen de oefeningen je vroegen om functies te schrijven, zagen de sjablonen er als volgt uit:
+Met `for`-lussen kun je ook berekeningen uitvoeren op een lijst. Bijvoorbeeld het berekenen van de som van de lijst:
 
 ```python
-# Schrijf hier je oplossing
-# Je kunt je functie testen door deze te bellen binnen het volgende blok
-if __name__ == "__main__":
-    zin = "it was a dark and stormy python"
-    print(first_word(zin))
-    print(second_word(zin))
-    print(last_word(zin))
+getallen = [5, 2, 6, 1, 3]
+som = 0
+for nummer in getallen:
+    som += nummer
+
+print("De som van de getallen is", som)
 ```
 
-Vanaf nu zullen er geen herinneringen meer zijn in de sjablonen om het `if __name__ == "__main__"`-blok te gebruiken. De automatische tests zullen nog steeds vereisen dat je dit gebruikt, dus je moet het blok zelf toevoegen wanneer je je functie test binnen de hoofdfunctie van je programma.
+<sample-output>
 
+De som van de getallen is 17
+
+</sample-output>
+
+De variabele `nummer` neemt de waarde aan van elk item in de lijst, één voor één. De som wordt bijgewerkt door elk nummer toe te voegen aan de huidige som.
+
+Je kunt ook de `range`-functie gebruiken in combinatie met de `len`-functie om de indexen van een lijst te gebruiken:
+
+```python
+getallen = [5, 2, 6, 1, 3]
+for i in range(len(getallen)):
+    getallen[i] = getallen[i] * 2
+
+print(getallen)
+```
+
+<sample-output>
+
+[10, 4, 12, 2, 6]
+
+</sample-output>
+
+De `range(len(getallen))`-expressie genereert een reeks van indexen die overeenkomen met de positie van elk item in de lijst. Vervolgens wordt elk item vermenigvuldigd met 2 en bijgewerkt in de oorspronkelijke lijst.
 
 <programming-exercise name='Lijst van sterren' tmcname='part04-22_list_of_stars'>
 
-Schrijf alsjeblieft een functie genaamd `lijst_van_sterren`, die een lijst van gehele getallen als argument neemt. De functie moet regels met sterretjes afdrukken. De getallen in de lijst geven aan hoeveel sterretjes elke regel moet bevatten.
-
-Bijvoorbeeld, met de functieaanroep `lijst_van_sterren([3, 7, 1, 1, 2])` zou het volgende moeten worden afgedrukt:
+Schrijf een programma die een lijst van nummers, bijvoorbeeld `sterren = [3, 7, 1, 2]` omzet in sterretjes. Dus per nummer wordt er een regel sterretjes afgedrukt met de juiste hoeveelheid. Bijvoorbeeld voor de hiervoor gegeven lijst:
 
 <sample-output>
 
 <pre>
 ***
 *******
-*
 *
 **
 </pre>
@@ -283,16 +341,29 @@ Bijvoorbeeld, met de functieaanroep `lijst_van_sterren([3, 7, 1, 1, 2])` zou het
 
 <programming-exercise name='Anagrammen' tmcname='part04-23_anagrams'>
 
-Schrijf alsjeblieft een functie genaamd `anagrammen`, die twee strings als argumenten neemt. De functie retourneert `True` als de strings anagrammen van elkaar zijn. Twee woorden zijn anagrammen als ze precies dezelfde karakters bevatten.
+Schrijf een programma, die op basis van twee strings `True` print als de strings anagrammen van elkaar zijn anders `False`. Twee woorden zijn anagrammen als ze precies dezelfde karakters bevatten.
 
-Enkele voorbeelden van hoe de functie zou moeten werken:
+Enkele voorbeelden van hoe het programma zou moeten werken:
 
 ```python
-print(anagrammen("tame", "meta")) # True
-print(anagrammen("tame", "mate")) # True
-print(anagrammen("tame", "team")) # True
-print(anagrammen("tabby", "batty")) # False
-print(anagrammen("python", "java")) # False
+string1 = "tame"
+string2 = "meta"
+<HET PROGRAMMA>
+# True
+```
+
+```python
+string1 = "tame"
+string2 = "team"
+<HET PROGRAMMA>
+# True
+```
+
+```python
+string1 = "tabby"
+string2 = "batty"
+<HET PROGRAMMA>
+# False
 ```
 
 Hint: de functie `sorted` kan ook worden gebruikt op strings.
@@ -301,36 +372,31 @@ Hint: de functie `sorted` kan ook worden gebruikt op strings.
 
 <programming-exercise name='Palindromen' tmcname='part04-24_palindromes'>
 
-Schrijf alsjeblieft een functie genaamd `palindromen`, die een string als argument neemt en `True` retourneert als de string een palindroom is. Palindromen zijn woorden die precies hetzelfde worden gespeld als ze
-
- achterstevoren worden gelezen.
-
-Schrijf ook een hoofdfunctie die de gebruiker vraagt om woorden in te typen totdat ze een palindroom typen:
+Schrijf een programma die een string vraagt aan de gebruiker en checkt of het een palindroom is. Palindromen zijn woorden die precies hetzelfde worden gespeld als ze achterstevoren worden gelezen. Bijvoorbeeld:
 
 <sample-output>
 
-Typ alsjeblieft een palindroom: **python**
+Typ een palindroom: **python**
 dat was geen palindroom
-Typ alsjeblieft een palindroom: **java**
+Typ een palindroom: **java**
 dat was geen palindroom
-Typ alsjeblieft een palindroom: **oddoreven**
+Typ een palindroom: **oddoreven**
 dat was geen palindroom
-Typ alsjeblieft een palindroom: **neveroddoreven**
+Typ een palindroom: **neveroddoreven**
 neveroddoreven is een palindroom!
 
 </sample-output>
 
-**NB:** De hoofdfunctie **mag niet** binnen een `if __name__ == "__main__":`-blok worden geplaatst.
 
 </programming-exercise>
 
 <programming-exercise name='De som van positieve getallen' tmcname='part04-25_sum_of_positives'>
 
-Schrijf alsjeblieft een functie genaamd `som_van_positieven`, die een lijst van gehele getallen als argument neemt. De functie retourneert de som van de positieve waarden in de lijst.
+Schrijf een programma die op basis van een lijst van gehele getallen de som van de positieve waarden in de lijst berekent.
 
 ```python
 mijn_lijst = [1, -2, 3, -4, 5]
-resultaat = som_van_positieven(mijn_lijst)
+<Jouw programma>
 print("Het resultaat is", resultaat)
 ```
 
@@ -342,50 +408,21 @@ Het resultaat is 9
 
 </programming-exercise>
 
-In deze oefeningen zullen we lijsten gebruiken als argumenten en retourwaarden. Dit is behandeld in de [vorige sectie](/part-4/3-lists#a-list-as-an-argument-or-a-return-value), als je een opfriscursus nodig hebt.
 
-<programming-exercise name='Even getallen' tmcname='part04-26_even_numbers'>
+<programming-exercise name='Unieke namen' tmcname='part04-28_distinct_numbers'>
 
-Schrijf alsjeblieft een functie genaamd `even_getallen`, die een lijst van gehele getallen als argument neemt. De functie retourneert een nieuwe lijst met daarin alleen de even getallen uit de oorspronkelijke lijst.
+Schrijf een programma die een lijst van voornamen kan ontdubbelen.
 
 ```python
-mijn_lijst = [1, 2, 3, 4, 5]
-nieuwe_lijst = even_getallen(mijn_lijst)
-print("origineel", mijn_lijst)
-print("nieuw", nieuwe_lijst)
+voornamen = ["max", "marie", "mark", "max", "linda", "marie"]
+<Jouw programma>
 ```
 
 <sample-output>
 
-origineel [1, 2, 3, 4, 5]
-nieuw [2, 4]
+De ontdubbelde lijst met namen is ["max", "marie", "mark", "linda"]
 
 </sample-output>
-
-</programming-exercise>
-
-<programming-exercise name='De som van lijsten' tmcname='part04-27_sum_of_lists'>
-
-Schrijf alsjeblieft een functie genaamd `lijst_som`, die twee lijsten van gehele getallen als argumenten neemt. De functie retourneert een nieuwe lijst met daarin de sommen van de items op elke index in de twee oorspronkelijke lijsten. Je mag ervan uitgaan dat beide lijsten evenveel items bevatten.
-
-Een voorbeeld van de werking van de functie:
-
-```python
-a = [1, 2, 3]
-b = [7, 8, 9]
-print(lijst_som(a, b)) # [8, 10, 12]
-```
-
-</programming-exercise>
-
-<programming-exercise name='Unieke getallen' tmcname='part04-28_distinct_numbers'>
-
-Schrijf alsjeblieft een functie genaamd `unieke_getallen`, die een lijst van gehele getallen als argument neemt. De functie retourneert een nieuwe lijst met daarin de getallen uit de oorspronkelijke lijst op volgorde van grootte, en zodanig dat elk uniek getal slechts één keer voorkomt.
-
-```python
-mijn_lijst = [3, 2, 2, 1, 3, 3, 1]
-print(unieke_getallen(mijn_lijst)) # [1, 2, 3]
-```
 
 </programming-exercise>
 
@@ -393,7 +430,7 @@ print(unieke_getallen(mijn_lijst)) # [1, 2, 3]
 
 Een zeer veelvoorkomende programmeertaak is het vinden van het beste of slechtste item in een lijst, volgens bepaalde criteria. Een eenvoudige oplossing is het gebruik van een hulpvariabele om te "onthouden" welk van de tot nu toe verwerkte items het meest geschikt was. Deze tijdelijke beste keuze wordt vervolgens vergeleken met elk item op zijn beurt, en aan het einde van de iteratie bevat de variabele het beste van de groep.
 
-Een ruwe schets die nog niet helemaal compileert:
+Een ruwe schets die nog niet helemaal werkt:
 
 ```python
 beste = initiële_waarde # De initiële waarde hangt af van de situatie
@@ -406,65 +443,31 @@ for item in mijn_lijst:
 
 De details van de uiteindelijke programmacode hangen af van het type items in de lijst, en ook van de criteria voor het kiezen van het beste (of slechtste) item. Soms heb je meer dan één hulpvariabele nodig.
 
-Laten we dit methode een beetje oefenen.
+Laten we deze methode een beetje oefenen.
 
 <programming-exercise name='De lengte van het langste in de lijst' tmcname='part04-29_length_of_longest'>
 
-Schrijf alsjeblieft een functie genaamd `lengte_van_langste`, die een lijst van strings als argument neemt. De functie retourneert de lengte van de langste string.
+Schrijf een programma die op basis van een lijst van strings de langste string print.
 
 ```python
 mijn_lijst = ["eerste", "tweede", "vierde", "elfde"]
-
-resultaat = lengte_van_langste(mijn_lijst)
-print(resultaat)
 ```
+<sample-output>
+
+De langste string is "eerste"
+
+</sample-output>
 
 ```python
 mijn_lijst = ["adele", "mark", "dorothy", "tim", "hedy", "richard"]
-
-resultaat = lengte_van_lang
-
-ste(mijn_lijst)
-print(resultaat)
 ```
+<sample-output>
 
+De langste string is "dorothy"
+
+</sample-output>
 </programming-exercise>
 
-<programming-exercise name='Het grootste in de lijst' tmcname='part04-30_max_of_a_list'>
-
-Schrijf alsjeblieft een functie genaamd `grootste_in_lijst`, die een lijst van gehele getallen als argument neemt. De functie retourneert het grootste getal in de lijst.
-
-```python
-mijn_lijst = [3, 2, 7, 1, 2, 6, 8, 3, 1, 5]
-resultaat = grootste_in_lijst(mijn_lijst)
-print(resultaat)
-```
-
-```python
-mijn_lijst = [1, 2, 3, 4, 5]
-resultaat = grootste_in_lijst(mijn_lijst)
-print(resultaat)
-```
-
-</programming-exercise>
-
-<programming-exercise name='Het kleinste in de lijst' tmcname='part04-31_min_of_a_list'>
-
-Schrijf alsjeblieft een functie genaamd `kleinste_in_lijst`, die een lijst van gehele getallen als argument neemt. De functie retourneert het kleinste getal in de lijst.
-
-```python
-mijn_lijst = [3, 2, 7, 1, 2, 6, 8, 3, 1, 5]
-resultaat = kleinste_in_lijst(mijn_lijst)
-print(resultaat)
-```
-
-```python
-mijn_lijst = [1, 2, 3, 4, 5]
-resultaat = kleinste_in_lijst(mijn_lijst)
-print(resultaat)
-```
-
-</programming-exercise>
 
 ## Samenvatting
 

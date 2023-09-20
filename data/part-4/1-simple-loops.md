@@ -22,7 +22,7 @@ Laten we eens kijken naar een programma dat de gebruiker vraagt om een getal in 
 
 ```python
 while True:
-    number = int(input("Typ alsjeblieft een getal in, -1 om te stoppen: "))
+    number = int(input("Typ een getal in, -1 om te stoppen: "))
 
     if number == -1:
         break
@@ -36,13 +36,13 @@ De uitvoering van het programma kan er als volgt uitzien:
 
 <sample-output>
 
-Typ alsjeblieft een getal in, -1 om te stoppen: **2**
+Typ een getal in, -1 om te stoppen: **2**
 4
-Typ alsjeblieft een getal in, -1 om te stoppen: **4**
+Typ een getal in, -1 om te stoppen: **4**
 16
-Typ alsjeblieft een getal in, -1 om te stoppen: **10**
+Typ een getal in, -1 om te stoppen: **10**
 100
-Typ alsjeblieft een getal in, -1 om te stoppen: **-1**
+Typ een getal in, -1 om te stoppen: **-1**
 Bedankt en tot ziens!
 
 </sample-output>
@@ -52,7 +52,7 @@ Zoals je hierboven kunt zien, vraagt het programma om meerdere getallen dankzij 
 Bij lussen is het cruciaal dat er altijd een manier is om de lus op een bepaald moment in de code te verlaten, anders kan de herhaling oneindig doorgaan. Om dit te illustreren, veranderen we het bovenstaande voorbeeld een beetje:
 
 ```python
-number = int(input("Typ alsjeblieft een getal in, -1 om te stoppen: "))
+number = int(input("Typ een getal in, -1 om te stoppen: "))
 while True:
     if number == -1:
         break
@@ -66,7 +66,7 @@ In deze versie vraagt het programma de gebruiker om een getal _buiten de lus_. A
 
 <sample-output>
 
-Typ alsjeblieft een getal in, -1 om te stoppen: **2**
+Typ een getal in, -1 om te stoppen: **2**
 4
 4
 4
@@ -83,7 +83,7 @@ Het volgende programma heeft een vergelijkbare structuur als het voorbeeld voor 
 
 ```python
 while True:
-    code = input("Typ alsjeblieft je PIN in: ")
+    code = input("Typ je PIN in: ")
     if code == "1234":
         break
     print("Onjuist...probeer het opnieuw")
@@ -93,18 +93,18 @@ print("Juiste PIN ingevoerd!")
 
 <sample-output>
 
-Typ alsjeblieft je PIN in: **0000**
+Typ je PIN in: **0000**
 Onjuist...probeer het opnieuw
-Typ alsjeblieft je PIN in: **9999**
+Typ je PIN in: **9999**
 Onjuist...probeer het opnieuw
-Typ alsjeblieft je PIN in: **1234**
+Typ je PIN in: **1234**
 Juiste PIN ingevoerd!
 
 </sample-output>
 
 <in-browser-programming-exercise name="Zullen we doorgaan?" tmcname="part02-15_zullen_we_doorgaan">
 
-Laten we een programma maken dat lijkt op het bovenstaande voorbeeld. Dit programma moet de boodschap "hi" afdrukken en vervolgens vragen "Zullen we doorgaan?" totdat de gebruiker "nee" invoert. Dan moet het programma "okee dan" afdrukken en stoppen. Kijk alsjeblieft naar het onderstaande voorbeeld.
+Laten we een programma maken dat lijkt op het bovenstaande voorbeeld. Dit programma moet de boodschap "hi" afdrukken en vervolgens vragen "Zullen we doorgaan?" totdat de gebruiker "nee" invoert. Dan moet het programma "okee dan" afdrukken en stoppen. Kijk naar het onderstaande voorbeeld.
 
 <sample-output>
 
@@ -124,7 +124,7 @@ okee dan
 
 <in-browser-programming-exercise name="Invoervalidatie" tmcname="part02-16_invoervalidatie">
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt om gehele getallen.
+Schrijf een programma dat de gebruiker vraagt om gehele getallen.
 
 - Als het getal kleiner is dan nul, moet het programma de boodschap "Ongeldig getal" afdrukken.
 - Als het getal groter is dan nul, moet het programma de wortel van het getal afdrukken met behulp van de Python-functie `sqrt`.
@@ -152,15 +152,15 @@ Een voorbeeld van het verwachte gedrag van je programma:
 
 <sample-output>
 
-Typ alsjeblieft een getal in: **16**
+Typ een getal in: **16**
 4.0
-Typ alsjeblieft een getal in: **4**
+Typ een getal in: **4**
 2.0
-Typ alsjeblieft een getal in: **-3**
+Typ een getal in: **-3**
 Ongeldig getal
-Typ alsjeblieft een getal in: **1**
+Typ een getal in: **1**
 1.0
-Typ alsjeblieft een getal in: **0**
+Typ een getal in: **0**
 Einde...
 
 </sample-output>
@@ -203,7 +203,7 @@ Het programma werkt echter niet helemaal correct. Herstel het alsjeblieft.
 
 <in-browser-programming-exercise name="Herhaal wachtwoord" tmcname="part02-18_herhaal_wachtwoord">
 
-Schrijf alsjeblieft een programma dat de gebruiker om een wachtwoord vraagt. Het programma moet vervolgens de gebruiker vragen om het wachtwoord opnieuw in te voeren. Als de gebruiker iets anders invoert dan het eerste wachtwoord, moet het programma blijven vragen totdat de gebruiker het eerste wachtwoord correct opnieuw invoert.
+Schrijf een programma dat de gebruiker om een wachtwoord vraagt. Het programma moet vervolgens de gebruiker vragen om het wachtwoord opnieuw in te voeren. Als de gebruiker iets anders invoert dan het eerste wachtwoord, moet het programma blijven vragen totdat de gebruiker het eerste wachtwoord correct opnieuw invoert.
 
 Kijk naar het verwachte gedrag hieronder:
 
@@ -227,7 +227,7 @@ Het programma maakt gebruik van twee hulpvariabelen. De variabele `attempts` hou
 attempts = 0
 
 while True:
-    code = input("Typ alsjeblieft je PIN in: ")
+    code = input("Typ je PIN in: ")
     attempts += 1
 
     if code == "1234":
@@ -249,20 +249,20 @@ else:
 
 <sample-output>
 
-Typ alsjeblieft je PIN in: **0000**
+Typ je PIN in: **0000**
 Onjuist...probeer het opnieuw
-Typ alsjeblieft je PIN in: **1234**
+Typ je PIN in: **1234**
 Juiste PIN ingevoerd!
 
 </sample-output>
 
 <sample-output>
 
-Typ alsjeblieft je PIN in: **0000**
+Typ je PIN in: **0000**
 Onjuist...probeer het opnieuw
-Typ alsjeblieft je PIN in: **9999**
+Typ je PIN in: **9999**
 Onjuist...probeer het opnieuw
-Typ alsjeblieft je PIN in: **4321**
+Typ je PIN in: **4321**
 Te veel pogingen...
 
 </sample-output>
@@ -279,7 +279,7 @@ Laten we eens kijken naar een programma dat bijna identiek is aan het vorige voo
 attempts = 0
 
 while True:
-    code = input("Typ alsjeblieft je PIN in: ")
+    code = input("Typ je PIN in: ")
     attempts += 1
 
     if attempts == 3:
@@ -297,11 +297,11 @@ Deze versie gedraagt zich vreemd wanneer de gebruiker de juiste code invoert bij
 
 <sample-output>
 
-Typ alsjeblieft je PIN in: **0000**
+Typ je PIN in: **0000**
 Onjuist...probeer het opnieuw
-Typ alsjeblieft je PIN in: **9999**
+Typ je PIN in: **9999**
 Onjuist...probeer het opnieuw
-Typ alsjeblieft je PIN in: **1234**
+Typ je PIN in: **1234**
 Te veel pogingen...
 
 </sample-output>
@@ -313,7 +313,7 @@ us toe te voegen:
 ```python
 while True:
     print("begin van het while-blok:")
-    code = input("Typ alsjeblieft je PIN in: ")
+    code = input("Typ je PIN in: ")
     attempts += 1
 
     print("pogingen:", attempts)
@@ -334,21 +334,21 @@ while True:
 <sample-output>
 
 begin van het while-blok:
-Typ alsjeblieft je PIN in: **2233**
+Typ je PIN in: **2233**
 pogingen: 1
 voorwaarde1: False
 code: 2233
 voorwaarde2: False
 Onjuist...probeer het opnieuw
 begin van het while-blok:
-Typ alsjeblieft je PIN in: **4545**
+Typ je PIN in: **4545**
 pogingen: 2
 voorwaarde1: False
 code: 4545
 voorwaarde2: False
 Onjuist...probeer het opnieuw
 begin van het while-blok:
-Typ alsjeblieft je PIN in: **1234**
+Typ je PIN in: **1234**
 pogingen: 3
 voorwaarde1: True
 Te veel pogingen...
@@ -376,7 +376,7 @@ De volgorde van conditionele verklaringen, of van verschillende takken binnen ee
 
 <in-browser-programming-exercise name="PIN en aantal pogingen" tmcname="part02-19_pin_en_aantal_pogingen">
 
-Schrijf alsjeblieft een programma dat de gebruiker blijft vragen om een PIN-code totdat ze de juiste invoeren, die _4321_ is. Het programma moet vervolgens het aantal keren dat de gebruiker verschillende codes heeft geprobeerd, afdrukken.
+Schrijf een programma dat de gebruiker blijft vragen om een PIN-code totdat ze de juiste invoeren, die _4321_ is. Het programma moet vervolgens het aantal keren dat de gebruiker verschillende codes heeft geprobeerd, afdrukken.
 
 <sample-output>
 
@@ -405,7 +405,7 @@ Correct! Je had er slechts één poging voor nodig!
 
 <in-browser-programming-exercise name="Het volgende schrikkeljaar" tmcname="part02-20_het_volgende_schrikkeljaar">
 
-Schrijf alsjeblieft een programma dat de gebruiker om een jaar vraagt en het volgende schrikkeljaar afdrukt.
+Schrijf een programma dat de gebruiker om een jaar vraagt en het volgende schrikkeljaar afdrukt.
 
 <sample-output>
 
@@ -433,7 +433,7 @@ Het bovenstaande voorbeeld met PIN-controle gebruikte een hulpvariabele `attempt
 attempts = 0
 
 while True:
-    code = input("Typ alsjeblieft je PIN in: ")
+    code = input("Typ je PIN in: ")
     attempts += 1
     # ...
 ```
@@ -448,7 +448,7 @@ codes = ""
 attempts = 0
 
 while True:
-    code = input("Typ alsjeblieft je PIN in: ")
+    code = input("Typ je PIN in: ")
     attempts += 1
     codes += code + ", "
     # ...
@@ -463,7 +463,7 @@ codes = ""
 Bij elke iteratie wordt de string langer, omdat de ingevoerde code van de gebruiker wordt toegevoegd, samen met een komma:
 
 ```python
-    code = input("Typ alsjeblieft je PIN in: ")
+    code = input("Typ je PIN in: ")
     codes += code + ", "
 ```
 
@@ -480,7 +480,7 @@ Als de gebruiker de codes _1111 2222 1234_ invoert, is de waarde van `codes` aan
 
 ### Deel 1
 
-Schrijf alsjeblieft een programma dat de gebruiker blijft vragen om woorden. Als de gebruiker `einde` typt, moet het programma het verhaal afdrukken dat de woorden vormen
+Schrijf een programma dat de gebruiker blijft vragen om woorden. Als de gebruiker `einde` typt, moet het programma het verhaal afdrukken dat de woorden vormen
 
 .
 

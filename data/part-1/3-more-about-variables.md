@@ -61,7 +61,7 @@ Zoals de naam _variabele_ al impliceert, kan de waarde die in een variabele is o
 Tijdens de uitvoering van het volgende programma zal de variabele `woord` drie verschillende waarden hebben:
 
 ```python
-woord = input("Typ alsjeblieft een woord: ")
+woord = input("Typ een woord: ")
 print(woord)
 
 woord = input("En nog een woord: ")
@@ -73,7 +73,7 @@ print(woord)
 
 <sample-output>
 
-Typ alsjeblieft een woord: **eerste**
+Typ een woord: **eerste**
 eerste
 En nog een woord: **tweede**
 tweede
@@ -86,7 +86,7 @@ De waarde die in de variabele is opgeslagen, verandert telkens wanneer de variab
 De nieuwe waarde van een variabele kan worden afgeleid uit de oude waarde. In het volgende voorbeeld wordt de variabele `woord` eerst een waarde toegewezen op basis van gebruikersinvoer. Vervolgens wordt het een nieuwe waarde toegewezen, die de oude waarde is met drie uitroeptekens toegevoegd aan het einde.
 
 ```python
-woord = input("Typ alsjeblieft een woord: ")
+woord = input("Typ een woord: ")
 print(woord)
 
 woord = woord + "!!!"
@@ -95,7 +95,7 @@ print(woord)
 
 <sample-output>
 
-Typ alsjeblieft een woord: **test**
+Typ een woord: **test**
 test
 test!!!
 

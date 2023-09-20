@@ -20,7 +20,7 @@ Je kunt voorwaarden combineren met de logische operatoren `and` en `or`. De oper
 Bijvoorbeeld, de voorwaarde `number >= 5 and number <= 8` bepaalt dat `number` tegelijkertijd minimaal 5 en maximaal 8 moet zijn. Dat wil zeggen, het moet tussen 5 en 8 liggen.
 
 ```python
-number = int(input("Typ alsjeblieft een getal in: "))
+number = int(input("Typ een getal in: "))
 if number >= 5 and number <= 8:
     print("Het getal ligt tussen 5 en 8")
 ```
@@ -28,7 +28,7 @@ if number >= 5 and number <= 8:
 Ondertussen bepaalt de voorwaarde `number < 5 or number > 8` dat `number` ofwel kleiner dan 5 ofwel groter dan 8 moet zijn. Dat wil zeggen, het mag niet binnen het bereik van 5 tot 8 vallen.
 
 ```python
-number = int(input("Typ alsjeblieft een getal in: "))
+number = int(input("Typ een getal in: "))
 if number < 5 or number > 8:
     print("Het getal valt niet binnen het bereik van 5 tot 8")
 ```
@@ -52,7 +52,7 @@ False | True
 Het bovenstaande voorbeeld met het bereik van 5 tot 8 _uitgesloten_ kan ook als volgt worden geprogrammeerd:
 
 ```python
-number = int(input("Typ alsjeblieft een getal in: "))
+number = int(input("Typ een getal in: "))
 if not (number >= 5 and number <= 8):
     print("Het getal valt niet binnen het bereik van 5 tot 8")
 ```
@@ -103,7 +103,7 @@ In het bovenstaande voorbeeld is de eerste voorwaarde `n1 > n2 and n1 > n3 and n
 
 <in-browser-programming-exercise name="Leeftijdscontrole" tmcname="part02-08_age_check">
 
-Schrijf alsjeblieft een programma dat de leeftijd van de gebruiker vraagt. Als de leeftijd niet plausibel is, dat wil zeggen, als deze onder de 5 ligt of iets is dat geen werkelijke leeftijd kan zijn, moet het programma een opmerking afdrukken.
+Schrijf een programma dat de leeftijd van de gebruiker vraagt. Als de leeftijd niet plausibel is, dat wil zeggen, als deze onder de 5 ligt of iets is dat geen werkelijke leeftijd kan zijn, moet het programma een opmerking afdrukken.
 
 Bekijk de voorbeelden van verwacht gedrag hieronder om te bepalen welke opmerking in elk geval van toepassing is.
 
@@ -133,7 +133,7 @@ That must be a mistake
 
 <in-browser-programming-exercise name="Neefjes" tmcname="part02-09_nephews">
 
-Schrijf alsjeblieft een programma dat de naam van de gebruiker vraagt. Als de naam Huey, Dewey of Louie is, moet het programma de gebruiker herkennen als een van de neefjes van Donald Duck.
+Schrijf een programma dat de naam van de gebruiker vraagt. Als de naam Huey, Dewey of Louie is, moet het programma de gebruiker herkennen als een van de neefjes van Donald Duck.
 
 Op een vergelijkbare manier, als de naam Morty of Ferdie is, moet het programma de gebruiker herkennen als een van de neefjes van Mickey Mouse.
 
@@ -164,7 +164,7 @@ You're not a nephew of any character I know of.
 
 <in-browser-programming-exercise name="Cijfers en punten" tmcname="part02-10_grades_and_points">
 
-De onderstaande tabel geeft de cijfergrenzen weer voor een bepaalde universitaire cursus. Schrijf alsjeblieft een programma dat de ontvangen punten vraagt en vervolgens het behaalde cijfer volgens de tabel afdrukt.
+De onderstaande tabel geeft de cijfergrenzen weer voor een bepaalde universitaire cursus. Schrijf een programma dat de ontvangen punten vraagt en vervolgens het behaalde cijfer volgens de tabel afdrukt.
 
 points   | grade
 :--:|:----:
@@ -206,7 +206,7 @@ Grade: impossible!
 
 <in-browser-programming-exercise name="FizzBuzz" tmcname="part02-11_fizzbuzz">
 
-Schrijf alsjeblieft een programma dat de gebruiker om een geheel getal vraagt. Als het getal deelbaar is door drie, moet het programma Fizz afdrukken. Als het getal deelbaar is door vijf, moet het programma Buzz afdrukken. Als het getal zowel deelbaar is door drie als door vijf, moet het programma FizzBuzz afdrukken.
+Schrijf een programma dat de gebruiker om een geheel getal vraagt. Als het getal deelbaar is door drie, moet het programma Fizz afdrukken. Als het getal deelbaar is door vijf, moet het programma Buzz afdrukken. Als het getal zowel deelbaar is door drie als door vijf, moet het programma FizzBuzz afdrukken.
 
 Enkele voorbeelden van verwacht gedrag:
 
@@ -244,7 +244,7 @@ FizzBuzz
 Voorwaardelijke statements kunnen ook genest zijn in andere voorwaardelijke statements. Bijvoorbeeld, het volgende programma controleert of een getal groter is dan nul, en vervolgens of het even of oneven is:
 
 ```python
-number = int(input("Typ alsjeblieft een getal in: "))
+number = int(input("Typ een getal in: "))
 
 if number > 0:
     if number % 2 == 0:
@@ -259,13 +259,13 @@ Enkele voorbeelden van hoe dit programma zich gedraagt:
 
 <sample-output>
 
-Typ alsjeblieft een getal in: **3**
+Typ een getal in: **3**
 Het getal is oneven
 
-Typ alsjeblieft een getal in: **18**
+Typ een getal in: **18**
 Het getal is even
 
-Typ alsjeblieft een getal in: **-4**
+Typ een getal in: **-4**
 Het getal is negatief of nul
 
 </sample-output>
@@ -275,7 +275,7 @@ Bij geneste voorwaardelijke statements is het belangrijk om de inspringingen cor
 Hetzelfde resultaat kan vaak worden bereikt met geneste voorwaardelijke statements of voorwaarden gecombineerd met logische operatoren. Het onderstaande voorbeeld is functioneel niet anders dan het bovenstaande voorbeeld, in die zin dat het precies dezelfde dingen afdrukt met dezelfde invoer:
 
 ```python
-number = int(input("Typ alsjeblieft een getal in: "))
+number = int(input("Typ een getal in: "))
 
 if number > 0 and number % 2 == 0:
     print("Het getal is even")
@@ -286,11 +286,12 @@ else:
 ```
 
 Geen van beide benaderingen is intrinsiek beter dan de andere, maar in verschillende situaties kan de ene of de andere logischer lijken. In dit specifieke voorbeeld vinden de meeste mensen de eerste versie met geneste voorwaarden intuïtiever.
+
 <in-browser-programming-exercise name="Leap year" tmcname="part02-12_leap_year">
 
-Generally, any year that is divisible by four is a leap year. However, if the year is additionally divisible by 100, it is a leap year only if it also divisible by 400.
-
 Please write a program which asks the user for a year, and then prints out whether that year is a leap year or not.
+
+Generally, any year that is divisible by four is a leap year. However, if the year is additionally divisible by 100, it is a leap year only if it also divisible by 400.
 
 Some examples:
 

@@ -96,7 +96,7 @@ Geen toegang
 
 <in-browser-programming-exercise name="Meerderjarigheid" tmcname="part02-04_age_of_maturity" height="400px">
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt naar zijn leeftijd. Het programma moet vervolgens een bericht afdrukken op basis van of de gebruiker meerderjarig is of niet, waarbij 18 als de leeftijd van meerderjarigheid wordt gebruikt.
+Schrijf een programma dat de gebruiker vraagt naar zijn leeftijd. Het programma moet vervolgens een bericht afdrukken op basis van of de gebruiker meerderjarig is of niet, waarbij 18 als de leeftijd van meerderjarigheid wordt gebruikt.
 
 Enkele voorbeelden van verwachte uitvoer:
 
@@ -206,7 +206,7 @@ Bedankt en tot ziens.
 
 <in-browser-programming-exercise name="Groter dan of gelijk aan" tmcname="part02-05_greater_or_equal"  height="400px">
 
-Schrijf alsjeblieft een programma dat vraagt om twee gehele getallen. Het programma moet vervolgens het grootste van de twee afdrukken. Als de getallen gelijk zijn, moet het programma een ander bericht afdrukken.
+Schrijf een programma dat vraagt om twee gehele getallen. Het programma moet vervolgens het grootste van de twee afdrukken. Als de getallen gelijk zijn, moet het programma een ander bericht afdrukken.
 
 Enkele voorbeelden van verwachte uitvoer:
 
@@ -240,7 +240,7 @@ The numbers are equal!
 
 <in-browser-programming-exercise name="De oudste" tmcname="part02-06_elder" height="550px">
 
-Schrijf alsjeblieft een programma dat vraagt naar de namen en leeftijden van twee personen. Het programma moet vervolgens de naam van de oudste persoon afdrukken.
+Schrijf een programma dat vraagt naar de namen en leeftijden van twee personen. Het programma moet vervolgens de naam van de oudste persoon afdrukken.
 
 Enkele voorbeelden van verwachte uitvoer:
 
@@ -277,7 +277,7 @@ Vergelijkingsoperatoren in Python kunnen ook worden gebruikt op strings. String 
 - de vergeleken tekens van dezelfde case zijn, dus beide HOOFDLETTERS of beide kleine letters
 - alleen het standaard Engelse alfabet van a tot z, of A tot Z, wordt gebruikt.
 
-Schrijf alsjeblieft een programma dat de gebruiker vraagt om twee woorden. Het programma moet vervolgens het woord dat alfabetisch als laatste komt afdrukken.
+Schrijf een programma dat de gebruiker vraagt om twee woorden. Het programma moet vervolgens het woord dat alfabetisch als laatste komt afdrukken.
 
 Je kunt ervan uitgaan dat alle woorden volledig in kleine letters worden ingevoerd.
 
