@@ -427,6 +427,7 @@ Lengte van de lijst: 4
 </sample-output>
 
 
+## Zoeken in een lijst
 
 
 
