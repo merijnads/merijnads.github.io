@@ -14,6 +14,9 @@ After this section
 
 </text-box>
 
+We hopen dat door de eerste drie weken te vertalen naar Nederlands dat de stof makkelijker te begrijpen was. Maar de realiteit is dat alle online bronnen op het gebied van programmeren in het engels zijn. Tevens komen veel programmeurs die werken in Nederland uit het buitenland. Vanaf nu zal de taal van het boek verder gaan in het engels. Dit zal niet voor iedereen even makkelijk zijn. Maak vooral gebruik van bijvoorbeeld ChatGPT om moeilijke zinnen te vertalen.
+
+And nu beck to busnes (heel grappig)
 
 In the previous section we learnt to use the `while True` loop to repeat sections of code. In that construction the condition of the loop is `True`, so the condition is fulfilled every time. We needed to explicitly break out from the loop each time to avoid an infinite loop. For example:
 

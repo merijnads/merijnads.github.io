@@ -14,9 +14,9 @@ Na deze sectie:
 
 </text-box>
 
-We hebben nu de conditionele structuren in detail behandeld. Een andere centrale techniek in programmeren is herhaling, of _iteratie_. Samen vormen deze de fundamentele controlestructuren die elke programmeur onder de knie moet hebben. Ze worden controlestructuren genoemd omdat ze in essentie de controle geven over welke regels code worden uitgevoerd en wanneer. Terwijl conditionele structuren je in staat stellen om _te kiezen tussen_ secties code, stellen iteratiestructuren je in staat om secties code te _herhalen_. Ze worden vaak _loops_ genoemd omdat ze het programma in staat stellen om terug te "lopen" naar een regel die al eerder is uitgevoerd. Het proces van het uitvoeren van één herhaling van een lus wordt ook wel een iteratie van de lus genoemd.
+We hebben nu de conditionele structuren in detail behandeld. Een andere centrale techniek in programmeren is herhaling, of _iteratie_. Een eerste voorbeeld hiervan hebben we vorige week gezien met de for-loop. Samen vormen deze de fundamentele controlestructuren die elke programmeur onder de knie moet hebben. Ze worden controlestructuren genoemd omdat ze in essentie de controle geven over welke regels code worden uitgevoerd en wanneer. Terwijl conditionele structuren je in staat stellen om _te kiezen tussen_ secties code, stellen iteratiestructuren je in staat om secties code te _herhalen_. Ze worden vaak _loops_ genoemd omdat ze het programma in staat stellen om terug te "lopen" naar een regel die al eerder is uitgevoerd. Het proces van het uitvoeren van één herhaling van een lus wordt ook wel een iteratie van de lus genoemd.
 
-In deze sectie introduceren we een eenvoudige `while`-lus. De structuur ervan lijkt op de conditionele instructies die we al hebben behandeld. In het volgende deel gaan we in op meer geavanceerde voorbeelden.
+In deze sectie introduceren we een eenvoudige `while`-lus. De structuur ervan lijkt op de `for`-lus die we in de vorige module hebben gezien. Het belangrijke verschil is dat een `for`-lus werkt over elk element in een lijst. De `for`-lus herhaalt dus maximaal `len(lijst)` keer, ofwel maximaal het aantal elementen in de lijst. De `while`-lus kun je zelf instellen hoe vaak hij herhaalt. Nul, een, twee of oneindig vaak.
 
 Laten we eens kijken naar een programma dat de gebruiker vraagt om een getal in te voeren en vervolgens het kwadraat van dat getal afdrukt. Dit gaat door totdat de gebruiker -1 invoert.
 
@@ -47,7 +47,7 @@ Bedankt en tot ziens!
 
 </sample-output>
 
-Zoals je hierboven kunt zien, vraagt het programma om meerdere getallen dankzij de `while`-verklaring in het programma. Wanneer de gebruiker -1 invoert, wordt het `break`-commando uitgevoerd, waarmee de lus wordt verlaten en de uitvoering doorgaat vanaf de eerste regel na het `while`-blok.
+Zoals je hierboven kunt zien, vraagt het programma om meerdere getallen dankzij de `while`-lus in het programma. Wanneer de gebruiker -1 invoert, wordt het `break`-commando uitgevoerd, waarmee de lus wordt verlaten en de uitvoering doorgaat vanaf de eerste regel na het `while`-blok.
 
 Bij lussen is het cruciaal dat er altijd een manier is om de lus op een bepaald moment in de code te verlaten, anders kan de herhaling oneindig doorgaan. Om dit te illustreren, veranderen we het bovenstaande voorbeeld een beetje:
 
@@ -102,31 +102,31 @@ Juiste PIN ingevoerd!
 
 </sample-output>
 
-<in-browser-programming-exercise name="Zullen we doorgaan?" tmcname="part02-15_zullen_we_doorgaan">
+<in-browser-programming-exercise name="Zullen we doorgaan?" tmcname="part02-15_shall_we_continue">
 
-Laten we een programma maken dat lijkt op het bovenstaande voorbeeld. Dit programma moet de boodschap "hi" afdrukken en vervolgens vragen "Zullen we doorgaan?" totdat de gebruiker "nee" invoert. Dan moet het programma "okee dan" afdrukken en stoppen. Kijk naar het onderstaande voorbeeld.
+Laten we een programma maken dat lijkt op het bovenstaande voorbeeld. Dit programma moet de boodschap "hi" afdrukken en vervolgens vragen "Shall we continue?" totdat de gebruiker "no" invoert. Dan moet het programma "okay then" afdrukken en stoppen. Kijk naar het onderstaande voorbeeld.
 
 <sample-output>
 
 hi
-Zullen we doorgaan? **ja**
+Shall we continue? **yes**
 hi
-Zullen we doorgaan? **oui**
+Shall we continue? **oui**
 hi
-Zullen we doorgaan? **jawohl**
+Shall we continue? **jawohl**
 hi
-Zullen we doorgaan? **nee**
-okee dan
+Shall we continue? **no**
+okay then
 
 </sample-output>
 
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Invoervalidatie" tmcname="part02-16_invoervalidatie">
+<in-browser-programming-exercise name="Invoervalidatie" tmcname="part02-16_input_validation">
 
 Schrijf een programma dat de gebruiker vraagt om gehele getallen.
 
-- Als het getal kleiner is dan nul, moet het programma de boodschap "Ongeldig getal" afdrukken.
+- Als het getal kleiner is dan nul, moet het programma de boodschap "Invalid number" afdrukken.
 - Als het getal groter is dan nul, moet het programma de wortel van het getal afdrukken met behulp van de Python-functie `sqrt`.
 - In beide gevallen moet het programma vervolgens vragen om een ander getal.
 - Als de gebruiker het getal nul invoert, moet het programma stoppen met het vragen om getallen en de lus verlaten.
@@ -134,9 +134,7 @@ Schrijf een programma dat de gebruiker vraagt om gehele getallen.
 Hieronder vind je een herinnering van hoe de `sqrt`-functie wordt gebruikt. Vergeet niet om deze in het begin van het programma te `importeren`.
 
 ```python
-# sqrt-functie wer
-
-kt niet zonder deze regel aan het begin van het programma
+# sqrt-functie werkt niet zonder deze regel aan het begin van het programma
 from math import sqrt
 
 print(sqrt(9))
@@ -152,48 +150,50 @@ Een voorbeeld van het verwachte gedrag van je programma:
 
 <sample-output>
 
-Typ een getal in: **16**
+Please type in a number: **16**
 4.0
-Typ een getal in: **4**
+Please type in a number: **4**
 2.0
-Typ een getal in: **-3**
-Ongeldig getal
-Typ een getal in: **1**
+Please type in a number: **-3**
+Invalid number
+Please type in a number: **1**
 1.0
-Typ een getal in: **0**
-Einde...
+Please type in a number: **0**
+Exiting...
+
 
 </sample-output>
 
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Herstel de code: Aftellen" tmcname="part02-17_aftellen">
+<in-browser-programming-exercise name="Herstel de code: Aftellen" tmcname="part02-17_countdown>
 
 Dit programma moet een aftelling afdrukken. De code is als volgt:
 
 ```python
 number = 5
-print("Aftellen!")
+print("Countdown!")
 while True:
   print(number)
   number = number - 1
   if number > 0:
     break
 
-print("Nu!")
+print("Now!")
 ```
+
 
 Dit zou moeten afdrukken
 
 <sample-output>
 
-Aftellen!
+Countdown!
 5
 4
 3
 2
 1
-Nu!
+Now!
 
 </sample-output>
 
@@ -201,7 +201,7 @@ Het programma werkt echter niet helemaal correct. Herstel het alsjeblieft.
 
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Herhaal wachtwoord" tmcname="part02-18_herhaal_wachtwoord">
+<in-browser-programming-exercise name="Herhaal wachtwoord" tmcname="part02-18_repeat_password">
 
 Schrijf een programma dat de gebruiker om een wachtwoord vraagt. Het programma moet vervolgens de gebruiker vragen om het wachtwoord opnieuw in te voeren. Als de gebruiker iets anders invoert dan het eerste wachtwoord, moet het programma blijven vragen totdat de gebruiker het eerste wachtwoord correct opnieuw invoert.
 
@@ -209,9 +209,14 @@ Kijk naar het verwachte gedrag hieronder:
 
 <sample-output>
 
-Wachtwoord: **geheim**
-Herhaal het wachtwoord: **geheim**
-Account aangemaakt!
+Password: **sekred**
+Repeat password: **secret**
+They do not match!
+Repeat password: **cantremember**
+They do not match!
+Repeat password: **sekred**
+User account created!
+
 
 </sample-output>
 
@@ -222,6 +227,9 @@ Account aangemaakt!
 Laten we het PIN-controle-voorbeeld iets realistischer maken. Deze versie geeft de gebruiker slechts drie pogingen om een PIN in te voeren.
 
 Het programma maakt gebruik van twee hulpvariabelen. De variabele `attempts` houdt bij hoe vaak de gebruiker heeft geprobeerd een PIN in te voeren. De variabele `success` wordt ingesteld op `True` of `False` op basis van of de gebruiker succesvol is ingelogd.
+
+Kun je de datatype van de variabele `attempts` en `success` benoemen?
+
 
 ```python
 attempts = 0
@@ -271,7 +279,7 @@ De lus wordt _ofwel_ beëindigd wanneer de gebruiker de juiste PIN invoert _ofwe
 
 ## Foutopsporingsberichten afdrukken in lussen
 
-Het toevoegen van lussen aan programma's voegt ook potentiële bronnen van fouten toe. Het is des te belangrijker om de vaardigheid van het gebruik van foutopsporingsberichten met afdrukken te beheersen, zoals geïntroduceerd in het [eerste deel van dit onderdeel](/part-2/1-programming-terminology).
+Het toevoegen van lussen aan programma's voegt ook potentiële bronnen van fouten toe. Het is des te belangrijker om foutopsporingsberichten toe te voegen.
 
 Laten we eens kijken naar een programma dat bijna identiek is aan het vorige voorbeeld, maar met één cruciaal verschil:
 
@@ -306,9 +314,7 @@ Te veel pogingen...
 
 </sample-output>
 
-Laten we proberen de oorzaak te vinden door wat strategische foutopsporingsberichten binnen de l
-
-us toe te voegen:
+Laten we proberen de oorzaak te vinden door wat strategische foutopsporingsberichten binnen de lus toe te voegen:
 
 ```python
 while True:
@@ -372,22 +378,22 @@ Uit de bovenstaande uitvoer kunnen we zien dat tijdens de derde iteratie van de 
         break
 ```
 
-De volgorde van conditionele verklaringen, of van verschillende takken binnen een conditionele verklaring, is een veelvoorkomende oorzaak van fouten, vooral in lussen. Foutopsporingsberichten met afdrukken zijn vaak de eenvoudigste manier om hun oorzaak te vinden.
+De volgorde van `if`-statements, of van verschillende takken binnen een `if`-statements, is een veelvoorkomende oorzaak van fouten, vooral in lussen. Foutopsporingsberichten met afdrukken zijn vaak de eenvoudigste manier om hun oorzaak te vinden.
 
-<in-browser-programming-exercise name="PIN en aantal pogingen" tmcname="part02-19_pin_en_aantal_pogingen">
+<in-browser-programming-exercise name="PIN en aantal pogingen" tmcname="part02-19_pin_and_number_of_attempts">
 
 Schrijf een programma dat de gebruiker blijft vragen om een PIN-code totdat ze de juiste invoeren, die _4321_ is. Het programma moet vervolgens het aantal keren dat de gebruiker verschillende codes heeft geprobeerd, afdrukken.
 
 <sample-output>
 
 PIN: **3245**
-Fout
+Wrong
 PIN: **1234**
-Fout
+Wrong
 PIN: **0000**
-Fout
+Wrong
 PIN: **4321**
-Correct! Je hebt er 4 pogingen voor nodig gehad
+Correct! It took you 4 attempts
 
 </sample-output>
 
@@ -396,21 +402,21 @@ Als de gebruiker het de eerste keer goed heeft, moet het programma iets anders a
 <sample-output>
 
 PIN: **4321**
-Correct! Je had er slechts één poging voor nodig!
+Correct! It only took you one single attempt!
 
 </sample-output>
 
 </in-browser-programming-exercise>
 
 
-<in-browser-programming-exercise name="Het volgende schrikkeljaar" tmcname="part02-20_het_volgende_schrikkeljaar">
+<in-browser-programming-exercise name="Het volgende schrikkeljaar" tmcname="part02-20_next_leap_year">
 
 Schrijf een programma dat de gebruiker om een jaar vraagt en het volgende schrikkeljaar afdrukt.
 
 <sample-output>
 
-Jaar: **2023**
-Het volgende schrikkeljaar na 2023 is 2024
+Year: **2023**
+The next leap year after 2023 is 2024
 
 </sample-output>
 
@@ -418,8 +424,8 @@ Als de gebruiker een jaar invoert dat een schrikkeljaar is (zoals 2024), moet he
 
 <sample-output>
 
-Jaar: **2024**
-Het volgende schrikkeljaar na 2024 is 2028
+Year: **2024**
+The next leap year after 2024 is 2028
 
 </sample-output>
 
@@ -476,104 +482,119 @@ Als de gebruiker de codes _1111 2222 1234_ invoert, is de waarde van `codes` aan
 </sample-output>
 
 
-<in-browser-programming-exercise name="Verhaal" tmcname="part02-21_verhaal">
+<in-browser-programming-exercise name="Verhaal" tmcname="part02-21_story">
 
 ### Deel 1
 
-Schrijf een programma dat de gebruiker blijft vragen om woorden. Als de gebruiker `einde` typt, moet het programma het verhaal afdrukken dat de woorden vormen
-
-.
+Please write a program which keeps asking the user for words. If the user types in `end`, the program should print out the story the words formed, and finish.
 
 <sample-output>
 
-Typ een woord: **De**
-Typ een woord: **mooie**
-Typ een woord: **kat**
-Typ een woord: **zat**
-Typ een woord: **op**
-Typ een woord: **de**
-Typ een woord: **mat**
-Typ een woord: **einde**
-
-Het verhaal:
-De mooie kat zat op de mat
+Please type in a word: **Once**
+Please type in a word: **upon**
+Please type in a word: **a**
+Please type in a word: **time**
+Please type in a word: **there**
+Please type in a word: **was**
+Please type in a word: **a**
+Please type in a word: **girl**
+Please type in a word: **end**
+Once upon a time there was a girl
 
 </sample-output>
 
 ### Deel 2
 
-Breid het programma uit zodat het de gebruiker vraagt om de naam van het verhaal in te voeren. Het programma moet het verhaal afdrukken met de ingevoerde naam ervoor.
+Change the program so that the loop ends also if the user types in the same word twice.
 
 <sample-output>
 
-Typ een woord: **De**
-Typ een woord: **mooie**
-Typ een woord: **kat**
-Typ een woord: **zat**
-Typ een woord: **op**
-Typ een woord: **de**
-Typ een woord: **mat**
-Typ een woord: **einde**
-Typ de naam van het verhaal: **Kattenavontuur**
 
-Het verhaal "Kattenavontuur":
-De mooie kat zat op de mat
+Please type in a word: **It**
+Please type in a word: **was**
+Please type in a word: **a**
+Please type in a word: **dark**
+Please type in a word: **and**
+Please type in a word: **stormy**
+Please type in a word: **night**
+Please type in a word: **night**
+It was a dark and stormy night
 
 </sample-output>
 
-### Deel 3
+</sample-output>
 
-Breid het programma verder uit zodat het een meervoudig verhaal kan afdrukken. Het programma moet de gebruiker vragen om het aantal verhalen in te voeren en daarna het verhaal afdrukken voor het opgegeven aantal keren.
+</in-browser-programming-exercise>
+
+<in-browser-programming-exercise name="Working with numbers" tmcname="part02-22_working_with_numbers">
+
+### Pre-task
+
+Please write a program which asks the user for integer numbers. The program should keep asking for numbers until the user types in zero.
 
 <sample-output>
 
-Typ een woord: **De**
-Typ een woord: **mooie**
-Typ een woord: **kat**
-Typ een woord: **zat**
-Typ een woord: **op**
-Typ een woord: **de**
-Typ een woord: **mat**
-Typ een woord: **einde**
-Typ de naam van het verhaal: **Kattenavontuur**
-Typ het aantal verhalen: **3**
-
-Het verhaal "Kattenavontuur":
-De mooie kat zat op de mat
-
-Het verhaal "Kattenavontuur":
-De mooie kat zat op de mat
-
-Het verhaal "Kattenavontuur":
-De mooie kat zat op de mat
+Please type in integer numbers. Type in 0 to finish.
+Number: **5**
+Number: **22**
+Number: **9**
+Number: **-2**
+Number: **0**
 
 </sample-output>
 
-### Deel 4
+### Part 1: Count
 
-Breid het programma verder uit zodat het de gebruiker vraagt om de leeftijd van het hoofdpersonage in te voeren. Het programma moet de leeftijd afdrukken samen met het verhaal.
+After reading in the numbers the program should print out how many numbers were typed in. The zero at the end should not be included in the count.
+
+You will need a new variable here to keep track of the numbers typed in.
 
 <sample-output>
 
-Typ een woord: **De**
-Typ een woord: **mooie**
-Typ een woord: **kat**
-Typ een woord: **zat**
-Typ een woord: **op**
-Typ een woord: **de**
-Typ een woord: **mat**
-Typ een woord: **einde**
-Typ de naam van het verhaal: **Kattenavontuur**
-Typ het aantal verhalen: **2**
-Typ de leeftijd van het hoofdpersonage: **3**
+... the program asks for numbers
+Numbers typed in 4
 
-Het verhaal "Kattenavontuur":
-De mooie kat zat op de mat
-Hoofdpersonage is 3 jaar oud
+</sample-output>
 
-Het verhaal "Kattenavontuur":
-De mooie kat zat op de mat
-Hoofdpersonage is 3 jaar oud
+### Part 2: Sum
+
+The program should also print out the sum of all the numbers typed in. The zero at the end should not be included in the calculation.
+
+The program should now print out the following:
+
+<sample-output>
+
+... the program asks for numbers
+Numbers typed in 4
+The sum of the numbers is 34
+
+</sample-output>
+
+### Part 3: Mean
+
+The program should also print out the mean of the numbers. The zero at the end should not be included in the calculation. You may assume the user will always type in at least one valid non-zero number.
+
+<sample-output>
+
+... the program asks for numbers
+Numbers typed in 4
+The sum of the numbers is 34
+The mean of the numbers is 8.5
+
+</sample-output>
+
+#### Part 4: Positives and negatives
+
+The program should also print out statistics on how many of the numbers were positive and how many were negative. The zero at the end should not be included in the calculation.
+
+<sample-output>
+
+... the program asks for numbers
+Numbers typed in 4
+The sum of the numbers is 34
+The mean of the numbers is 8.5
+Positive numbers 3
+Negative numbers 1
 
 </sample-output>
 
