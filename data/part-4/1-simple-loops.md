@@ -166,7 +166,7 @@ Exiting...
 
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Herstel de code: Aftellen" tmcname="part02-17_countdown>
+<in-browser-programming-exercise name="Herstel de code: Aftellen" tmcname="part02-17_countdown">
 
 Dit programma moet een aftelling afdrukken. De code is als volgt:
 
