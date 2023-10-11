@@ -1,5 +1,5 @@
 ---
-path: '/part-5/6-strings-and-lists'
+path: '/part-6/6-strings-and-lists'
 title: 'More strings and lists'
 hidden: false
 ---
@@ -183,14 +183,14 @@ my_list = [1,2,3]
 my_list[0] = 10
 ```
 
-<img src="4_6_1.png">
+<img src="5_6_1.png">
 
 ```python
 my_string = "Hey"
 my_string = my_string + "!"
 ```
 
-<img src="4_6_2.png">
+<img src="5_6_2.png">
 
 The first example changes the contents of the referenced list. The second example replaces the reference to the original string with a reference to another string. The original string is still somewhere in computer memory, but there is no reference to it, and it cannot be used in the program any longer.
 
@@ -573,13 +573,13 @@ You have to first split the input line in two and then convert the sections into
 
 <!-- **Huomaa** että tällä hetkellä Windowsissa on ongelmia joidenkin tehtävien testien suorittamisessa. Jos törmäät seuraavaan virheilmoitukseen
 
-<img src="4_3_2.png" alt="Listan iterointi">
+<img src="5_6_2.png" alt="Listan iterointi">
 
 voit suorittaa testit lähettämällä ne palvelimelle valitsemalla testien suoritusnapin oikealla puolella olevasta symbolista avautuvasta TMC-valikosta _Submit solutions_.
 
 Ongelman saa korjattua menemällä laajennuksen asennusvalikkoon ja muuttamalla "TMC Data" -kohdassa tehtävien sijainnin johonkin toiseen sijaintiin, jonka tiedostopolku on lyhempi, allaolevassa kuvassa nappi _change path_. Siirrossa saattaa kestää hetken, joten odotathan operaation päättymistä.
 
-<img src="4_3_3.png" alt="Listan iterointi">
+<img src="5_6_3.png" alt="Listan iterointi">
 
 Ongelmaan pyritään saamaan parempi ratkaisu lähipäivinä. -->
 

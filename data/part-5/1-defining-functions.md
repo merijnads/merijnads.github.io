@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
 Any code left outside the above block causes an error:
 
-<img src="3_4_1.png">
+<img src="5_5_1.png">
 
 The purpose of this is to make sure that your solution gets tested on a clean slate, as the tests often check what your functions print out. It is worth noting that the tests will not execute any code from within the `if __name__ == "__main__"` block, so no code that is needed to fulfil the requirements of the exercise should be placed within the block.
 
@@ -470,12 +470,3 @@ uayba
 
 </in-browser-programming-exercise>
 
-<!---
-A quiz to review the contents of this section:
-
-<quiz id="b04f1d8b-d207-5a8c-abbd-e42a3af7c12d"></quiz>
--->
-
-Please respond to a quick questionnaire on this week's materials.
-
-<quiz id="d2e3d2ab-dda9-50b8-89e9-7bd96cc03aea"></quiz>

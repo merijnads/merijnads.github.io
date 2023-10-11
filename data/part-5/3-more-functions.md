@@ -77,24 +77,6 @@ This terminology may all seem a bit superfluous, but computer science as a disci
 
 </text-box>
 
-## Error messages when running tests
-
-Most exercises on this course have automatic tests attached to them. If your program doesn't work as specified in the task, the tests will show an error message, which may or may not be helpful. It is usually worth the trouble to read the error message carefully.
-
-In some situations the error message might not tell you very much at all. In the next exercise below you may come across this error message:
-
-<img src="4_2_1.png">
-
-The message just states that you should be able to call the function `line` with the specified arguments:
-```python
-line(5, "")
-```
-
-The actual issue becomes clear when we try executing the function call specified in the error message. You can do this by copying the function call into your program and clicking on the triangle:
-
-<img src="4_2_2.png">
-
-The last lines produced by the execution, highlighted in the above image, tell us that line 4 of our code causes the error _IndexError: string index out of range_. In the [previous part](/part-3/2-working-with-strings) there was a similar example, where we tried to use an index that fell outside the scope of the string. This time the error appears because we are trying to access the first character of an empty string, that is, a string of length 0.
 
 <programming-exercise name='Line' tmcname='part04-02_line'>
 
@@ -513,7 +495,7 @@ Net als de ingebouwde functies hierboven kunnen onze eigen functies ook een lijs
 
 ```python
 def mediaan(mijn_lijst: list):
-    geordend = sorted(mijn_lijst))
+    geordend = sorted(mijn_lijst)
     lijst_midden = len(geordend) // 2
     return geordend[lijst_midden]
 ```
