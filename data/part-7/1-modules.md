@@ -14,32 +14,6 @@ After this section
 
 </text-box>
 
-## Debugging revisited
-
-We have already come across quite a few debugging methods on this course. The [visualisation tool](http://www.pythontutor.com/visualize.html#mode=edit) should now be familiar to you, and [debugging print outs](/part-2/1-programming-terminology#debugging) are a good old staple by now. You have possibly also tried the Visual Studio Code [built-in debugger](/part-4/1-vscode#the-built-in-debugger). If you come across problems with the debugger not finding your files, there were some tips for handling these situations in the [previous part](/part-6/1-reading-files#debugging-code-which-handles-files).
-
-In Python version 3.7 brought yet another easy and useful tool for debugging programs: the [breakpoint()](https://docs.python.org/3/library/functions.html?highlight=breakpoint#breakpoint) command.
-
-You can add this command to any point in your code (within normal syntactic rules, of course). When the program is run, the execution halts at the point where you inserted the `breakpoint` command. Here is an example of debugging efforts when completing one of the exercises from the previous part (please ignore the Finnish variable names in the images, and concentrate on the functionality):
-
-<img src="7_1_1.png">
-
-When the execution halts at the `breakpoint` command, an interactive console window is opened. Here you can write any code just as you would in a normal Python console, and see how the code works at exactly that point in the program.
-
-The `breakpoint` command is especially useful when you know that some line of code causes an error, but you are not quite sure why that is. Add a breakpoint just before the problematic line of code and run your program. Now you can try out different options in the interactive console window, and figure out the correct commands to include in your program.
-
-It is also possible to continue execution from where it halted. The command `continue`, or the shorthand `c`, typed into the debugging console will resume execution until the next breakpoint is reached. The following picture depicts a situation where the loop has already been executed a few times:
-
-<img src="7_1_2.png">
-
-There are also some other commands available in the debugging console. You may find them [here](https://docs.python.org/3/library/pdb.html#debugger-commands), or else you can type in _help_ in the debugging console:
-
-<img src="7_1_3.png">
-
-The command _exit_ finishes the execution of the program.
-
-When you are done debugging, remember to remove the `breakpoint` commands from your code!
-
 ## Using modules
 
 The Python language definition already contains some useful functions, such as the `len` function which returns the length of a string or a list, or the `sum` function which returns the sum of items in a data structure, but they will only get a programmer so far. The Python _standard library_ is a collection of standardised functions and objects, which can be used to expand the expressive power of Python in many ways. We have already used some functions defined in the standard library in previous exercises, for example when calculating square roots.
@@ -67,7 +41,7 @@ print(math.log(8, 2))
 
 The functions are defined in the `math` module, so they must be referred to as `math.sqrt` and `math.log` in the program code.
 
-## Selecting distinct sections from a module 
+## Selecting distinct sections from a module
 
 Another way to use modules is to select a distinct entity from the module with the `from` command. In case we want to use just the functions `sqrt` and `log` from the module `math`, we can do the following:
 
@@ -152,7 +126,7 @@ print(parts[2])
 
 OlHeyaremltswrking
 !!!,?
-é  üäü ö 
+é  üäü ö
 
 </sample-output>
 

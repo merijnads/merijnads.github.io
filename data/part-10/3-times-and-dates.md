@@ -1,5 +1,5 @@
 ---
-path: '/part-7/3-times-and-dates'
+path: '/part-10/3-times-and-dates'
 title: 'Times and dates'
 hidden: false
 ---
@@ -180,13 +180,13 @@ You weren't born yet on the eve of the new millennium.
 
 </sample-output>
 
-You may assume all day-month-year combinations given as an argument will be valid dates. That is, there will not be a date like February 31st. 
+You may assume all day-month-year combinations given as an argument will be valid dates. That is, there will not be a date like February 31st.
 
 </programming-exercise>
 
 <programming-exercise name='Valid PIC?' tmcname='part07-10_valid_pic'>
 
-In this exercise you will validate Finnish Personal Identity Codes (PIC). 
+In this exercise you will validate Finnish Personal Identity Codes (PIC).
 
 Please write a function named `is_it_valid(pic: str)`, which returns `True` or `False` based on whether the PIC given as an argument is valid or not. Finnish PICs follow the format `ddmmyyXyyyz`, where `ddmmyy` contains the date of birth, `X` is the marker for century, `yyy` is the personal identifier and `z` is a control character.
 
@@ -265,7 +265,7 @@ You were born in the previous millennium
 
 <programming-exercise name='Screen time' tmcname='part07-11_screen_time'>
 
-Please write a program for recording the amount of time the user has spent in front of a television, computer or mobile device screen over a specific period of time. 
+Please write a program for recording the amount of time the user has spent in front of a television, computer or mobile device screen over a specific period of time.
 
 The program should work as follows:
 

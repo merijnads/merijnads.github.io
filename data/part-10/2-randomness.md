@@ -1,5 +1,5 @@
 ---
-path: '/part-7/2-randomness'
+path: '/part-10/2-randomness'
 title: 'Randomness'
 hidden: false
 ---
@@ -8,7 +8,7 @@ hidden: false
 
 After this section
 
-- You will be familiar with some of the functions in the module `random` 
+- You will be familiar with some of the functions in the module `random`
 - You will be able to make use of random numbers in your programs
 
 </text-box>
@@ -317,7 +317,7 @@ print(result)
 
 The exercise template contains the file `words.txt`, which contains some English language words, one on each line.
 
-Please write a function named `words(n: int, beginning: str)`, which returns a list containing `n` random words from the `words.txt` file. All words should begin with the string specified by the second argument. 
+Please write a function named `words(n: int, beginning: str)`, which returns a list containing `n` random words from the `words.txt` file. All words should begin with the string specified by the second argument.
 
 The same word should not appear twice in the list. If there are not enough words beginning with the specified string, the function should raise a `ValueError` exception.
 

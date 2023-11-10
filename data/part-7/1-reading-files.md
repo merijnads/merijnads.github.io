@@ -1,5 +1,5 @@
 ---
-path: '/part-7/1-reading-files'
+path: '/part-7/2-reading-files'
 title: 'Reading files'
 hidden: false
 ---
@@ -14,18 +14,6 @@ After this section
 
 </text-box>
 
-<!--the same text is in sections 3-1, 5-1 and 6-1, check them all if you're changing this-->
-<text-box variant='hint' name="About the exercises on this course">
-
-Becoming a proficient programmer requires a lot of practice, sometimes even quite mechanical practice. It also involves developing problem solving skills and applying intuition. This is why there are a lot of exercises of different kinds on this course. Some of them ask you to quite straightforwardly apply what you have learnt in the material, but some of them are intentionally more challenging and open-ended.
-
-Some of the exercises might at first seem overwhelming, but this is nothing to worry about. None of the exercises is strictly mandatory, and in fact _only 25 % of the points in each part is required to pass the course._ You can find more details about passing the course on the [page on grading](/grading-and-exams).
-
-**The exercises are not in any specific order of difficulty.** Each section usually introduces some new programming concepts, and these are then practised with both simpler and more complicated exercises. **If you come across an exercise that feels too difficult, move on to the next one.** You can always come back to the more difficult exercises if you have time later.
-
-When the going inevitably gets tough, a word of consolation: a task that seems impossibly difficult this week will likely feel rather easy in about four weeks' time.
-
-</text-box>
 
 A very common use case for programming is handling data stored in files. Programs can read data from files and write the computed results to files. Even large amounts of data become easy to process automatically when files are used.
 
@@ -119,40 +107,9 @@ Please write a function named `largest`, which reads the file and returns the la
 
 Notice that the function does not take any arguments. The file you are working with is always named `numbers.txt`.
 
-**NB:** If Visual Studio Code can't find the file and you have checked that there are no spelling errors, take a look at the instructions following this exercise.
 
 </programming-exercise>
 
-## What if Visual Studio Code cannot find my file?
-
-When you execute your code, Visual Studio Code might complain about not finding the file, even though you have checked and double-checked the file name was written correctly, and the file exists. Changing the following setting may fix the problem:
-
-* Open the settings from the menu bar: _File_ -> _Preferences_ -> _Settings_
-* Find the relevant setting with the search term "executeinfile"
-* Choose the tab _Workspace_
-* Select the option under _Python_ -> _Terminal_ -> _Execute In File Dir_
-
-Your settings window should now look somewhat like this:
-
-<img src="6_1_1.png">
-
-If this doesn't help, you can copy the file in the _src_ directory
-
-<img src="6_1_2.png">
-
-directly to the root of the exercise directory
-
-<img src="6_1_3.png">
-
-## Debugging code which handles files
-
-Using the Visual Studio Code [debugger](/part-4/1-vscode#the-built-in-debugger) with programs which handle files will often result in a nasty looking error message:
-
-<img src="6_1_4.png">
-
-The reason is that the debugger will always look for files in the root of the exercise directory. The _Execute In File Dir_ setting mentioned above will have no effect on this. The easiest solution is to just copy the file to the root of the directory.
-
-You may need to restart Visual Studio Code after copying all the necessary files.
 
 ## Reading CSV files
 
@@ -226,7 +183,6 @@ orange;8.0
 
 Please write a function named `read_fruits`, which reads the file and returns a dictionary based on the contents. In the dictionary, the name of the fruit should be the key, and the value should be its price. Prices should be of type `float`.
 
-NB: the function does not take any arguments. The file you are working with is always named `fruits.csv`.
 
 </programming-exercise>
 

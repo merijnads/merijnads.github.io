@@ -226,6 +226,4 @@ This is a test lets see how it goes11
 <quiz id="2203412c-628c-54a3-bd77-edebd5ce4f67"></quiz>
 -->
 
-Please respond to a quick questionnaire on this week's materials.
 
-<quiz id="3847e0b3-f921-546d-9cea-14bdb10adbde"></quiz>

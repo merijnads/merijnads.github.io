@@ -1,6 +1,6 @@
 ---
 path: '/part-8'
-title: 'Part 8'
+title: '8. Week 3'
 overview: true
 hidden: false
 ---

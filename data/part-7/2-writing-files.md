@@ -1,5 +1,5 @@
 ---
-path: '/part-7/2-writing-files'
+path: '/part-7/3-writing-files'
 title: 'Writing files'
 hidden: false
 ---

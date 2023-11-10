@@ -1,5 +1,5 @@
 ---
-path: '/part-7/6-more-features'
+path: '/part-10/6-more-features'
 title: 'More Python features'
 hidden: false
 ---
