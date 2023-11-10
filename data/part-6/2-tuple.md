@@ -1,5 +1,5 @@
 ---
-path: '/part-6/4-tuple'
+path: '/part-6/2-tuple'
 title: 'Tuple'
 hidden: false
 ---

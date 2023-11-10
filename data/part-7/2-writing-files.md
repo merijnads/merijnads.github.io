@@ -1,5 +1,5 @@
 ---
-path: '/part-6/2-writing-files'
+path: '/part-7/2-writing-files'
 title: 'Writing files'
 hidden: false
 ---
@@ -295,7 +295,7 @@ Please write a function named `filter_solutions()` which
 * writes those lines which have a _correct_ result into the file `correct.csv`
 * writes those lines which have an _incorrect_ result into the file `incorrect.csv`
 
-Using the example above, the file `correct.csv` would contain the lines 
+Using the example above, the file `correct.csv` would contain the lines
 
 ```sh
 Arto;2+5;7
@@ -361,7 +361,7 @@ Emily;6;6;5;5;0;4;8
 
 </sample-data>
 
-The program logic is divided into three functions: reading the file and processing the contents into an accessible format, determining the grade, and writing the file. 
+The program logic is divided into three functions: reading the file and processing the contents into an accessible format, determining the grade, and writing the file.
 
 The file is read following the principles covered in the previous section. The data is stored in a dictionary, where the key is the student's name, and the value is a list of the points received by the student, in integer format:
 
@@ -447,7 +447,7 @@ If we determine a certain functionality in the program needs fixing, in a well d
 
 <programming-exercise name='Course grading, part 4' tmcname='part06-14_course_grading_part_4'>
 
-Let's revisit the course grading project from the previous section. 
+Let's revisit the course grading project from the previous section.
 
 As we left if last time, the program read and processed files containing student information, completed exercises and exam results. We'll add a file containing information about the course. An example of the format of the file:
 
@@ -476,7 +476,7 @@ liisa virtanen                35        8         14        22        3
 
 </sample-data>
 
-The statistics section is identical to the results printed out in part 3 of the project. The only addition here is the header section. 
+The statistics section is identical to the results printed out in part 3 of the project. The only addition here is the header section.
 
 Additionally, there should be a file called `results.csv` with the following format:
 
@@ -520,7 +520,7 @@ The search term may include lowercase letters and the following wildcard charact
 
 * A dot `.` means that any single character is acceptable in its place. For example, `ca.` would yield words like _cat_ and _car_, `p.ng` would yield words like _ping_ and _pong_, and `.a.e` would yield words like _sane_, _care_ and _late_.
 * An asterisk `*` at the _end_ of the search term means that any word which _begins_ with the search term is acceptable. An asterisk at the _beginning_ of the search term means that any word which _ends_ with the search term is acceptable. For example, `ca*` would yield words like _california_, _cat_, _caring_ and _catapult_, while `*ane` would yield words like _crane_, _insane_ and _aeroplane_. There can only ever be a single asterisk in the search term.
-* If there are no wildcard characters in the search term, only words which match the search term exactly are returned. 
+* If there are no wildcard characters in the search term, only words which match the search term exactly are returned.
 
 You may assume both wildcards are never used in the same search term.
 

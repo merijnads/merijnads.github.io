@@ -1,5 +1,5 @@
 ---
-path: '/part-6/1-reading-files'
+path: '/part-7/1-reading-files'
 title: 'Reading files'
 hidden: false
 ---
@@ -647,7 +647,7 @@ id;e1;e2;e3
 12345699;10;2;2
 ```
 
-In the above example the student whose student number is 12345678 was awarded 4+1+4 points in the exam, which equals a total of 9 points. 
+In the above example the student whose student number is 12345678 was awarded 4+1+4 points in the exam, which equals a total of 9 points.
 
 The program should again ask the user for the names of the files. Then the program should process the files and print out a grade for each student.
 
@@ -821,7 +821,7 @@ butter
 
 **Hint:** it might be best to first read through all the lines in the file and pop them into a list, which is then easier to manipulate in the way described in the exercise.
 
-#### Search for recipes based on the name of the recipe 
+#### Search for recipes based on the name of the recipe
 
 Please write a function named `search_by_name(filename: str, word: str)`, which takes a filename and a search string as its arguments. The function should go through the file and select all recipes whose _name_ contains the given search string. The names of these recipes are then returned in a list.
 
@@ -927,7 +927,7 @@ Next, write a function named `distance(stations: dict, station1: str, station2: 
 The distance is calculated using the Pythagorean theorem. The multiplication factors below are approximate values for converting latitudes and longitudes to distances in kilometres in the Helsinki region.
 
 ```python
-# we will need the function sqrt from the math module 
+# we will need the function sqrt from the math module
 import math
 
 x_km = (longitude1 - longitude2) * 55.26

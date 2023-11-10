@@ -1,5 +1,5 @@
 ---
-path: '/part-6/4-scope-of-variables'
+path: '/part-10/4-scope-of-variables'
 title: 'Local and global variables'
 hidden: false
 ---
