@@ -1,5 +1,5 @@
 ---
-path: '/part-6/3-errors'
+path: '/part-10/3-errors'
 title: 'Handling errors'
 hidden: false
 ---
@@ -194,7 +194,7 @@ Here is a selection of typical errors you will likely come across, along with so
 
 **ValueError**
 
-This error is often thrown when the argument passed to a function is somehow invalid. For example, the function call `float("1,23")`causes an error, because decimals are always separated by a point in Python, and here we have a comma. 
+This error is often thrown when the argument passed to a function is somehow invalid. For example, the function call `float("1,23")`causes an error, because decimals are always separated by a point in Python, and here we have a comma.
 
 **TypeError**
 

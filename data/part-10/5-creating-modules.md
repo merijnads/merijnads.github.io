@@ -1,5 +1,5 @@
 ---
-path: '/part-7/5-creating-modules'
+path: '/part-10/5-creating-modules'
 title: 'Creating your own modules'
 hidden: false
 ---
