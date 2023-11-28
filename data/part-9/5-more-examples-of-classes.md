@@ -1,5 +1,5 @@
 ---
-path: '/part-8/5-more-examples-of-classes'
+path: '/part-9/5-more-examples-of-classes'
 title: 'More examples of classes'
 hidden: false
 ---
