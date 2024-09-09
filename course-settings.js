@@ -3,7 +3,7 @@ const courseSettings = {
   name: "Programmeren 1",
   siteUrl: "https://programmingads.github.io",
   githubUrl: "https://github.com/programmingads/programmingads.github.io",
-  subtitle: "2023/2024",
+  subtitle: "2024/2025",
   slug: "programmeren-1",
   organizationName: "hr",
   tmcCourse: "programmeren-1",
