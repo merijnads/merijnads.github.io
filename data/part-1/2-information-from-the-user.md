@@ -233,7 +233,7 @@ Schrijf een programma dat het volgende verhaal afdrukt. De gebruiker geeft een n
 Typ een naam in: **Mary**
 Typ een jaar in: **1572**
 
-Mary is valiant knight, born in the year 1572. One morning Mary woke up to an awful racket: a dragon was approaching the village. Only Mary could save the village's residents.
+Mary is a valiant knight, born in the year 1572. One morning Mary woke up to an awful racket: a dragon was approaching the village. Only Mary could save the village's residents.
 
 </sample-output>
 
